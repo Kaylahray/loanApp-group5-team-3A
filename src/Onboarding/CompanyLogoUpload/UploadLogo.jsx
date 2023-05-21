@@ -1,7 +1,7 @@
-import "./uploadLogo.scss";
+import styles from "./uploadLogo.module.scss";
 
 const UploadLogo = () => {
-  return <div>UploadLogo</div>;
+  return <div className={styles.ss}>UploadLogo</div>;
 };
 
 export default UploadLogo;

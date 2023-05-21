@@ -1,7 +1,7 @@
-import "./signup.scss";
+import styles from "./signup.module.scss";
 
 const Signup = () => {
-  return <div>Signup</div>;
+  return <div className={styles.kk}>Signup</div>;
 };
 
 export default Signup;

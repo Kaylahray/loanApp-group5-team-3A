@@ -1,8 +1,8 @@
-import "./resetPasswordSent.scss"
+import styles from"./resetPasswordSent.module.scss"
 
 const ResetPasswordSent = () => {
   return (
-    <div>ResetPasswordSent</div>
+    <div className={styles.kkk}>ResetPasswordSent</div>
   )
 }
 

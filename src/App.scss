@@ -1,0 +1,15 @@
+@import "./variables";
+
+.application {
+  min-height: $Main-height;
+  .btn {
+    margin-top: 2rem;
+  }
+}
+
+.dark {
+  @include theme($dark-theme: true);
+}
+.light {
+  background-color: $backGroundColor;
+}

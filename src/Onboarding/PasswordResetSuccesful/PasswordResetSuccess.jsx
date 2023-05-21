@@ -1,9 +1,7 @@
-import "./passwordResetSuccess.scss"
+import styles from "./passwordResetSuccess.module.scss";
 
 const PasswordResetSuccess = () => {
-  return (
-    <div>PasswordResetSuccess</div>
-  )
-}
+  return <div className={styles.ss}>PasswordResetSuccess</div>;
+};
 
-export default PasswordResetSuccess
+export default PasswordResetSuccess;

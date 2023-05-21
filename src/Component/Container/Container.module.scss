@@ -1,0 +1,7 @@
+.container {
+  margin-inline: 1.5rem;
+  max-width: 1440px;
+  @media screen and (min-width: 1440px) {
+    margin-inline: auto;
+  }
+}

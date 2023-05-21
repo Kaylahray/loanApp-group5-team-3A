@@ -1,7 +1,11 @@
-import "./addTeamMember.scss";
+import styles from "./addTeamMember.module.scss";
 
 const AddTeamMember = () => {
-  return <div>AddTeamMember</div>;
+  return (
+    <div className={styles.whaterver - your - classname - is}>
+      AddTeamMember
+    </div>
+  );
 };
 
 export default AddTeamMember;

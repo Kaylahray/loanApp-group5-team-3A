@@ -1,7 +1,7 @@
-import "./forgotPassword.scss";
+import styles from "./forgotPassword.module.scss";
 
 const ForgotPassword = () => {
-  return <div>ForgotPassword</div>;
+  return <div className={styles.ss}>ForgotPassword</div>;
 };
 
 export default ForgotPassword;

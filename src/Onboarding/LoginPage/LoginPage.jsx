@@ -1,7 +1,7 @@
-import "./loginPage.scss";
+import styles from "./loginPage.module.scss";
 
 const LoginPage = () => {
-  return <div>LoginPage</div>;
+  return <div className={styles.ss}>LoginPage</div>;
 };
 
 export default LoginPage;

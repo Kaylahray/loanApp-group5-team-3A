@@ -1,7 +1,7 @@
-import "./personalDetailForm.scss";
+import styles from "./personalDetailForm.module.scss";
 
 const PersonalDetailForm = () => {
-  return <div>PersonalDetailForm</div>;
+  return <div className={styles.nn}>PersonalDetailForm</div>;
 };
 
 export default PersonalDetailForm;
