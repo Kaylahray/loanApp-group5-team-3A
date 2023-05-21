@@ -1,10 +1,11 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
+import LandingPage from "./Onboarding/LandingPage/LandingPage";
 
 function App() {
-  return( 
-   <>
-   <Routes>
+  return (
+    <>
+      {/* <Routes>
      <Route path="/" element ={}/>
      <Route path="/" element ={}/>
      <Route path="/" element ={}/>
@@ -18,10 +19,10 @@ function App() {
      <Route path="/" element ={}/>
 
 
-   </Routes>
-  
-  </>
-  )
+   </Routes> */}
+      <LandingPage />
+    </>
+  );
 }
 
 export default App;
