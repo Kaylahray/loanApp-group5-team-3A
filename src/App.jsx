@@ -1,12 +1,27 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  return (
-    <>
-      <h1>TEAM 3A</h1>
-      <p>teammm</p>
-    </>
-  );
+  return( 
+   <>
+   <Routes>
+     <Route path="/" element ={}/>
+     <Route path="/" element ={}/>
+     <Route path="/" element ={}/>
+     <Route path="/" element ={}/>
+     <Route path="/" element ={}/>
+     <Route path="/" element ={}/>
+     <Route path="/" element ={}/>
+     <Route path="/" element ={}/>
+     <Route path="/" element ={}/>
+     <Route path="/" element ={}/>
+     <Route path="/" element ={}/>
+
+
+   </Routes>
+  
+  </>
+  )
 }
 
 export default App;
