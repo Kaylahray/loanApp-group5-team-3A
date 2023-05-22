@@ -3,7 +3,7 @@ import FormBox from "../../Component/FormBox/FormBox";
 import ImageBox from "../../Component/ImageBox/ImageBox";
 
 const ResetPasswordForm = () => {
-  return <div className={styles.nnn}>
+  return <div className={styles.main}>
     <ImageBox>
         <div>
           <p>imageeeeeee link</p>
