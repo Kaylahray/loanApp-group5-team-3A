@@ -1,19 +1,2 @@
 @import "../../variables";
 
-.main {
-  // background-color: rgb(0, 255, 98);
-  @include flexCenter(row);
-  // gap: 10%;
-  margin-block: 2rem;
-
-  .chi {
-    background-color: $Primary-colors;
-    width: 50%;
-    height: 80vh;
-  }
-  .boo {
-    // background-color: yellow;
-    width: 50%;
-    height: 80vh;
-  }
-}

@@ -1,1 +1,7 @@
+
 @import "../../variables";
+
+.main {
+    @include flexCenter(row);
+    margin-block: 2rem;
+  }
