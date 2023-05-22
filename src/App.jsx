@@ -1,10 +1,9 @@
 import { useState } from "react";
 import "./App.scss";
 // import { Routes, Route } from "react-router-dom";
-// import LandingPage from "./Onboarding/LandingPage/LandingPage";
+import LandingPage from "./Onboarding/LandingPage/LandingPage";
 
 import Container from "./Component/Container/Container";
-import LoginPage from "./Onboarding/LoginPage/LoginPage";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -34,7 +33,7 @@ function App() {
 
 
    </Routes>  */}
-        <LoginPage />
+        <LandingPage />
       </Container>
     </div>
   );

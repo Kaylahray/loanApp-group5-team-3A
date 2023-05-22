@@ -1,5 +1,8 @@
+@import "../../variables";
+
 .container {
   margin-inline: 1.5rem;
+  // background-color: aqua;
   max-width: 1440px;
   @media screen and (min-width: 1440px) {
     margin-inline: auto;
