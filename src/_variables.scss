@@ -27,6 +27,11 @@ $Font-weights: (
   column-gap: 2rem;
 }
 
+@mixin flexRight($direction) {
+  display: flex;
+  justify-content: right;
+}
+
 @mixin theme($dark-theme: true) {
   @if $dark-theme {
     background-color: darken($backGroundColor, 100%);

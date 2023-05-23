@@ -4,8 +4,8 @@ import "./App.scss";
 
 import Container from "./Component/Container/Container";
 
-import Signup from "./Onboarding/SignUpPage/Signup";
 import { Context } from "./Context";
+import AddTeamMember from "./Onboarding/AddTeamMember/AddTeamMember";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -39,7 +39,7 @@ function App() {
 
 
    </Routes>  */}
-          <Signup />
+          <AddTeamMember />
           {/* <AddTeamMember /> */}
           {/* <PersonalDetailForm /> */}
         </Container>
