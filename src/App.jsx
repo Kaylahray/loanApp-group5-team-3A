@@ -3,8 +3,8 @@ import "./App.scss";
 // import { Routes, Route } from "react-router-dom";
 
 import Container from "./Component/Container/Container";
-
-import Signup from "./Onboarding/SignUpPage/Signup";
+import LoginPage from "./Onboarding/LoginPage/LoginPage";
+//import Signup from "./Onboarding/SignUpPage/Signup";
 import { Context } from "./Context";
 
 function App() {
@@ -39,7 +39,8 @@ function App() {
 
 
    </Routes>  */}
-          <Signup />
+          {/*<Signup /> */}
+          <LoginPage /> 
           {/* <AddTeamMember /> */}
           {/* <PersonalDetailForm /> */}
         </Container>
