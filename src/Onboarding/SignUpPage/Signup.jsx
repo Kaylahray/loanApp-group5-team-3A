@@ -6,7 +6,6 @@ import axios from "axios";
 import "./icon.png";
 import "./eye-open.png";
 import { useContext } from "react";
-import { ViewIcon } from "@chakra-ui/icons";
 import { Context } from "../../Context";
 import {
   FormControl,
@@ -94,7 +93,6 @@ const Signup = () => {
       </ImageBox>
       <FormBox>
         <div className={styles.signup}>
-          <ViewIcon />
           <div className={styles.logo}> LOGO</div>
           <p className={styles.welcome}>Welcome let&apos;s get you started</p>
           <form onSubmit={handleSubmit}>
