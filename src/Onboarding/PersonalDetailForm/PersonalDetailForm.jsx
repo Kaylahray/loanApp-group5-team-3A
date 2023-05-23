@@ -24,7 +24,7 @@ const PersonalDetailForm = () => {
       </ImageBox>
       <FormBox>
         <section>
-          <div className={styles.logo}></div>
+          <img src="./images/img.svg" alt="" />
           <FormControl isInvalid={isError}>
             <FormLabel className="label">First name (required)</FormLabel>
             <Input placeholder="e.g. Oluwatofunmi" type="text" />
