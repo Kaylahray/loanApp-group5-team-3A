@@ -3,7 +3,10 @@ import ImageBox from "../../Component/ImageBox/ImageBox";
 import styles from "./Signup.module.scss";
 import validate from "../../validate";
 import axios from "axios";
+import "./icon.png";
+import "./eye-open.png";
 import { useContext } from "react";
+import { ViewIcon } from "@chakra-ui/icons";
 import { Context } from "../../Context";
 import {
   FormControl,
@@ -91,7 +94,8 @@ const Signup = () => {
       </ImageBox>
       <FormBox>
         <div className={styles.signup}>
-          <div className={styles.logo}> LoGo</div>
+          <ViewIcon />
+          <div className={styles.logo}> LOGO</div>
           <p className={styles.welcome}>Welcome let&apos;s get you started</p>
           <form onSubmit={handleSubmit}>
             <FormControl marginBottom={"15px"} isInvalid={errors.email}>
@@ -102,10 +106,11 @@ const Signup = () => {
                 onChange={handleChange}
                 value={values.email}
                 variant={"outline"}
-                size="sm"
+                size="48px"
                 type="email"
                 name="email"
                 placeholder="e.g @chiomachris@gmail.com"
+                _placeholder={{ fontSize: "12px", padding: "1rem" }}
               />
               <FormErrorMessage>{errors.email}</FormErrorMessage>
             </FormControl>
@@ -117,10 +122,11 @@ const Signup = () => {
                 onChange={handleChange}
                 value={values.companyName}
                 variant={"outline"}
-                size="sm"
+                size="48px"
                 type="text"
                 name="companyName"
                 placeholder="e.g Stutern"
+                _placeholder={{ fontSize: "12px", padding: "1rem" }}
               />
               <FormErrorMessage>{errors.companyName}</FormErrorMessage>
             </FormControl>
@@ -135,10 +141,11 @@ const Signup = () => {
                 onChange={handleChange}
                 value={values.numberOfEmployees}
                 variant={"outline"}
-                size="sm"
+                size="48px"
                 type="number"
                 name="numberOfEmployees"
                 placeholder="e.g Stutern"
+                _placeholder={{ fontSize: "12px", padding: "1rem" }}
               />
               <FormErrorMessage>{errors.numberOfEmployees}</FormErrorMessage>
             </FormControl>
@@ -150,16 +157,20 @@ const Signup = () => {
                 <Input
                   onChange={handleChange}
                   value={values.password}
-                  size="sm"
+                  size="48px"
                   name="password"
                   type={show ? "text" : "password"}
                   placeholder="***********"
+                  _placeholder={{ fontSize: "12px", padding: "1rem" }}
                 />
 
-                <InputRightElement width="4.5rem">
+                <InputRightElement width="4.5rem" height={" auto"}>
                   {/* STILL HAVENT FIXED THE RIGHT ICON BUT IT DOESN'T RELOAD ANYMORE */}
                   <button type="button" onClick={visiblePassword}>
-                    <p> {show ? "ok" : "no"}</p>
+                    <img
+                      src={show ? "./icon.png" : "./eye-open.png"}
+                      alt="no"
+                    />
                   </button>
                 </InputRightElement>
               </InputGroup>
@@ -177,6 +188,9 @@ const Signup = () => {
 
               <a> Continue</a>
             </Button>
+            <p className={styles.account}>
+              Have an account? <span> Login</span>
+            </p>
           </form>
         </div>
       </FormBox>
