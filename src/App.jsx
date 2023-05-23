@@ -3,6 +3,7 @@ import "./App.scss";
 // import { Routes, Route } from "react-router-dom";
 
 import Container from "./Component/Container/Container";
+import ResetPasswordForm from "./Onboarding/ResetPasswordForm/ResetPasswordForm";
 
 import Signup from "./Onboarding/SignUpPage/Signup";
 import { Context } from "./Context";
@@ -39,9 +40,10 @@ function App() {
 
 
    </Routes>  */}
-          <Signup />
+          {/*<Signup /> */}
           {/* <AddTeamMember /> */}
           {/* <PersonalDetailForm /> */}
+          <ResetPasswordForm/>
         </Container>
       </div>
     </Context.Provider>
