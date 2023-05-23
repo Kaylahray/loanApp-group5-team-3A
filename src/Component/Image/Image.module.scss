@@ -1,0 +1,16 @@
+.img {
+  height: 100%;
+  width: 80%;
+  margin: 2px auto;
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid #dfe0f3;
+  border-radius: 320px;
+}
+.image {
+  width: 98%;
+  height: 100%;
+  border: 1px solid #dfe0f3;
+  object-fit: cover;
+  border-radius: 320px;
+}

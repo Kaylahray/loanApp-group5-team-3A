@@ -23,7 +23,8 @@ $Font-weights: (
 
 @mixin flexCenter($direction) {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 2rem;
 }
 
 @mixin theme($dark-theme: true) {

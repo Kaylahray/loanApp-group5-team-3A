@@ -1,25 +1,30 @@
 import { useState } from "react";
 import "./App.scss";
 // import { Routes, Route } from "react-router-dom";
-// import LandingPage from "./Onboarding/LandingPage/LandingPage";
 
 import Container from "./Component/Container/Container";
+
 import Signup from "./Onboarding/SignUpPage/Signup";
+import { Context } from "./Context";
 
 function App() {
   const [theme, setTheme] = useState("light");
+  const [show, setShow] = useState(false);
+  const visiblePassword = () => setShow(!show);
+
   const changeTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (
-    <div className={`${theme} application`}>
-      <Container>
-        <button className="btn" onClick={changeTheme}>
-          Theme
-        </button>
+    <Context.Provider value={{ visiblePassword, show }}>
+      <div className={`${theme} application`}>
+        <Container>
+          <button className="btn" onClick={changeTheme}>
+            Theme
+          </button>
 
-        {/* <Routes>
+          {/* <Routes>
      <Route path="/" element ={}/>
      <Route path="/" element ={}/>
      <Route path="/" element ={}/>
@@ -34,9 +39,12 @@ function App() {
 
 
    </Routes>  */}
-        <Signup />
-      </Container>
-    </div>
+          <Signup />
+          {/* <AddTeamMember /> */}
+          {/* <PersonalDetailForm /> */}
+        </Container>
+      </div>
+    </Context.Provider>
   );
 }
 

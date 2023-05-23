@@ -1,14 +1,13 @@
 import styles from "./personalDetailForm.module.scss";
 import FormBox from "../../Component/FormBox/FormBox";
 import ImageBox from "../../Component/ImageBox/ImageBox";
+import Image from "../../Component/Image/Image";
 
 const PersonalDetailForm = () => {
   return (
     <div className={styles.main}>
       <ImageBox>
-        <div>
-          <p>imageeeeeee link</p>
-        </div>
+        <Image />
       </ImageBox>
       <FormBox>
         <div>formmmmmmmmmmmmm</div>

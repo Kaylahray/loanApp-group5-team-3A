@@ -1,6 +1,22 @@
 @import "../../variables";
 
 .main {
-    @include flexCenter(row);
-    margin-block: 2rem;
-  }
+  @include flexCenter(row);
+  margin-block: 1rem;
+}
+
+.signup {
+  width: 490px;
+  margin: 0 auto;
+}
+.welcome {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+
