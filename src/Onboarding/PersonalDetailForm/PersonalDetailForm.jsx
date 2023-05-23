@@ -1,47 +1,83 @@
-import styles from "./personalDetailForm.module.scss";
-import FormBox from "../../Component/FormBox/FormBox";
-import ImageBox from "../../Component/ImageBox/ImageBox";
-import Image from "../../Component/Image/Image";
+import "./personalDetailForm.scss";
 import { useState } from "react";
-import {
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  Input,
-} from "@chakra-ui/react";
+import { FormControl, FormLabel, Input, FormErrorMessage } from "@chakra-ui/react";
+import Button from "../../Component/Button/Button";
 
 const PersonalDetailForm = () => {
-  const [input, setInput] = useState(" ");
-  const handleInputChange = (e) => setInput(e.target.value);
-  const isError = input === "";
+  const [errors, setErrors] = useState({ firstName: false, lastName: false, role: false });
+  const [firstNameValue, setFirstNameValue] = useState("");
+  const handleFirstNameChange = (e) => setFirstNameValue(e.target.value);
+  const [lastNameValue, setLastNameValue] = useState("");
+  const handleLastNameChange = (e) => setLastNameValue(e.target.value);
+  const [roleValue, setRoleValue] = useState("");
+  const handleRoleChange = (e) => setRoleValue(e.target.value);
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    setErrors({
+      firstName: firstNameValue === "",
+      lastName: lastNameValue === "",
+      role: roleValue === ""
+    });
+  }
+
   return (
-    <div className={styles.main}>
-      <h1>
-        <img src="./component/img.svg" alt="" />
-      </h1>
-      <ImageBox>
-        <Image />
-      </ImageBox>
-      <FormBox>
-        <section>
-          <img src="./images/img.svg" alt="" />
-          <FormControl isInvalid={isError}>
-            <FormLabel className="label">First name (required)</FormLabel>
-            <Input placeholder="e.g. Oluwatofunmi" type="text" />
-            <FormErrorMessage>First name is required</FormErrorMessage>
-          </FormControl>
-          <FormControl isInvalid={isError}>
-            <FormLabel>Last name (required)</FormLabel>
-            <Input placeholder="e.g. Idowu" type="text" />
-            <FormErrorMessage>Last name is required</FormErrorMessage>
-          </FormControl>
-          <FormControl isInvalid={isError}>
-            <FormLabel>Role (required)</FormLabel>
-            <Input placeholder="e.g. Bank manager" type="text" />
-            <FormErrorMessage>Role is required</FormErrorMessage>
-          </FormControl>
-        </section>
-      </FormBox>
+    <div className="personal-detail-page">
+      <div className="man-picture">
+        <img src="./images/man.svg" />
+      </div>
+      <div className="detail-form">
+        <div className="form-logo">
+          <img src="./images/img.svg" />
+        </div>
+        <div className="form-data">
+          <div className="form-heading">Personal detail</div>
+          <form className="form-inputs" onSubmit={handleFormSubmit}>
+            <div>
+              <FormControl isInvalid={errors.firstName}>
+                <FormLabel>First name (required)</FormLabel>
+                <Input
+                  type="text"
+                  name="firstName"
+                  placeholder="e.g. Miriam"
+                  value={firstNameValue}
+                  onChange={handleFirstNameChange}
+                />
+                <FormErrorMessage>First name is required.</FormErrorMessage>
+              </FormControl>
+            </div>
+            <div>
+              <FormControl isInvalid={errors.lastName}>
+                <FormLabel>Last name (required)</FormLabel>
+                <Input
+                  type="text"
+                  name="lastName"
+                  placeholder="e.g. Miriam"
+                  value={lastNameValue}
+                  onChange={handleLastNameChange}
+                />
+                <FormErrorMessage>Last name is required.</FormErrorMessage>
+              </FormControl>
+            </div>
+            <div>
+              <FormControl isInvalid={errors.role}>
+                <FormLabel>Role (required)</FormLabel>
+                <Input
+                  type="text"
+                  name="role"
+                  placeholder="e.g. Bank manager"
+                  value={roleValue}
+                  onChange={handleRoleChange}
+                />
+                <FormErrorMessage>Role is required.</FormErrorMessage>
+              </FormControl>
+            </div>
+            <div>
+              <Button>Continue</Button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };
