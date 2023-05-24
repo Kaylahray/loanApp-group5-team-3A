@@ -6,6 +6,7 @@ import Container from "./Component/Container/Container";
 
 import Signup from "./Onboarding/SignUpPage/Signup";
 import { Context } from "./Context";
+import PasswordResetSuccess from "./Onboarding/PasswordResetSuccesful/PasswordResetSuccess";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -20,8 +21,7 @@ function App() {
     <Context.Provider value={{ visiblePassword, show }}>
       <div className={`${theme} application`}>
         <Container>
-          <button className="btn" onClick={changeTheme}>
-            Theme
+           <button className="btn" onClick={changeTheme}>
           </button>
 
           {/* <Routes>
@@ -39,7 +39,7 @@ function App() {
 
 
    </Routes>  */}
-          <Signup />
+          <PasswordResetSuccess/>
           {/* <AddTeamMember /> */}
           {/* <PersonalDetailForm /> */}
         </Container>
