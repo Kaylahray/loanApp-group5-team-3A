@@ -7,6 +7,7 @@ import Container from "./Component/Container/Container";
 import Signup from "./Onboarding/SignUpPage/Signup";
 import { Context } from "./Context";
 import PasswordResetSuccess from "./Onboarding/PasswordResetSuccesful/PasswordResetSuccess";
+import VerificationSuccessful from "./Onboarding/VerificationSuccessful/VerificationSuccessful";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -39,7 +40,7 @@ function App() {
 
 
    </Routes>  */}
-          <PasswordResetSuccess/>
+          <VerificationSuccessful/>
           {/* <AddTeamMember /> */}
           {/* <PersonalDetailForm /> */}
         </Container>
