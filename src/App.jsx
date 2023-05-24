@@ -1,11 +1,14 @@
+/*
+ * Copyright (c) 2023 Your Company Name
+ * All rights reserved.
+ */
 import { useState } from "react";
 import "./App.scss";
-// import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Container from "./Component/Container/Container";
-
-import Signup from "./Onboarding/SignUpPage/Signup";
 import { Context } from "./Context";
+import UploadLogo from "./Onboarding/CompanyLogoUpload/UploadLogo";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -21,27 +24,15 @@ function App() {
       <div className={`${theme} application`}>
         <Container>
           <button className="btn" onClick={changeTheme}>
-            Theme
+      
           </button>
 
           {/* <Routes>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
+          <Route path="/" element={<UploadLogo />} />
 
 
    </Routes>  */}
-          <Signup />
-          {/* <AddTeamMember /> */}
-          {/* <PersonalDetailForm /> */}
+          <UploadLogo />
         </Container>
       </div>
     </Context.Provider>
