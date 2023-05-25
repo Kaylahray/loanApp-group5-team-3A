@@ -1,8 +1,14 @@
+/*
+ * Copyright (c) 2023 Your Company Name
+ * All rights reserved.
+ */
 import { useState } from "react";
 import "./App.scss";
-// import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import Container from "./Component/Container/Container";
+import Container from "./Component/Container/Container
+import { Context } from "./Context";
+import UploadLogo from "./Onboarding/CompanyLogoUpload/UploadLogo";
 
 import LoginPage from "./Onboarding/LoginPage/LoginPage";
 //import Signup from "./Onboarding/SignUpPage/Signup";
@@ -15,6 +21,7 @@ import { Context } from "./Context";
 import PasswordResetSuccess from "./Onboarding/PasswordResetSuccesful/PasswordResetSuccess";
 import VerificationSuccessful from "./Onboarding/VerificationSuccessful/VerificationSuccessful";
 import VerifyEmail from "./Onboarding/VerifyEmail/VerifyEmail";
+
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -29,25 +36,20 @@ function App() {
     <Context.Provider value={{ visiblePassword, show }}>
       <div className={`${theme} application`}>
         <Container>
-           <button className="btn" onClick={changeTheme}>
+
+          <button className="btn" onClick={changeTheme}>
+
+          theme
           </button>
 
           {/* <Routes>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
-     <Route path="/" element ={}/>
+          <Route path="/" element={<UploadLogo />} />
 
 
 
    </Routes>  */}
+
+          <UploadLogo />
           {/*<Signup /> */}
           <LoginPage /> 
    </Routes>
@@ -55,7 +57,7 @@ function App() {
           {/* <AddTeamMember /> */}
           {/* <PersonalDetailForm /> */}
           {/*<ResetPasswordForm/> */}
-          <ResetPasswordSent/>
+          <ResetPasswor
         </Container>
       </div>
     </Context.Provider>
