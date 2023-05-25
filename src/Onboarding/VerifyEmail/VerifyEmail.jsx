@@ -23,7 +23,7 @@ import Button from "../../Component/Button/Button.jsx";
         </Button>
         </div>
         <div className={styles.footer}>
-       <a href="#"><p>Didn't get the email?<span> Request again</span></p>
+       <a href="#"><p>Didn't get the email?<span> gitRequest again</span></p>
        </a>
         </div>
     </div>
