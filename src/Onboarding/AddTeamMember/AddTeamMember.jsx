@@ -5,7 +5,7 @@ import Image from "../../Component/Image/Image";
 import { FormControl, FormLabel, Input, Select} from "@chakra-ui/react";
 import Button from "../../Component/Button/Button";
 import { useState } from "react";
-// import validate from "../../validate";
+
 
 
 const AddTeamMember = () => {
@@ -30,12 +30,6 @@ const AddTeamMember = () => {
         }else {
           setMessage("")
         }
-        
-        // if (!value.email) {
-        //   errors.email = "Email is required";
-        // } else if (!regex.test(value.email)) {
-        //   errors.email = "Invalid format";
-        // }
     }
   // const [errors, setFormError] = useState({});
   // const handleSubmit = (e) => {
