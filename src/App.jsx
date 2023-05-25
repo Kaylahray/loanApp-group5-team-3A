@@ -8,6 +8,7 @@ import Signup from "./Onboarding/SignUpPage/Signup";
 import { Context } from "./Context";
 import PasswordResetSuccess from "./Onboarding/PasswordResetSuccesful/PasswordResetSuccess";
 import VerificationSuccessful from "./Onboarding/VerificationSuccessful/VerificationSuccessful";
+import VerifyEmail from "./Onboarding/VerifyEmail/VerifyEmail";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -40,7 +41,7 @@ function App() {
 
 
    </Routes>  */}
-          <VerificationSuccessful/>
+          <VerifyEmail/>
           {/* <AddTeamMember /> */}
           {/* <PersonalDetailForm /> */}
         </Container>
