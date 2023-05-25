@@ -3,6 +3,8 @@ import "./App.scss";
 // import { Routes, Route } from "react-router-dom";
 
 import Container from "./Component/Container/Container";
+import ResetPasswordSent from "./Onboarding/ResetPasswordSent/ResetPasswordSent";
+import ResetPasswordForm from "./Onboarding/ResetPasswordForm/ResetPasswordForm";
 
 import Signup from "./Onboarding/SignUpPage/Signup";
 import { Context } from "./Context";
@@ -40,10 +42,11 @@ function App() {
      <Route path="/" element ={}/>
 
 
-   </Routes>  */}
-          <VerifyEmail/>
+   </Routes>
           {/* <AddTeamMember /> */}
           {/* <PersonalDetailForm /> */}
+          {/*<ResetPasswordForm/> */}
+          <ResetPasswordSent/>
         </Container>
       </div>
     </Context.Provider>
