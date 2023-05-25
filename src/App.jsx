@@ -5,14 +5,14 @@ import "./App.scss";
 import Container from "./Component/Container/Container"
 import { Context } from "./Context";
 import AddTeamMember from "./Onboarding/AddTeamMember/AddTeamMember";
-import LoginPage from "./Onboarding/LoginPage/LoginPage";
+// import LoginPage from "./Onboarding/LoginPage/LoginPage";
 //import Signup from "./Onboarding/SignUpPage/Signup";
-import ResetPasswordSent from "./Onboarding/ResetPasswordSent/ResetPasswordSent";
-import ResetPasswordForm from "./Onboarding/ResetPasswordForm/ResetPasswordForm";
-import { Context } from "./Context";
-import PasswordResetSuccess from "./Onboarding/PasswordResetSuccesful/PasswordResetSuccess";
-import VerificationSuccessful from "./Onboarding/VerificationSuccessful/VerificationSuccessful";
-import VerifyEmail from "./Onboarding/VerifyEmail/VerifyEmail";
+// import ResetPasswordSent from "./Onboarding/ResetPasswordSent/ResetPasswordSent";
+// import ResetPasswordForm from "./Onboarding/ResetPasswordForm/ResetPasswordForm";
+// import { Context } from "./Context";
+// import PasswordResetSuccess from "./Onboarding/PasswordResetSuccesful/PasswordResetSuccess";
+// import VerificationSuccessful from "./Onboarding/VerificationSuccessful/VerificationSuccessful";
+// import VerifyEmail from "./Onboarding/VerifyEmail/VerifyEmail";
 
 
 function App() {
@@ -49,12 +49,12 @@ function App() {
    </Routes>  
           <AddTeamMember />
           {/*<Signup /> */}
-          <LoginPage /> 
+          {/* <LoginPage />  */}
    
-          {/* <AddTeamMember /> */}
-          {/* <PersonalDetailForm /> */}
-          {/*<ResetPasswordForm/> */}
-          <ResetPasswordSent/>
+          <AddTeamMember /> 
+          {/* <PersonalDetailForm />
+          <ResetPasswordForm/>
+          <ResetPasswordSent/> */}
         </Container>
       </div>
     </Context.Provider>
