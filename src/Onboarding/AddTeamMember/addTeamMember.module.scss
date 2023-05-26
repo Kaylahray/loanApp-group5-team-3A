@@ -4,3 +4,52 @@
   @include flexCenter(row);
   margin-block: 2rem;
 }
+
+.addteam {
+  width: 490px;
+  margin: auto;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.logo {
+  margin-bottom: 30px;
+  color:#4c4ddc ;
+  font-weight: 700;
+  font-size: 28px ;
+  letter-spacing: 3px;
+}
+
+.fetch {
+  display: flex;
+  width: 300px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  border: 1px solid rgba(223, 224, 243, 1);
+  border-radius: 4px; 
+  padding: 10px 24px;
+  justify-content: space-between;
+}
+
+.skipnav {
+  @include flexRight(right);
+  font-size: 16px;
+  font-weight: 400;
+  color: #4c4ddc;
+  margin-top: -20px;
+
+} 
+
+.closeicon {
+  width: 24px;
+}
+
+.errormsg {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
