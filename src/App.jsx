@@ -13,7 +13,7 @@ import Settings from "./Pages/Settings/Settings";
 import Faq from "./Pages/Faq/Faq";
 import Models from "./Pages/Models/Models";
 import Logout from "./Pages/Logout/Logout";
-import CustomerProfile from "./Pages/CustomerProfile/CustomerProfile";
+import CustomerPro from "./Pages/CustomerProfile/CustomerProfile";
 
 // import SignUp from "./OnboardingPages/SignUp";
 // import PersonalDetails from "./OnboardingPages/PersonalDetails";
@@ -55,7 +55,7 @@ function App() {
               <Route path="/layout/application" element={<Application />}>
                 <Route
                   path="/layout/application/customerprofile"
-                  element={<CustomerProfile />}
+                  element={<CustomerPro/>}
                 />
               </Route>
               <Route path="/layout/teams" element={<Teams />} />

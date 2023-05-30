@@ -1,0 +1,35 @@
+.customer_name {
+    // line-height: 44px;
+    font-weight: 700;
+}
+
+.customer_details_title {
+    display: flex;
+    width: 180px;
+    flex-direction: row;
+    align-items: center;
+    color: #616161;
+    gap: 8px;
+}
+.customer_details__title {
+    display: flex;
+    flex-direction: row;
+    color: #0c0c0c;
+    gap: 8px;
+    align-items: center;
+}
+
+.customer_details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    color: #0c0c0c;
+ }
+
+.customer_details_wrraper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px 40px;
+
+}
