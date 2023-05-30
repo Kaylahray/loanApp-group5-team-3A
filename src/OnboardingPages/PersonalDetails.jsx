@@ -24,7 +24,7 @@ const PersonalDetails = () => {
     console.log(onSubmitProps);
     onSubmitProps.setSubmitting(false);
     onSubmitProps.resetForm();
-    navigate("./add");
+    navigate("/add");
   };
   return (
     <div className="main">

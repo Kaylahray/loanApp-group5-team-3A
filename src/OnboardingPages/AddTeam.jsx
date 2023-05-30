@@ -28,7 +28,7 @@ const AddTeam = () => {
     console.log(onSubmitProps);
     onSubmitProps.setSubmitting(false);
     onSubmitProps.resetForm();
-    navigate("./up");
+    navigate("/up");
   };
 
   return (
@@ -44,7 +44,7 @@ const AddTeam = () => {
             initialValues={initialValues}
             validationSchema={validationSchema}
             onSubmit={onSubmit}
-            validateOnMount
+            // validateOnMount
           >
             {(formik) => {
               console.log(formik);
