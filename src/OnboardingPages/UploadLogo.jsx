@@ -17,10 +17,10 @@ const UploadLogo = () => {
 
         <div className="skip">
           <button className="btn" type="submit">
-            Complete Sign Up
+            <Link to={"/verify"}> Complete Sign up</Link>
           </button>
 
-          <Link to={"./verify"}> skip</Link>
+          <Link to={"/verify"}> skip</Link>
         </div>
       </FormBox>
     </div>

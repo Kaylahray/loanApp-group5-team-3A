@@ -1,10 +1,3 @@
-// const LoginForm = () => {
-//   return <div>
-
-//   </div>;
-// };
-
-// export default LoginForm;
 import * as Yup from "yup";
 import { Formik, Form } from "formik";
 import ImageBox from "../Component/ImageBox/ImageBox";
@@ -13,17 +6,14 @@ import Image from "../Component/Image/Image";
 import FormikControl from "../Component/FormComponent/FormikControl";
 import { useNavigate } from "react-router-dom";
 
-const LoginForm = () => {
+const ForgotPassword = () => {
   const navigate = useNavigate();
 
   const initialValues = {
     email: "",
-    password: "",
   };
   const validationSchema = Yup.object({
     email: Yup.string().required("Required"),
-
-    password: Yup.string().required("No password provided."),
   });
 
   const onSubmit = (values, onSubmitProps) => {
@@ -31,7 +21,7 @@ const LoginForm = () => {
     console.log(onSubmitProps);
     onSubmitProps.setSubmitting(false);
     onSubmitProps.resetForm();
-    navigate("/logTwo");
+    navigate("./pdetails");
   };
   return (
     <div className="main">
@@ -41,7 +31,11 @@ const LoginForm = () => {
 
       <FormBox>
         <div className="logo"> LOGO</div>
-        <p className="welcome">Welcome let&apos;s get you started</p>
+        <p className="welcome">Forgot Password</p>
+        <p>
+          Enter the email address associated with this account to request
+          password reset verification link
+        </p>
         <div className="size">
           <Formik
             initialValues={initialValues}
@@ -57,31 +51,10 @@ const LoginForm = () => {
                       control="input"
                       type="email"
                       name="email"
-                      label="Work email"
+                      label="Work email (required)"
                       placeholder="e.g @chiomachris@gmail.com"
                     />
                   </div>
-
-                  <div className="form-control">
-                    <FormikControl
-                      control="input"
-                      type="password"
-                      name="password"
-                      label="Password"
-                      placeholder="*********"
-                    />
-                  </div>
-
-                  <button
-                    className="btn"
-                    type="submit"
-                    disabled={!formik.isValid || formik.isSubmitting}
-                  >
-                    Login
-                  </button>
-                  <p className="account">
-                    Have an account? <span> Sign in</span>
-                  </p>
                 </Form>
               );
             }}
@@ -92,4 +65,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default ForgotPassword;

@@ -4,25 +4,30 @@ import { Routes, Route } from "react-router-dom";
 
 import Container from "./Component/Container/Container";
 import { Context } from "./Context";
-import Layout from "./Component/LayoutComponent/Layout";
-import Dashboard from "./Pages/Dashboard/Dashboard";
-import Application from "./Pages/Applications/Application";
-import Teams from "./Pages/Teams/Teams";
-import Chats from "./Pages/Chats/Chats";
-import Settings from "./Pages/Settings/Settings";
-import Faq from "./Pages/Faq/Faq";
-import Models from "./Pages/Models/Models";
-import Logout from "./Pages/Logout/Logout";
-import CustomerProfile from "./Pages/CustomerProfile/CustomerProfile";
+// import Layout from "./Component/LayoutComponent/Layout";
+// import Dashboard from "./Pages/Dashboard/Dashboard";
+// import Application from "./Pages/Applications/Application";
+// import Teams from "./Pages/Teams/Teams";
+// import Chats from "./Pages/Chats/Chats";
+// import Settings from "./Pages/Settings/Settings";
+// import Faq from "./Pages/Faq/Faq";
+// import Models from "./Pages/Models/Models";
+// import Logout from "./Pages/Logout/Logout";
+// import CustomerProfile from "./Pages/CustomerProfile/CustomerProfile";
 
-// import SignUp from "./OnboardingPages/SignUp";
-// import PersonalDetails from "./OnboardingPages/PersonalDetails";
+import SignUp from "./OnboardingPages/SignUp";
+import PersonalDetails from "./OnboardingPages/PersonalDetails";
 // import LandingPage from "./OnboardingPages/LandingPage";
-// import AddTeam from "./OnboardingPages/AddTeam";
-// import UploadLogo from "./OnboardingPages/UploadLogo";
-// import SignUp from "./OnboardingPages/SignUp";
-// import LoginForm from "./OnboardingPages/LoginForm";
-// import LoginFormTwo from "./OnboardingPages/LoginFormTwo";
+import AddTeam from "./OnboardingPages/AddTeam";
+import UploadLogo from "./OnboardingPages/UploadLogo";
+import LoginForm from "./OnboardingPages/LoginForm";
+import LoginFormTwo from "./OnboardingPages/LoginFormTwo";
+import ForgotPassword from "./OnboardingPages/ForgotPassword";
+import ResetPassword from "./OnboardingPages/ResetPassword";
+import ResetPasswordSent from "./OnboardingPages/ResetPasswordSent";
+import PasswordResetSuccess from "./OnboardingPages/PasswordResetSuccess";
+import VerifyEmail from "./OnboardingPages/VerifyEmail";
+import VerificationSuccess from "./OnboardingPages/VerificationSuccess";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -42,12 +47,26 @@ function App() {
           </button> */}
 
           <Routes>
-            {/* <Route path="/" element={<SignUp />} />
-            <Route path="/login" element={<LoginForm />} />
-
-            <Route index element={<LoginFormTwo />} />
+            <Route path="/jbjb" element={<SignUp />} />
+            <Route path="/pdetails" element={<PersonalDetails />} />
+            <Route path="/forgotPassword" element={<ForgotPassword />} />
+            <Route path="/resetPassword" element={<ResetPassword />} />
+            <Route index element={<LoginForm />} />
+            <Route path="/logTwo" element={<LoginFormTwo />} />
             <Route path="/add" element={<AddTeam />} />
-            <Route path="/up" element={<UploadLogo />} /> */}
+            <Route path="/up" element={<UploadLogo />} />
+            <Route path="/resetPasswordSent" element={<ResetPasswordSent />} />
+            <Route
+              path="/passwordResetSuccess"
+              element={<PasswordResetSuccess />}
+            />
+            <Route path="/verify" element={<VerifyEmail />} />
+            <Route path="/verifySuccess" element={<VerificationSuccess />} />
+          </Routes>
+
+          {/* Layout routesss ///////////////////////////////////////////////////////////////////  */}
+
+          {/* <Routes>
 
             <Route path="/" element={<Layout />}>
               <Route path="/layout/dashboard" element={<Dashboard />} />
@@ -66,7 +85,7 @@ function App() {
               <Route path="/layout/faq" element={<Faq />} />
               <Route path="/layout/logout" element={<Logout />} />
             </Route>
-          </Routes>
+          </Routes> */}
         </Container>
       </div>
     </Context.Provider>
