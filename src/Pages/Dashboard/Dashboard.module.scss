@@ -1,0 +1,95 @@
+.search {
+  display: flex;
+  width: 520px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  column-gap: 11px;
+}
+
+.img {
+  width: 18px;
+  height: 18px;
+}
+
+.input {
+  background-color: transparent;
+  outline: none;
+}
+.input:focus {
+  border: 1px solid #4c4ddc;
+}
+.input::placeholder {
+  font-size: 16px;
+  padding: 8px;
+}
+
+.btn {
+  width: 160px;
+  height: 56px;
+  margin-block: auto;
+  color: white;
+  background-color: #4c4ddc;
+  border-radius: 6px;
+}
+.profile {
+  width: 48px;
+  height: 48px;
+  background-image: url("./DashboardIcons/profile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.first,
+.second {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.second {
+  column-gap: 40px;
+}
+.body {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+}
+.left {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.box {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+}
+.one,
+.two,
+.three {
+  height: 60px;
+  width: 30%;
+  margin: auto;
+}
+
+.one {
+  border-bottom: 2px solid #4c4ddc;
+}
+.two {
+  border-bottom: 2px solid #dcdb4c;
+}
+.three {
+  border-bottom: 2px solid #4cdc93;
+}
+.applicant {
+  font-size: 14px;
+  color: #0a0a0a;
+}
+.paragraph {
+  color: #0a0a0a;
+
+  font-size: 28px;
+  line-height: 36px;
+  vertical-align: middle;
+  letter-spacing: -2px;
+}

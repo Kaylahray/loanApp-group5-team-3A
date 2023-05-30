@@ -1,9 +1,21 @@
 @import "./variables";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.main {
+  @include flexCenter(row);
+  margin-block: 2rem;
+  // background-color: red;
+}
+
 .application {
   min-height: $Main-height;
-  font-family: "Inter", sans-serif;
 
   .btn {
     margin-top: 2rem;
@@ -15,4 +27,107 @@
 }
 .light {
   background-color: $backGroundColor;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+.form-control {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  // background-color: blue;
+  margin-bottom: 10px;
+}
+input,
+select {
+  display: block;
+  height: 30px;
+  width: 100%;
+  margin-top: 1px;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 8px 12px;
+  border: 1px solid #c2c2c2;
+}
+input::placeholder {
+  font-size: 12px;
+}
+select {
+  font-size: 14px;
+  padding: 5px 12px;
+}
+
+.size {
+  width: 600px;
+  // background-color: aqua;
+}
+label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.error {
+  color: red;
+}
+.welcome {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.welcomee {
+  font-size: 30px;
+  font-weight: 500;
+}
+.logo {
+  margin: 20px 0;
+}
+.btn {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  color: white;
+  background-color: #4c4ddc;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 2px;
+  margin-top: 30px;
+}
+.account {
+  padding-top: 5px;
+  font-size: 14px;
+  padding-bottom: 60px;
+}
+.account a {
+  text-decoration: none;
+}
+span {
+  color: rgb(36, 173, 173);
+}
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #ebe9e9;
+  color: #a5a4a4;
+}
+.landing {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.down {
+  position: absolute;
+  top: 50%;
+}
+
+.skip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
