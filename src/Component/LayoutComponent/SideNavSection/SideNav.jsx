@@ -22,6 +22,7 @@ const SideNav = () => {
           <div className={styles.nav1}>< RxStack /><NavLink to={"/layout/models"} className={styles.navl}> Models</NavLink></div>
           <div className={styles.nav1}>< FiSettings /> <NavLink to={"/layout/settings"} className={styles.navl}>Settings</NavLink></div>
           <div className={styles.nav1}>< HiOutlineUserGroup /><NavLink to={"/layout/teams"} className={styles.navl}> Teams</NavLink></div>
+          <div className={styles.nav1}>< HiOutlineUserGroup /><NavLink to={"/layout/customerprofile"} className={styles.navl}> CustomerProfile</NavLink></div>
         </div>
 
         <div className={styles.bottomS}> 
