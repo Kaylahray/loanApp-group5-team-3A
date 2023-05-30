@@ -131,3 +131,44 @@ button[disabled] {
   justify-content: space-between;
   align-items: center;
 }
+
+//  ///////////////////////////////////////////////
+
+.verify {
+  text-align: center;
+}
+
+.h2text {
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.ptext {
+  margin-bottom: 15px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  text-align: center;
+  letter-spacing: -0.011em;
+}
+
+.ptext2 {
+  margin-bottom: 25px;
+  color: #cd7b2e;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cont {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
