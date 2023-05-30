@@ -73,13 +73,9 @@ function App() {
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
               <Route path="/layout/application" element={<Application />}/>
-                <Route
+                <Route path="/layout/application/customerprofile" element={<CustomerPro/>}/>
 
-                  path="/layout/application/customerprofile"
-                  element={<CustomerPro/>}
-                />
-              </Route>
-                  path="/layout/customerprofile"element={<CustomerProfile />}/>
+                  {/* path="/layout/customerprofile"element={<CustomerProfile />}/> */}
               <Route path="/layout/teams" element={<Teams />} />
               <Route path="/layout/models" element={<Models />} />
 
