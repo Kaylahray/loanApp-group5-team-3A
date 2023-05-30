@@ -4,23 +4,28 @@ import styles from "./Dashboard.module.scss";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className={styles.body}>
       <Top>
-        <div className={styles.first}>
-          <h2>Hi chioma</h2>
-          <div className={styles.search}>
-            <img src={search} alt="img" className={styles.img} />
-            <input type="text" placeholder="search" className={styles.input} />
-          </div>
-        </div>
-        <div className={styles.second}>
-          <button className={styles.btn}>Create model</button>
+        <div className={styles.dashnav}>
+          <div className={styles.dashleft}>
+            <h3>Hi Tofunmi</h3>
 
-          <div className={styles.profile}> </div>
+            <div className={styles.dashinput}>
+              <img src={search} alt="img" className={styles.img} />
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+
+          <div className={styles.dashright}>
+            <button className={styles.dashnavbtn}>Create Model</button>
+            <div className={styles.profile}> </div>
+          </div>
         </div>
       </Top>
 
-      <div className={styles.body}>
+      {/* ////////////////////////////////////////////////////////////////////////////////////// */}
+
+      {/* <div className={styles.body}>
         <div className={styles.left}>
           <div className={styles.box}>
             <div className={styles.one}>
@@ -38,7 +43,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className={styles.right}> bjjjj</div>
-      </div>
+      </div> */}
     </div>
   );
 };
