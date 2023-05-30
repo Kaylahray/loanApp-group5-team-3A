@@ -1,3 +1,65 @@
 .nav {
   background-color: #fcfcfc;
+  font-size: 14px;
 }
+
+.slogo{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.navlinkContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+
+}
+
+.navl{
+  color: #616161;
+}
+
+.navl:hover{
+    color: white;
+}
+
+.topS{
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+  gap: 10px;
+}
+
+.nav1{
+ background-color: transparent;
+ height: 35px;
+ border-radius: 3px;
+ padding: 10px;
+ align-items: center;
+ justify-content: flex-start;
+ display: flex;
+ flex-direction: row;
+ gap: 5px;
+}
+
+.nav1:hover{
+  background-color: #4C4DDC;
+  color: white;
+  border-radius: 3px;
+}
+
+
+.bottomS{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-right: 30px;
+  gap:10px;
+
+}
+
+
+
