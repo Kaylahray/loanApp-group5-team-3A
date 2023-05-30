@@ -1,7 +1,7 @@
 // import { Chart } from 'chart.js'
 import styles from './BankState.module.scss'
 // import { useState } from 'react-router-dom'
-import {CustomerIncome} from './Data.js'
+import {CustomerIncome} from '../CustomerData/Data'
 
 const BankState = () => {
 

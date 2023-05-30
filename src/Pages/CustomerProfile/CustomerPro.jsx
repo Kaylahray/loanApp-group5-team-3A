@@ -1,10 +1,10 @@
 import styles from './CustomerPro.module.scss'  
-import Top from '../LayoutComponent/TopComponent/Top'
 import { HiOutlineChevronDown, HiOutlineChevronRight, } from 'react-icons/hi'
 import CustomerBio from './CutomerDetails/CustomerBio'
 import CustomerDoc from './CutomerDetails/CustomerDoc'
 import NavTab from './NavigationTab/NavTab'
 import BankState from './CustomerAnalysis/BankState'
+import Top from '../../Component/LayoutComponent/TopSectionComponent/Top'
 
 const CustomerPro = () => {
 
