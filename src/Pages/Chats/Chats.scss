@@ -1,0 +1,34 @@
+.chat-container {
+    display: flex;
+    height: 100%;
+    div {
+        flex-basis: 50%;
+    }
+}
+
+.message-center-container {
+    display: flex;
+    flex-direction: column;
+    .header, .footer {
+        flex-basis: 10%;
+
+    }
+    .body {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        .sent-message {
+            display: flex;
+            justify-content: start;
+        }
+        .received-message {
+            display: flex;
+            justify-content: end;
+        }
+    }
+}
+.avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
