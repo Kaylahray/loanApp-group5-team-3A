@@ -1,14 +1,14 @@
 .gridcotainer {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    row-gap: 32px;
+    row-gap: 30px;
     background: #FFFFFF;
     margin-top: 80px;
-    margin-left: 32px;
+    margin-left: 30px;
 }
 
 .griditem {
-    width: 220px;
+    width: 200px;
     height: 90px;
     text-align: justify;
     background: #DFE0F3;
@@ -17,8 +17,8 @@
     padding: 10px 0px 10px 20px;
 }
 
-.griditem h2{
-    margin: -5px;
+.griditem h3{
+    font-size: 20px;
 }
 
 .griditem p{

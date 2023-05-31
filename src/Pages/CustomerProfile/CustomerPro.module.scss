@@ -1,29 +1,29 @@
 
-.top {
-    display: flex;
-    height: 80px;
-    justify-content: space-between;
-    padding: 0px 40px;
-    align-items: center;
-    background-color: #fff;
-  }
+// .top {
+//     display: flex;
+//     height: 80px;
+//     justify-content: space-between;
+//     padding: 0px 40px;
+//     align-items: center;
+//     // background-color: #fff;
+//   }
 
   .breadcrumb {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 192px;
-    font-size: 16px;
+    // width: 192px;
+    font-size: 14px;
     font-weight: 400px;
 }
 
-button {
+.btn {
     display: flex;
-    width: 224px;
+    width: 200px;
     height: 48px;
     border-radius: 6px;
     border: none;
-    background-color: #4C4DDC;
+    background-color:#4c4ddc;
     color: #DFE0F3;
     font-size: 16px;
     font-weight: 400px;
