@@ -1,20 +1,20 @@
 // import { Chart } from 'chart.js'
 import styles from './BankState.module.scss'
 // import { useState } from 'react-router-dom'
-import {CustomerIncome} from '../CustomerData/Data'
+// import {CustomerIncome} from '../CustomerData/Data'
 
 const BankState = () => {
 
-  const [customerIncome, setCustomerIncome] = useState({
-    labels: CustomerIncome.map((item) => item.month),
-    datasets: [{
-      label: 'Income and expenses in the last 12 months',
-      data: CustomerIncome.map((item) => item.income),
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-      borderColor: 'rgba(255, 99, 132, 1)',
-      borderWidth: 1,
-    }]
-  })
+  // const [customerIncome, setCustomerIncome] = useState({
+  //   labels: CustomerIncome.map((item) => item.month),
+  //   datasets: [{
+  //     label: 'Income and expenses in the last 12 months',
+  //     data: CustomerIncome.map((item) => item.income),
+  //     backgroundColor: 'rgba(255, 99, 132, 0.2)',
+  //     borderColor: 'rgba(255, 99, 132, 1)',
+  //     borderWidth: 1,
+  //   }]
+  // })
   return (
     <div className={styles.gridcotainer}>
       <div className={styles.griditem}>

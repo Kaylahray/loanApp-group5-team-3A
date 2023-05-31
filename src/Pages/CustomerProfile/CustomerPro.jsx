@@ -12,7 +12,7 @@ const CustomerPro = () => {
     <div className={styles.customerpro}>
         
       <Top>
-        <div className={styles.top}>
+        {/* <div className={styles.top}> */}
 
             <div className={styles.breadcrumb}>
             <p>Applications</p>
@@ -21,9 +21,9 @@ const CustomerPro = () => {
             </div>
 
             <div className={styles.btn_decision}>
-              <button>Make decision <HiOutlineChevronDown/></button>             
+              <button className={styles.btn}>Make decision <HiOutlineChevronDown/></button>             
             </div>          
-        </div>
+        {/* </div> */}
       </Top>
       <CustomerBio/>
       <CustomerDoc/>
