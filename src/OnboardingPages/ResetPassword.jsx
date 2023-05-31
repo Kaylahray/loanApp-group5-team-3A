@@ -1,3 +1,10 @@
+// const LoginForm = () => {
+//   return <div>
+
+//   </div>;
+// };
+
+// export default LoginForm;
 import * as Yup from "yup";
 import { Formik, Form } from "formik";
 import ImageBox from "../Component/ImageBox/ImageBox";
@@ -6,22 +13,20 @@ import Image from "../Component/Image/Image";
 import FormikControl from "../Component/FormComponent/FormikControl";
 import { useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+const ResetPassword = () => {
   const navigate = useNavigate();
 
   const initialValues = {
-    email: "",
-    company: "",
-    employees: "",
     password: "",
+    passwordConfirmation: " ",
   };
   const validationSchema = Yup.object({
-    email: Yup.string().email("invalid").required("Required"),
-    company: Yup.string().required("Required"),
-    employees: Yup.number().required("Required"),
-    password: Yup.string()
-      .required("No password provided.")
-      .min(8, "must contain at least 8 letters."),
+
+    password: Yup.string().required("No password provided."),
+    passwordConfirmation: Yup.string().oneOf(
+      [Yup.ref("password"), null],
+      "Passwords must match"
+    ),
   });
 
   const onSubmit = (values, onSubmitProps) => {
@@ -29,7 +34,7 @@ const SignUp = () => {
     console.log(onSubmitProps);
     onSubmitProps.setSubmitting(false);
     onSubmitProps.resetForm();
-    navigate("/pdetails");
+    navigate("./pdetails");
   };
   return (
     <div className="main">
@@ -39,7 +44,7 @@ const SignUp = () => {
 
       <FormBox>
         <div className="logo"> LOGO</div>
-        <p className="welcome">Welcome let&apos;s get you started</p>
+        <p className="welcome">Reset Password</p>
         <div className="size">
           <Formik
             initialValues={initialValues}
@@ -53,36 +58,19 @@ const SignUp = () => {
                   <div className="form-control">
                     <FormikControl
                       control="input"
-                      type="email"
-                      name="email"
-                      label="Work email"
-                      placeholder="e.g @chiomachris@gmail.com"
+                      type="password"
+                      name="password"
+                      label="Create new password"
+                      placeholder="*********"
                     />
                   </div>
-                  <div className="form-control">
-                    <FormikControl
-                      control="input"
-                      type="text"
-                      name="company"
-                      label="Company name"
-                      placeholder="e.g Stutern"
-                    />
-                  </div>
-                  <div className="form-control">
-                    <FormikControl
-                      control="input"
-                      type="number"
-                      name="employees"
-                      label="Number of employees"
-                      placeholder="e.g Stutern"
-                    />
-                  </div>
+
                   <div className="form-control">
                     <FormikControl
                       control="input"
                       type="password"
-                      name="password"
-                      label="Password"
+                      name="passwordConfirmation"
+                      label=" Re-enter Password"
                       placeholder="*********"
                     />
                   </div>
@@ -92,10 +80,10 @@ const SignUp = () => {
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
                   >
-                    Submit
+                    Login
                   </button>
                   <p className="account">
-                    Have an account? <span> Login</span>
+                    Have an account? <span> Sign in</span>
                   </p>
                 </Form>
               );
@@ -107,4 +95,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default ResetPassword;

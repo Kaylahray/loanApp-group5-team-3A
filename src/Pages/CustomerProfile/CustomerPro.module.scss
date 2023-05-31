@@ -1,0 +1,35 @@
+
+.top {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    padding: 0px 40px;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  .breadcrumb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 192px;
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+button {
+    display: flex;
+    width: 224px;
+    height: 48px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4C4DDC;
+    color: #DFE0F3;
+    font-size: 16px;
+    font-weight: 400px;
+    cursor: pointer;
+    padding: 6px 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+
