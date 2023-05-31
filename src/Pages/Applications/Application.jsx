@@ -1,24 +1,27 @@
-import Top from "../../Component/LayoutComponent/TopSectionComponent/Top";
+//import Top from "../../Component/LayoutComponent/TopSectionComponent/Top";
+//import { useState } from "react"
 import styles from "./Application.module.scss";
 import { TbSearch } from "react-icons/tb";
 import ApplicationTable from './ApplicationTables/ApplicationTable';
+import { MdArrowBackIosNew } from "react-icons/md";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
+
 //import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
 //import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 
 const Application = () => {
+
   return (
     <div>
      <div className={styles.application}>
-        <Top />
         <div className={styles.appcontainer}>
             <nav>
                 <h1>Applications</h1>
                 <div className={styles.appinput}>
                     <TbSearch className={styles.appicon}/>
-                    <input type="text" placeholder='Search'/>
+                    <input type="text" placeholder='Search' className={styles.input1}/>
                 </div>
-                
-            </nav>
+              </nav>
 
             <div className={styles.apptop}>
                 <a href="/" className={styles.apptopall}>All (200)</a>
@@ -31,7 +34,7 @@ const Application = () => {
             
             <div className={styles.appfooter}>
                 <div className={styles.appfooterback}>
-                    {/*<ArrowBackIosNewOutlinedIcon className='appfooter-icon'/>*/}
+                    < MdArrowBackIosNew className='appfootericon'/>
                     <a href="">Previous</a>
                 </div>
                 <div className={styles.appfooternos}>
@@ -48,7 +51,7 @@ const Application = () => {
                 </div>
                 <div className={styles.appfooternext}>
                     <a href="">Next</a>
-                    {/*<ArrowForwardIosOutlinedIcon className='appfooter-icon'>*/}
+                    < MdOutlineArrowForwardIos className='appfootericon' />
                 </div>
             </div>
         </div>
@@ -56,6 +59,6 @@ const Application = () => {
      
     </div>
   )
-}
+};
 
 export default Application;
