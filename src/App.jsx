@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023 Your Company Name
+ * All rights reserved.
+ */
 import { useState } from "react";
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
