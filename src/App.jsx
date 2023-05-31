@@ -17,7 +17,7 @@ import Settings from "./Pages/Settings/Settings";
 import Faq from "./Pages/Faq/Faq";
 import Models from "./Pages/Models/Models";
 import Logout from "./Pages/Logout/Logout";
-import CustomerPro from "./Pages/CustomerProfile/CustomerProfile";
+import CustomerPro from "./Pages/CustomerProfile/CustomerPro";
 
 // import SignUp from "./OnboardingPages/SignUp";
 // import PersonalDetails from "./OnboardingPages/PersonalDetails";
@@ -82,7 +82,7 @@ function App() {
                   element={<CustomerPro/>}
                 />
               </Route>
-                  path="/layout/customerprofile"element={<CustomerProfile />}/>
+                  
               <Route path="/layout/teams" element={<Teams />} />
               <Route path="/layout/models" element={<Models />} />
 
@@ -90,7 +90,7 @@ function App() {
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />
               <Route path="/layout/logout" element={<Logout />} />
-            </Route>
+            
           </Routes>
         </Container>
       </div>
