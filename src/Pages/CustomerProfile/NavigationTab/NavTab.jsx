@@ -8,7 +8,7 @@ const NavTab = () => {
             <ul className={styles.nav_container}>
                 <li><NavLink>Loan History</NavLink></li>
                 <div id={styles.tabs}><li><NavLink>Bank statement analysis</NavLink></li></div>
-                <li><NavLink>Credit report analysis</NavLink></li>
+                <li><NavLink to={'/creditanalysis'}>Credit report analysis</NavLink></li>
                 <li><NavLink>Prediction model analysis</NavLink></li>
             </ul>
         </div>

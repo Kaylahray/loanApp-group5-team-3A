@@ -22,6 +22,12 @@ nav ul li a {
     text-decoration: none;
     color: #9E9E9E;
 }
+nav ul li a:active {
+    font-weight: 400;
+    font-size: 14px;
+    // text-decoration: underline;
+    border-bottom: 1px solid #4C4DDC;
+}
 
 .tab.active {
     color: #000000;
