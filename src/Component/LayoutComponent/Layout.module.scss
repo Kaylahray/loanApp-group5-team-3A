@@ -1,5 +1,10 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  height: 100vh;
+  // height: min-content;
+  // background-color: bisque;
+  height: 1024px;
+}
+.left {
+  height: fit-content;
 }

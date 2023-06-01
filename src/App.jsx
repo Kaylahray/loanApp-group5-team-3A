@@ -13,22 +13,21 @@ import Settings from "./Pages/Settings/Settings";
 import Faq from "./Pages/Faq/Faq";
 import Models from "./Pages/Models/Models";
 import Logout from "./Pages/Logout/Logout";
-import CustomerPro from "./Pages/CustomerProfile/CustomerPro";
+import CustomerProfile from "./Pages/CustomerProfile/CustomerProfile";
 
-
-// import SignUp from "./OnboardingPages/SignUp";
-// import PersonalDetails from "./OnboardingPages/PersonalDetails";
-// import LandingPage from "./OnboardingPages/LandingPage";
-// import AddTeam from "./OnboardingPages/AddTeam";
-// import UploadLogo from "./OnboardingPages/UploadLogo";
-// import LoginForm from "./OnboardingPages/LoginForm";
-// import LoginFormTwo from "./OnboardingPages/LoginFormTwo";
-// import ForgotPassword from "./OnboardingPages/ForgotPassword";
-// import ResetPassword from "./OnboardingPages/ResetPassword";
-// import ResetPasswordSent from "./OnboardingPages/ResetPasswordSent";
-// import PasswordResetSuccess from "./OnboardingPages/PasswordResetSuccess";
-// import VerifyEmail from "./OnboardingPages/VerifyEmail";
-// import VerificationSuccess from "./OnboardingPages/VerificationSuccess";
+import SignUp from "./OnboardingPages/SignUp";
+import PersonalDetails from "./OnboardingPages/PersonalDetails";
+import LandingPage from "./OnboardingPages/LandingPage";
+import AddTeam from "./OnboardingPages/AddTeam";
+import UploadLogo from "./OnboardingPages/UploadLogo";
+import LoginForm from "./OnboardingPages/LoginForm";
+import LoginFormTwo from "./OnboardingPages/LoginFormTwo";
+import ForgotPassword from "./OnboardingPages/ForgotPassword";
+import ResetPassword from "./OnboardingPages/ResetPassword";
+import ResetPasswordSent from "./OnboardingPages/ResetPasswordSent";
+import PasswordResetSuccess from "./OnboardingPages/PasswordResetSuccess";
+import VerifyEmail from "./OnboardingPages/VerifyEmail";
+import VerificationSuccess from "./OnboardingPages/VerificationSuccess";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -47,12 +46,14 @@ function App() {
             theme
           </button> */}
 
-          {/* <Routes>
-            <Route path="/jbjb" element={<SignUp />} />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/signup" element={<SignUp />} />
+
             <Route path="/pdetails" element={<PersonalDetails />} />
             <Route path="/forgotPassword" element={<ForgotPassword />} />
             <Route path="/resetPassword" element={<ResetPassword />} />
-            <Route index element={<LoginForm />} />
+            <Route path="/login" element={<LoginForm />} />
             <Route path="/logTwo" element={<LoginFormTwo />} />
             <Route path="/add" element={<AddTeam />} />
             <Route path="/up" element={<UploadLogo />} />
@@ -63,19 +64,16 @@ function App() {
             />
             <Route path="/verify" element={<VerifyEmail />} />
             <Route path="/verifySuccess" element={<VerificationSuccess />} />
-          </Routes> */}
-
-          {/* Layout routesss ///////////////////////////////////////////////////////////////////  */}
-
-          <Routes>
-
-            <Route path="/" element={<Layout />}>
+            <Route path="/layout" element={<Layout />}>
+              <Route path="/layout/" element={<Dashboard />} />
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
-              <Route path="/layout/application" element={<Application />}/>
-                <Route path="/layout/customerprofile" element={<CustomerPro/>}/>
-
-                  {/* path="/layout/customerprofile"element={<CustomerProfile />}/> */}
+              <Route path="/layout/application" element={<Application />}>
+                <Route
+                  path="/layout/application/customerprofile"
+                  element={<CustomerProfile />}
+                />
+              </Route>
               <Route path="/layout/teams" element={<Teams />} />
               <Route path="/layout/models" element={<Models />} />
 
