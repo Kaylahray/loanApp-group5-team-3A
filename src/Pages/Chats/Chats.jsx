@@ -1,17 +1,16 @@
-import FriendListComponent from "./FriendList";
-import MessageCenterComponent from "./MessageCenter";
+import FriendListComponent from "./FriendList/FriendList";
+import MessageCenterComponent from "./MessageCenter/MessageCenter";
 import "./Chats.scss"
 import { useState } from "react";
 
-const Chats = () => {
-  const [ friend, setFriend ] = useState(null);
 
+ function Chats() {
   return (
-    <div className="chat-container">
-      <FriendListComponent setFriend={setFriend} />
-      <MessageCenterComponent friend={friend} />
+    <div className="main-container">
+      <FriendListComponent />
+      <MessageCenterComponent />
     </div>
   );
-};
+}
 
 export default Chats;
