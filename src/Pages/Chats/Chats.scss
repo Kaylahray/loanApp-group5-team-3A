@@ -92,7 +92,7 @@ body {
     }
     .message {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         overflow: scroll;
         height: 77%;
         color: #fcfcfc;

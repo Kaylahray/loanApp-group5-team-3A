@@ -16,7 +16,7 @@ export default function MessageCenter() {
   const composeMessage = (newMessage) => {
     const sentMessage = { message: newMessage, sentMessage: false };
     const receivedMessage = { message: newMessage, sentMessage: true };
-    setMessages([ ...messages, sentMessage, receivedMessage ])
+    setMessages([receivedMessage, sentMessage, ...messages]);
   }
   
   return (

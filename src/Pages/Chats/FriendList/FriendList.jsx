@@ -9,9 +9,9 @@ export default function FriendList() {
         <input type="text" />
       </div>
 
-      <FriendComponent notification={2} />
+      <FriendComponent notification={2} active={true}/>
       <FriendComponent notification={0} />
-      <FriendComponent notification={0} />
+      <FriendComponent notification={0} active={false}/>
       <FriendComponent notification={0} />
       <FriendComponent notification={0} />
       <FriendComponent notification={0} />

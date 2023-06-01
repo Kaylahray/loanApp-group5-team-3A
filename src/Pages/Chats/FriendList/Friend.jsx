@@ -1,10 +1,11 @@
-export default function FriendComponent({ notification }) {
+export default function FriendComponent({ notification, active }) {
+  const friendClassName = active ? "juliet" : "text";
   return (
     <div className="friend-main">
       <div className="friend-list">
         <img src="/images/person.svg" alt="" />
         <div className="friend-name">
-          <span className="juliet">juliet Frank</span>
+          <span className={friendClassName}>juliet Frank</span>
           <span className="text">This is lovely</span>
         </div>
       </div>
