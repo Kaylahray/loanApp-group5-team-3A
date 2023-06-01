@@ -1,24 +1,34 @@
+import { Link } from "react-router-dom";
+
 const ResetPasswordSent = () => {
   return (
-    <div className="">
-      <h1 className="">Reset password</h1>
+    <div className="verify">
+      <h1>LOGO</h1>
+      <h1 className="h2text">Reset password</h1>
       <div>
-        <p className="">
+        <p className="ptext">
           We just sent a password reset link to{" "}
-          <a href="#">peacesandy04@gmail.com</a>
+          <a href="#" className="email">
+            peacesandy04@gmail.com
+          </a>
           <br /> Click on the link to complete complete password reset
         </p>
 
-        <p className="">Please know that the link will expire in 4 hours</p>
+        <p className="ptext2">
+          Please know that the link will expire in 4 hours
+        </p>
       </div>
+
       <div>
-        {/* <Button>
-          <Link to={"/resetpassword"}> Open email</Link>
-        </Button> */}
+        <button className="btn">
+          {" "}
+          <Link to={"/resetPassword"}>Open email </Link>
+        </button>
       </div>
-      <div>
-        <p>Didn &apos;t get the email? Request again</p>
-      </div>
+
+      <p className="account">
+        Didn&apos;t get the email?<span>Request again</span>
+      </p>
     </div>
   );
 };
