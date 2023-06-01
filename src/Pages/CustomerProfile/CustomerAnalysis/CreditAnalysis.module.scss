@@ -5,6 +5,7 @@
     column-gap: 30px;
     background: #FFFFFF;
     margin-top: 60px;
+    margin-bottom: 50px;
 }
 
 .griditem {
@@ -27,19 +28,3 @@
     font-size: 12px;
     padding-bottom: 10px;
 }
-
-.header {
-    position: absolute;
-    width: 398px;
-    height: 28px;
-    top: 350px;
-    margin: 15px 0px 0px 0px;
-    font-weight: 600;
-  }
-  
-  .chart {
-    position: absolute;
-    width: 840px;
-    height: 380px;
-    top: 450px;
-  }
