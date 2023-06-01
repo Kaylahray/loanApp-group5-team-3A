@@ -1,8 +1,8 @@
 .application {
   //  display: flex;
-   // align-items: flex-start;
+  // align-items: flex-start;
     //gap: 50px;
-    //position: absolute;
+    position: absolute;
    //height: 1000px;
    // left: 0px;
 }
@@ -15,9 +15,9 @@
    align-items: flex-start;
    padding: 0px;
    gap: 30px;
-  // position: absolute;
-   width: 1000px;
-   height: 872px;
+  //position: absolute;
+   //width: 1000px;
+  // height: 872px;
    left: 344px;
    top: 40px;
    margin-left: 30px;
@@ -86,7 +86,7 @@ nav input {
   
 }
 
-.apptop a {
+.apptop {
     //width: 80px;
     height: 24px;
     font-family: 'Inter';
@@ -113,7 +113,7 @@ nav input {
     display: flex;
     flex-direction: row;
     align-items: center;
-    //padding: 0px;
+    padding: 0px;
     gap: 15px;
     //position: absolute;
     width: 100%;
