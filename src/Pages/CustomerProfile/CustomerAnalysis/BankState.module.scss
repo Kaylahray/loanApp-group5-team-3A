@@ -1,0 +1,27 @@
+.gridcotainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 30px;
+    background: #FFFFFF;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+.griditem {
+    width: 200px;
+    height: 90px;
+    text-align: justify;
+    background: #DFE0F3;
+    border: 1px solid #DFE0F3;
+    border-radius: 8px;
+    padding: 10px 0px 10px 20px;
+}
+
+.griditem h3{
+    font-size: 20px;
+}
+
+.griditem p{
+    color: #616161;
+    font-size: 14px;
+}
