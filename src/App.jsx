@@ -6,14 +6,16 @@ import Container from "./Component/Container/Container";
 import { Context } from "./Context";
 import Layout from "./Component/LayoutComponent/Layout";
 import Dashboard from "./Pages/Dashboard/Dashboard";
-import Application from "./Pages/Applications/Application";
+import Application from "./Pages/Applications/UserApplications/Application";
 import Teams from "./Pages/Teams/Teams";
 import Chats from "./Pages/Chats/Chats";
 import Settings from "./Pages/Settings/Settings";
 import Faq from "./Pages/Faq/Faq";
 import Models from "./Pages/Models/Models";
 import Logout from "./Pages/Logout/Logout";
+
 import CustomerProfile from "./Pages/CustomerProfile/CustomerPro";
+
 
 import SignUp from "./OnboardingPages/SignUp";
 import PersonalDetails from "./OnboardingPages/PersonalDetails";
@@ -69,10 +71,10 @@ function App() {
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
               <Route path="/layout/application" element={<Application />}>
-                <Route
+                {/* <Route
                   path="/layout/application/customerprofile"
                   element={<CustomerProfile />}
-                />
+                /> */}
               </Route>
               <Route path="/layout/teams" element={<Teams />} />
               <Route path="/layout/models" element={<Models />} />

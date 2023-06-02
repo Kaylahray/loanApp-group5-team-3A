@@ -1,0 +1,72 @@
+.appH {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    //padding: 0px;
+    width: 950px;
+    height: 40px;
+    background: #F5F5FF;
+    color: #404040;
+}
+
+.appH th {
+    width: 158px;
+    height: 20px;
+    //font-family: 'Inter';
+    //font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.006em;
+    color: #404040;
+    padding: 10px;
+}
+
+.appH .tableA, .appB .tableA {
+    /* text-align: right; */
+    color: #4C4DDC;
+    justify-content: flex-end;
+}
+
+.appB:hover{
+    background-color: #F5F5FF;
+    color: rgb(108, 108, 108);
+}
+
+.appB {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    width: 950px;
+    height: 35px;
+    font-size: 13px;
+}
+
+.appB td {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 1000px;
+    height: 35px;
+    border-bottom: 1px solid #EFEFEF;
+    padding: 10px;
+    
+}
+
+.appB .tableA {
+    margin-right: 10px;
+}
+
+.status{
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    border-radius: 7px;
+    font-weight: 50px;
+}

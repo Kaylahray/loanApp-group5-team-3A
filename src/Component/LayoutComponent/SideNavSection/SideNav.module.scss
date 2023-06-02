@@ -6,7 +6,7 @@
 
 .slogo {
   margin-top: 30px;
-  margin-left: 30px;
+  margin-left: 35px;
 }
 
 .navlinkContainer {
@@ -43,12 +43,23 @@
   display: flex;
   flex-direction: row;
   gap: 5px;
+  font-size: 16px;
 }
 
 .nav1:hover {
   background-color: #4c4ddc;
   color: white;
   border-radius: 3px;
+  font-size: 18px;
+}
+.active {
+  background-color: #4c4ddc;
+  color: white;
+  font-size: 18px;
+}
+.active a {
+  color: #fcfcfc;
+  font-size: 18px;
 }
 
 .bottomS {
