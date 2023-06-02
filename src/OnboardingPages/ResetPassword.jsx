@@ -21,7 +21,6 @@ const ResetPassword = () => {
     passwordConfirmation: " ",
   };
   const validationSchema = Yup.object({
-
     password: Yup.string().required("No password provided."),
     passwordConfirmation: Yup.string().oneOf(
       [Yup.ref("password"), null],
@@ -34,7 +33,7 @@ const ResetPassword = () => {
     console.log(onSubmitProps);
     onSubmitProps.setSubmitting(false);
     onSubmitProps.resetForm();
-    navigate("./pdetails");
+    navigate("/passwordResetSuccess");
   };
   return (
     <div className="main">
@@ -60,7 +59,7 @@ const ResetPassword = () => {
                       control="input"
                       type="password"
                       name="password"
-                      label="Create new password"
+                      label="Create new password(required)"
                       placeholder="*********"
                     />
                   </div>
@@ -70,7 +69,7 @@ const ResetPassword = () => {
                       control="input"
                       type="password"
                       name="passwordConfirmation"
-                      label=" Re-enter Password"
+                      label=" Re-enter Password(required)"
                       placeholder="*********"
                     />
                   </div>
@@ -80,10 +79,10 @@ const ResetPassword = () => {
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
                   >
-                    Login
+                    Continue
                   </button>
                   <p className="account">
-                    Have an account? <span> Sign in</span>
+                    Here by mistake? <span> Login</span>
                   </p>
                 </Form>
               );

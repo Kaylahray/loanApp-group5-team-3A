@@ -3,10 +3,11 @@ import Select from "./Select";
 
 /* eslint-disable react/prop-types */
 const FormikControl = (props) => {
-  const { control, ...rest } = props;
+  const { control, variant, ...rest } = props;
+
   switch (control) {
     case "input":
-      return <Input {...rest} />;
+      return <Input variant= {variant} {...rest} />;
     case "select":
       return <Select {...rest} />;
   }

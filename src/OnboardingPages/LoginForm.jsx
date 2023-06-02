@@ -11,7 +11,7 @@ import ImageBox from "../Component/ImageBox/ImageBox";
 import FormBox from "../Component/FormBox/FormBox";
 import Image from "../Component/Image/Image";
 import FormikControl from "../Component/FormComponent/FormikControl";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const LoginForm = () => {
     console.log(onSubmitProps);
     onSubmitProps.setSubmitting(false);
     onSubmitProps.resetForm();
-    navigate("/logTwo");
+    navigate("/layout");
   };
   return (
     <div className="main">
@@ -57,7 +57,7 @@ const LoginForm = () => {
                       control="input"
                       type="email"
                       name="email"
-                      label="Work email"
+                      label="Work email address(required)"
                       placeholder="e.g @chiomachris@gmail.com"
                     />
                   </div>
@@ -67,11 +67,14 @@ const LoginForm = () => {
                       control="input"
                       type="password"
                       name="password"
-                      label="Password"
+                      label="Password (required)"
                       placeholder="*********"
+                      variant={true}
                     />
                   </div>
-
+                  <p className="forgot">
+                    <Link to={"/forgotPassword"}>forgot password?</Link>
+                  </p>
                   <button
                     className="btn"
                     type="submit"
@@ -80,7 +83,11 @@ const LoginForm = () => {
                     Login
                   </button>
                   <p className="account">
-                    Have an account? <span> Sign in</span>
+                    Have an account?{" "}
+                    <span>
+                      {" "}
+                      <Link to={"/signup"}> Sign up</Link>
+                    </span>
                   </p>
                 </Form>
               );
