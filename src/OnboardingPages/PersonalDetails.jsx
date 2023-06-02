@@ -78,11 +78,8 @@ const PersonalDetails = () => {
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
                   >
-                    Submit
+                    Continue
                   </button>
-                  <p className="account">
-                    Have an account? <span> Login</span>
-                  </p>
                 </Form>
               );
             }}
