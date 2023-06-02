@@ -6,14 +6,16 @@ import Container from "./Component/Container/Container";
 import { Context } from "./Context";
 import Layout from "./Component/LayoutComponent/Layout";
 import Dashboard from "./Pages/Dashboard/Dashboard";
-import Application from "./Pages/Applications/Application";
+import Application from "./Pages/Applications/UserApplications/Application";
 import Teams from "./Pages/Teams/Teams";
 import Chats from "./Pages/Chats/Chats";
 import Settings from "./Pages/Settings/Settings";
 import Faq from "./Pages/Faq/Faq";
 import Models from "./Pages/Models/Models";
 import Logout from "./Pages/Logout/Logout";
-// import CustomerProfile from "./Pages/CustomerProfile/CustomerProfile";
+
+import CustomerProfile from "./Pages/CustomerProfile/CustomerPro";
+
 
 import SignUp from "./OnboardingPages/SignUp";
 import PersonalDetails from "./OnboardingPages/PersonalDetails";
@@ -82,6 +84,8 @@ function App() {
               <Route path="/layout/faq" element={<Faq />} />
               <Route path="/layout/logout" element={<Logout />} />
             </Route>
+            <Route path="/models" element={<Models />} />
+
           </Routes>
         </Container>
       </div>
