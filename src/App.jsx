@@ -6,7 +6,7 @@ import Container from "./Component/Container/Container";
 import { Context } from "./Context";
 import Layout from "./Component/LayoutComponent/Layout";
 import Dashboard from "./Pages/Dashboard/Dashboard";
-import Application from "./Pages/Applications/Application";
+import Application from "./Pages/Applications/UserApplications/Application";
 import Teams from "./Pages/Teams/Teams";
 import Chats from "./Pages/Chats/Chats";
 import Settings from "./Pages/Settings/Settings";

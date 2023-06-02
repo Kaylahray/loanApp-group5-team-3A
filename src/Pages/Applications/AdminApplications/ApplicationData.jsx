@@ -1,6 +1,6 @@
 
 
-const appdata = [
+const ApplicationData = [
     {
         id: 1,
         name: 'Shakirat Akanji',
@@ -99,4 +99,4 @@ const appdata = [
     },
 ];
 
-export default appdata;
+export default ApplicationData;
