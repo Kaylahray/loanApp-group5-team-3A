@@ -13,7 +13,9 @@ import Settings from "./Pages/Settings/Settings";
 import Faq from "./Pages/Faq/Faq";
 import Models from "./Pages/Models/Models";
 import Logout from "./Pages/Logout/Logout";
-// import CustomerProfile from "./Pages/CustomerProfile/CustomerProfile";
+
+import CustomerProfile from "./Pages/CustomerProfile/CustomerPro";
+
 
 import SignUp from "./OnboardingPages/SignUp";
 import PersonalDetails from "./OnboardingPages/PersonalDetails";
