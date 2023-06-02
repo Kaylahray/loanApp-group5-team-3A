@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$Primary-colors: #4c4ddc;
+$box-maxWidth: 1440px;
+$backGroundColor: #ffffff;
+$Main-height: 100vh;
+$marginMain: 2rem auto;
+$row-gap: 10rem;
+$text-color: #000;
+$Font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+@function weight($weight-name) {
+  @return map-get($Font-weights, $weight-name);
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+@mixin flexRight($direction) {
+  display: flex;
+  justify-content: right;
+}
+
+@mixin theme($dark-theme: true) {
+  @if $dark-theme {
+    background-color: darken($backGroundColor, 100%);
+    color: lighten($text-color, 100%);
+  }
+}

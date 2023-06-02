@@ -1,0 +1,10 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  // height: min-content;
+  // background-color: bisque;
+  height: 100vh;
+}
+.left {
+  height: 100vh;
+}
