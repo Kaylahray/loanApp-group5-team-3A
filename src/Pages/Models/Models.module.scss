@@ -1,0 +1,23 @@
+.body{
+    position: relative;
+}
+
+.ModelTop{
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+}
+
+
+
+
+.profiles {
+    width: 48px;
+    height: 48px;
+    background-image: url("./ModelIcons/profile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-color: red;
+  }
