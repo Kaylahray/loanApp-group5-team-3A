@@ -38,7 +38,7 @@ const SignUp = () => {
       </ImageBox>
 
       <FormBox>
-        <div className="logo"> LOGO</div>
+        <div className="logo"> SMARTLEND</div>
         <p className="welcome">Welcome let&apos;s get you started</p>
         <div className="size">
           <Formik

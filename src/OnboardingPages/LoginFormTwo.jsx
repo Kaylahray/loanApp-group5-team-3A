@@ -45,7 +45,7 @@ const LoginFormTwo = () => {
       </ImageBox>
 
       <FormBox>
-        <div className="logo"> LOGO</div>
+        <div className="logo"> SMARTLEND</div>
         <p className="welcome">Welcome let&apos;s get you started</p>
         <div className="size">
           <Formik
@@ -74,6 +74,7 @@ const LoginFormTwo = () => {
                       name="password"
                       label="Password"
                       placeholder="*********"
+                      variant={true}
                     />
                   </div>
 
@@ -84,6 +85,7 @@ const LoginFormTwo = () => {
                       name="passwordConfirmation"
                       label=" Confirm Password"
                       placeholder="*********"
+                      variant={true}
                     />
                   </div>
 

@@ -125,8 +125,10 @@ const Dashboard = () => {
                       <img src={item.img} alt="img" />
                     </div>
                     <div>
-                      <p>{item.name}</p>
-                      <p>{item.text}</p>
+                      <p>
+                        <strong> {item.name} </strong>{" "}
+                        <span className="span">{item.text}</span>
+                      </p>
                       <h4>{item.time}</h4>
                     </div>
                   </div>

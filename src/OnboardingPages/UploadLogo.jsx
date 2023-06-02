@@ -3,7 +3,7 @@ import FormBox from "../Component/FormBox/FormBox";
 import Image from "../Component/Image/Image";
 import ImageBox from "../Component/ImageBox/ImageBox";
 import { useState } from "react";
-
+import { FcNext } from "react-icons/fc";
 const UploadLogo = () => {
   const [file, setFile] = useState("");
 
@@ -21,7 +21,9 @@ const UploadLogo = () => {
       <FormBox>
         <div className="logo">SMARTLEND</div>
         <p className="welcomee">Upload Company Logo</p>
-        <p>Give your workspace a more pleasing feel with your company logo</p>
+        <p className="space">
+          Give your workspace a more pleasing feel with your company logo
+        </p>
         <div className="size">
           <label htmlFor="image-upload" className="uploadLabel">
             <input
@@ -61,7 +63,15 @@ const UploadLogo = () => {
             <Link to={"/verify"}> Complete Sign up</Link>
           </button>
 
-          <Link to={"/verify"}> skip</Link>
+          <button className="hi">
+            <Link to={"/verify"}> skip</Link>{" "}
+            <span>
+              <Link to={"/verify"}>
+                {" "}
+                <FcNext />
+              </Link>{" "}
+            </span>
+          </button>
         </div>
       </FormBox>
     </div>

@@ -110,6 +110,10 @@
   background-size: cover;
 }
 
+.notice {
+  font-weight: bold;
+}
+
 ///////////////////////////////////////////////////////////////////////////////
 
 // .first,
@@ -386,4 +390,6 @@
   align-items: center;
   gap: 30px;
   text-overflow: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(253, 249, 249);
 }

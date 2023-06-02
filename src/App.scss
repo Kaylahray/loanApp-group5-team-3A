@@ -52,14 +52,14 @@
 
 .eye {
   position: absolute;
-  right: 1rem;
+  right: 4rem;
 }
 
 input,
 select {
   display: block;
   height: 30px;
-  width: 100%;
+  width: 90%;
   margin-top: 1px;
   border-radius: 5px;
   background-color: transparent;
@@ -76,6 +76,7 @@ select {
 
 .size {
   width: 600px;
+  margin-top: 20px;
 }
 label {
   font-size: 14px;
@@ -95,10 +96,17 @@ label {
 .welcomee {
   font-size: 30px;
   font-weight: 500;
+  margin-bottom: 10px;
 }
+
 .logo {
-  margin: 20px 0;
+  margin: 15px 0;
+  color: #4c4ddc;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 3px;
 }
+
 .btn {
   text-align: center;
   font-size: 12px;
@@ -156,6 +164,9 @@ label {
 span {
   color: rgb(36, 173, 173);
 }
+.span {
+  color: #363333;
+}
 
 .fetch {
   display: flex;
@@ -196,7 +207,8 @@ button[disabled] {
 }
 .paragraph {
   font-size: 14px;
-  padding-inline: 1rem;
+  padding-inline: 0.2rem;
+  margin-bottom: 1.3rem;
 }
 .downlanding {
   position: absolute;
@@ -220,9 +232,16 @@ button[disabled] {
 
 .verify {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
-
+.hi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hi a {
+  color: #4c4ddc;
+}
 .h2text {
   font-size: 30px;
   font-weight: bolder;
@@ -256,7 +275,7 @@ button[disabled] {
   display: block;
   justify-content: center;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 4rem;
 }
 .uploadLabel {
   position: relative;
