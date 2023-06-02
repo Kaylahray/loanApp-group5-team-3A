@@ -82,6 +82,8 @@ function App() {
               <Route path="/layout/faq" element={<Faq />} />
               <Route path="/layout/logout" element={<Logout />} />
             </Route>
+            <Route path="/models" element={<Models />} />
+
           </Routes>
         </Container>
       </div>
