@@ -1,4 +1,6 @@
 import styles from './CustomerBio.module.scss'
+import copyData from 'copy-to-clipboard'
+import { useState } from 'react'
 import {
     HiOutlineCalendar,
     HiOutlineIdentification,
@@ -10,6 +12,15 @@ import {
 } from 'react-icons/hi'
 
 const CustomerBio = () => {
+
+    const [copyText, setCopyText] = useState('');
+        let customernum = "+2349067878607"
+    const copyToClipboard = () => {
+        setCopyText(customernum);
+        copyData(copyText);
+        // alert(`You have copied "${copyText}"`);
+    }
+
     return (
         <div className={styles.customer_details_wrraper}>
 
@@ -38,14 +49,26 @@ const CustomerBio = () => {
                 <p className="customer_details_value">1234569878</p>
 
             </div>
-            <div className={styles.customer_details}>
+            <div className={styles.customer__details}>
                 <div className={styles.customer_details_title}>
                     <HiOutlinePhone />
                     <p>Contact No</p>
                 </div>
+
                 <div className={styles.customer_details__title}>
-                    <p className="customer_details_value">+234 906 7878 607</p>
-                    <HiOutlineDuplicate />
+                    <p className="customer_details_value" onClick={copyToClipboard} >{customernum}</p>
+                   
+                    {/* <CopyToClipboard 
+                    text= "+2349067878607"
+                    onCopy={() => setClipBoard(true)}>
+                     
+                    {copyClipBoard ? <span style={{color: 'blue'}}>Copied.</span> : null}
+
+                    </CopyToClipboard>     */}
+                    <HiOutlineDuplicate onClick={copyToClipboard}/>
+                    {/* {copyText ? <span style={{color: 'blue'}}>Copied.</span> : null} */}
+                    {/* {copyText && (<span style={{color: 'blue'}}>Copied.</span>)} {""} */}
+                                    
                 </div>
 
             </div>

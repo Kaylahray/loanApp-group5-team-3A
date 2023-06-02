@@ -1,7 +1,12 @@
 // import React from 'react'
 import styles from './PredictionAnalysis.module.scss'
-import { HiOutlineChevronDown } from 'react-icons/hi'
+import { HiOutlineChevronDown, HiOutlineCheck } from 'react-icons/hi'
+import { useNavigate } from 'react-router-dom'
+
+
 const PredictionAnalysis = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.wrraper}>
 
@@ -12,7 +17,7 @@ const PredictionAnalysis = () => {
           <HiOutlineChevronDown />
         </button>
         <button className={styles.btn2}>
-          Change applied prediction model
+        <p className={styles.nav} onClick={() => navigate("/model")}>Change applied prediction model</p>
         </button>
       </div>
 
@@ -93,6 +98,14 @@ const PredictionAnalysis = () => {
           <HiOutlineChevronDown />
           </button>
 
+          <div className={styles.select}>
+            <div className={styles.approved}>
+               <p>Approve candidate</p>
+              <HiOutlineCheck/>            
+            </div>
+            <p className={styles.reject}>Reject candidate</p>
+          </div>
+          <button className={styles.btn4}>Confirm selection</button>
         </div>
       </div>
     </div>
