@@ -13,7 +13,7 @@ const Input = (props) => {
     <div className="form-control">
       <label htmlFor={name}>{label}</label>
       <div className="hide">
-        <Field id={name} name={name} type={show} {...rest} />
+        <Field id={name} name={name} type={variant ? show : type} {...rest} />
         {variant && (
           <div className="eye">
             {active ? (
