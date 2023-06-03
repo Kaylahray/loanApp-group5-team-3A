@@ -14,8 +14,7 @@ import Faq from "./Pages/Faq/Faq";
 import Models from "./Pages/Models/Models";
 import Logout from "./Pages/Logout/Logout";
 
-import CustomerProfile from "./Pages/CustomerProfile/CustomerPro";
-
+// import CustomerPro from "./Pages/CustomerProfile/CustomerPro";
 
 import SignUp from "./OnboardingPages/SignUp";
 import PersonalDetails from "./OnboardingPages/PersonalDetails";
@@ -85,7 +84,6 @@ function App() {
               <Route path="/layout/logout" element={<Logout />} />
             </Route>
             <Route path="/models" element={<Models />} />
-
           </Routes>
         </Container>
       </div>

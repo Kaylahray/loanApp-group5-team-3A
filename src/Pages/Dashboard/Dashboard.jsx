@@ -14,7 +14,7 @@ const Dashboard = () => {
 
             <div className={styles.dashinput}>
               <img src={search} alt="img" className={styles.img} />
-              <input type="text" placeholder="Search" />
+              <input  className={styles.mysearch} type="text" placeholder="Search" />
             </div>
           </div>
 

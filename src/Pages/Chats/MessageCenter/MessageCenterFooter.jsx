@@ -10,7 +10,7 @@ export default function MessageCenterFooter({ sendMessage }) {
         <img src="/images/attachment.svg" alt="" />
         <img src="/images/emoji.svg" alt="" />
         <input
-          className="placeholder text"
+          className=" input placeholder text"
           type="text"
           placeholder="Type message"
           onKeyDown={onHandleInput}

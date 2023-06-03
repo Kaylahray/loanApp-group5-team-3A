@@ -52,14 +52,14 @@
 
 .eye {
   position: absolute;
-  right: 4rem;
+  right: 1rem;
 }
 
 input,
 select {
   display: block;
   height: 30px;
-  width: 90%;
+  width: 100%;
   margin-top: 1px;
   border-radius: 5px;
   background-color: transparent;
@@ -73,7 +73,12 @@ select {
   font-size: 14px;
   padding: 5px 12px;
 }
-
+.split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+}
 .size {
   width: 600px;
   margin-top: 20px;
