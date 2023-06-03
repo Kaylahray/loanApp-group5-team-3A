@@ -14,7 +14,7 @@ import Faq from "./Pages/Faq/Faq";
 import Models from "./Pages/Models/Models";
 import Logout from "./Pages/Logout/Logout";
 
-// import CustomerPro from "./Pages/CustomerProfile/CustomerPro";
+import CustomerPro from "./Pages/CustomerProfile/CustomerPro";
 
 import SignUp from "./OnboardingPages/SignUp";
 import PersonalDetails from "./OnboardingPages/PersonalDetails";
@@ -70,10 +70,10 @@ function App() {
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
               <Route path="/layout/application" element={<Application />}>
-                {/* <Route
+                <Route
                   path="/layout/application/customerprofile"
-                  element={<CustomerProfile />}
-                /> */}
+                  element={<CustomerPro />}
+                />
               </Route>
               <Route path="/layout/teams" element={<Teams />} />
               <Route path="/layout/models" element={<Models />} />
