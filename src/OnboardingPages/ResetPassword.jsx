@@ -42,7 +42,7 @@ const ResetPassword = () => {
       </ImageBox>
 
       <FormBox>
-        <div className="logo"> LOGO</div>
+        <div className="logo"> SMARTLEND</div>
         <p className="welcome">Reset Password</p>
         <div className="size">
           <Formik
@@ -61,6 +61,7 @@ const ResetPassword = () => {
                       name="password"
                       label="Create new password(required)"
                       placeholder="*********"
+                      variant={true}
                     />
                   </div>
 
@@ -71,6 +72,7 @@ const ResetPassword = () => {
                       name="passwordConfirmation"
                       label=" Re-enter Password(required)"
                       placeholder="*********"
+                      variant={true}
                     />
                   </div>
 

@@ -5,8 +5,10 @@ import FormBox from "../Component/FormBox/FormBox";
 import Image from "../Component/Image/Image";
 import FormikControl from "../Component/FormComponent/FormikControl";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const AddTeam = () => {
+  const [users, setUsers] = useState([]);
   const dropDown = [
     { key: "select", value: "" },
     { key: "Analyst", value: "User" },
@@ -22,16 +24,15 @@ const AddTeam = () => {
     select: Yup.string().required("Required"),
   });
 
-  const arr = [];
-
   const onSubmit = (values, onSubmitProps) => {
-    arr.push(values);
+    setUsers((prev) => [...prev, values]);
     onSubmitProps.setSubmitting(false);
     onSubmitProps.resetForm();
   };
 
-  const removeList = () => {
-    console.log(arr.length);
+  const removeList = (list) => {
+    const newList = users.filter((item) => item.email !== list.email);
+    setUsers(newList);
   };
 
   return (
@@ -71,16 +72,16 @@ const AddTeam = () => {
                   </div>
 
                   <div>
-                    {arr.length > 0 &&
-                      arr.map((item) => {
+                    {users.length > 0 &&
+                      users.map((item) => {
                         const { email } = item;
                         return (
-                          <div key={email}>
+                          <div key={email} className="split">
                             <p>{email} </p>
                             <button
                               type="button"
+                              onClick={() => removeList(item)}
                               className="btn"
-                              onClick={() => removeList(arr, item)}
                             >
                               X
                             </button>
@@ -88,7 +89,6 @@ const AddTeam = () => {
                         );
                       })}
                   </div>
-                  {arr.length}
                   <button
                     className="btn"
                     type="submit"

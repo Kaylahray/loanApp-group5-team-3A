@@ -1,45 +1,60 @@
+import chi from "../../../public/DashboardImages/icon.svg";
+import one from "../../../public/DashboardImages/one.svg";
+import two from "../../../public/DashboardImages/two.svg";
+import three from "../../../public/DashboardImages/three.svg";
+import four from "../../../public/DashboardImages/four.svg";
+import five from "../../../public/DashboardImages/five.svg";
+
 const ProfileData = [
   {
-    name: "oluwatofumi idowus ",
-    text: " Oluwatofunmi Idowus application database successfully downloaded ",
+    name: "Oluwatofumi idowus ",
+    text: " application database successfully downloaded ",
     time: "30m ago",
     id: 1,
 
-    img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600",
+    img: chi,
   },
   {
-    name: "oluwatofumi idowus ",
-    text: " Oluwatofunmi Idowus application database successfully downloaded ",
+    name: "Timmy Adubi ",
+    text: "  assigned you to Oluwatofunmi Idowu ",
     time: "30m ago",
     id: 2,
-    img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fprofile%2F&psig=AOvVaw3ihZBEiuSDTQGBU_Boc234&ust=1685600649928000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPjGjqD2nv8CFQAAAAAdAAAAABAE",
+    img: one,
   },
   {
-    name: "oluwatofumi idowus ",
-    text: " Oluwatofunmi Idowus application database successfully downloaded ",
+    name: "oluwatofumi idowu ",
+    text: " just submitted loan application ",
     time: "30m ago",
     id: 3,
-    img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fprofile%2F&psig=AOvVaw3ihZBEiuSDTQGBU_Boc234&ust=1685600649928000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPjGjqD2nv8CFQAAAAAdAAAAABAE",
+    img: two,
   },
   {
-    name: "oluwatofumi idowus ",
-    text: " Oluwatofunmi Idowus application database successfully downloaded ",
+    name: "Adefemiwa Sewa ",
+    text: "  just submitted loan application ",
     time: "30m ago",
     id: 4,
-    img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fprofile%2F&psig=AOvVaw3ihZBEiuSDTQGBU_Boc234&ust=1685600649928000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPjGjqD2nv8CFQAAAAAdAAAAABAE",
+    img: three,
   },
   {
-    name: "oluwatofumi idowus ",
-    text: " Oluwatofunmi Idowus application database successfully downloaded ",
+    name: " Akanji Shakirat ",
+    text: " just submitted loan application ",
     time: "30m ago",
     id: 5,
-    img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fprofile%2F&psig=AOvVaw3ihZBEiuSDTQGBU_Boc234&ust=1685600649928000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPjGjqD2nv8CFQAAAAAdAAAAABAE",
+    img: four,
   },
   {
-    name: "oluwatofumi idowus ",
-    text: " Oluwatofunmi Idowus application database successfully downloaded ",
+    name: "Timmy Adubi ",
+    text: "  created a new model “Credit Analysis” ",
     time: "30m ago",
     id: 6,
+    img: five,
+  },
+  {
+    name: "Oluwatofunmi Idowu’s ",
+    text: "  application database successfully downloaded. ",
+    time: "30m ago",
+    id: 7,
+    img: five,
   },
 ];
 export default ProfileData;
