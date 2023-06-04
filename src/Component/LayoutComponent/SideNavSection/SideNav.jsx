@@ -41,6 +41,13 @@ const links = [
     to: "/layout/teams",
     icon: <BiGroup />,
   },
+  
+  {
+    id: 8,
+    name: "customer",
+    to: "/layout/customerprofile",
+    icon: <BiGroup />,
+  },
 ];
 
 const bottom = [

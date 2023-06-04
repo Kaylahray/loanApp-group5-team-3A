@@ -17,13 +17,13 @@ const PredictionAnalysis = () => {
           <HiOutlineChevronDown />
         </button>
         <button className={styles.btn2}>
-        <p className={styles.nav} onClick={() => navigate("/model")}>Change applied prediction model</p>
+          <p className={styles.nav} onClick={() => navigate("/model")}>Change applied prediction model</p>
         </button>
       </div>
 
       <div className={styles.container}>
         <h3 className={styles.title}>Alpha model applied</h3>
-        
+
         <div className={styles.modeldetails}>
 
           <div className={styles.modelhead}>
@@ -66,19 +66,19 @@ const PredictionAnalysis = () => {
             <li >Average</li>
             <li className={styles.list3}>Pass</li>
           </div>
-       
+
           <div className={styles.modelresult}>
             <p >Result</p>
             <p className={styles.result}>Failed</p>
           </div>
-         
+
         </div>
 
       </div>
 
       <div className={styles.container}>
         <h3 className={styles.title}>Recommendation</h3>
-        
+
         <div className={styles.gridcotainer}>
           <div className={styles.griditem}>
             <p>Highest loanable amount</p>
@@ -94,14 +94,14 @@ const PredictionAnalysis = () => {
           </div>
 
           <button className={styles.btn3}>
-          Make decision
-          <HiOutlineChevronDown />
+            Make decision
+            <HiOutlineChevronDown />
           </button>
 
           <div className={styles.select}>
             <div className={styles.approved}>
-               <p>Approve candidate</p>
-              <HiOutlineCheck/>            
+              <p>Approve candidate</p>
+              <HiOutlineCheck />
             </div>
             <p className={styles.reject}>Reject candidate</p>
           </div>
