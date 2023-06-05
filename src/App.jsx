@@ -71,10 +71,10 @@ function App() {
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
               <Route path="/layout/application" element={<Application />}>
-                {/* <Route
+                <Route
                   path="/layout/application/customerprofile"
                   element={<CustomerProfile />}
-                /> */}
+                />
               </Route>
               <Route path="/layout/teams" element={<Teams />} />
               <Route path="/layout/models" element={<Models />} />
