@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
@@ -13,6 +14,7 @@ import Settings from "./Pages/Settings/Settings";
 import Faq from "./Pages/Faq/Faq";
 import Models from "./Pages/Models/Models";
 import Logout from "./Pages/Logout/Logout";
+
 
 import CustomerPro from "./Pages/CustomerProfile/CustomerPro";
 
@@ -69,21 +71,21 @@ function App() {
               <Route path="/layout/" element={<Dashboard />} />
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
-              <Route path="/layout/application" element={<Application />}>
-                <Route
+              <Route path="/layout/application" element={<Application />}/>
+               
+           <Route
                   path="/layout/application/customerprofile"
                   element={<CustomerPro />}
                 />
-              </Route>
+
+           
               <Route path="/layout/teams" element={<Teams />} />
               <Route path="/layout/models" element={<Models />} />
 
               <Route path="/layout/settings" element={<Settings />} />
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />
-              <Route path="/layout/logout" element={<Logout />} />
-            </Route>
-            <Route path="/models" element={<Models />} />
+              <Route path="/layout/logout" element={<Logout />} /
           </Routes>
         </Container>
       </div>
