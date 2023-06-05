@@ -1,14 +1,12 @@
 import { useState } from "react";
 import MessageBody from "./MessageBody";
-import MessageCenterFooter from "./MessageCenterFooter";
-import MessageCenterHeader from "./MessageCenterHeader";
+import MessageFooter from "./MessageFooter";
+import MessageHeader from "./MessageHeader";
 
-export default function MessageCenter() {
-  const [allMessages, setAllMessages] = useState([]);
+export default function MessageCenter({ friend }) {
+  const [allMessages, setAllMessages] = useState(friend.messages);
+  const [filter, setFilter] = useState("");
 
-  const onHandleFiltering = (value) => {
-    console.log("Filtered Message from " + value);
-  }
   const onHandleMessageSending = (value, type) => {
     console.log("About to send ", value, type);
     setAllMessages([
@@ -16,19 +14,18 @@ export default function MessageCenter() {
       { content: value, type, isSent: true },
       ...allMessages,
     ]);
-  }
+  };
 
   return (
     <div className="child-container-2">
-      <MessageCenterHeader
-        name="Nony"
-        image="/images/person.svg"
-        onFilterMessage={onHandleFiltering}
+      <MessageHeader
+        friend={friend}
+        onFilterMessage={setFilter}
       />
 
-      <MessageBody messages={allMessages}/>
+      <MessageBody messages={allMessages} filter={filter} />
 
-      <MessageCenterFooter onSendMessage={onHandleMessageSending} />
+      <MessageFooter onSendMessage={onHandleMessageSending} />
     </div>
   );
 }

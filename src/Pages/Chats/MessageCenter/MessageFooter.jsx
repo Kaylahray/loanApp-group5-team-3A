@@ -2,21 +2,21 @@ import EmojiPicker from "emoji-picker-react";
 import ReactFileReader from "react-file-reader";
 import { useState } from "react";
 
-export default function MessageCenterFooter({ onSendMessage }) {
+export default function MessageFooter({ onSendMessage }) {
   const [showEmoji, setShowEmoji] = useState(false);
   const [message, setMessage] = useState("");
 
   const handleTextMessage = (event) => {
-    if(event.key == "Enter") {
+    if (event.key == "Enter") {
       onSendMessage(message, "TEXT");
       setMessage("");
     }
-  }
+  };
   const handleEmojiClick = (value) => {
     setShowEmoji(false);
     if (message == "") onSendMessage(value.unified, "EMOJI");
     else setMessage(message + value.emoji);
-  }
+  };
   const handleFiles = (files) => {
     onSendMessage(files.base64, "IMAGE");
   };

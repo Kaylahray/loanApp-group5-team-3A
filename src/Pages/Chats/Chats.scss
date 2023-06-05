@@ -4,6 +4,11 @@ body {
 .main-container {
     display: flex;
     height: 100%;
+    img {
+        max-width: 75px;
+        max-height: 75px;
+        border-radius: 50%;
+    }
 }
 .child-container-1 {
     display: flex;

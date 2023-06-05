@@ -5,10 +5,11 @@ import { useState } from "react";
 
 
  function Chats() {
+   const [friend, setFriend] = useState(null);
   return (
     <div className="main-container">
-      <FriendListComponent />
-      <MessageCenterComponent />
+      <FriendListComponent setFriend={setFriend}/>
+      { friend ? <MessageCenterComponent friend={friend}/> : <></> }
     </div>
   );
 }
