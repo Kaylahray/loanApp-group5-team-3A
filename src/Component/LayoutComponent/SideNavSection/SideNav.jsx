@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023 Your Company Name
+ * All rights reserved.
+ */
 import { NavLink } from "react-router-dom";
 import styles from "./SideNav.module.scss";
 import Logo from "./SLogo.svg";
