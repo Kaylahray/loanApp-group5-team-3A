@@ -1,26 +1,17 @@
-/*
- * Copyright (c) 2023 Your Company Name
- * All rights reserved.
- */
+
 // import { Chart } from 'chart.js'
 import styles from './BankState.module.scss'
 // import { useState } from 'react-router-dom'
 import {CustomerIncome} from '../CustomerData/Data'
 
+import styles from './BankState.module.scss'
+import Chart from './Chart'
+
 
 const BankState = () => {
 
-  const [customerIncome, setCustomerIncome] = useState({
-    labels: CustomerIncome.map((item) => item.month),
-    datasets: [{
-      label: 'Income and expenses in the last 12 months',
-      data: CustomerIncome.map((item) => item.income),
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-      borderColor: 'rgba(255, 99, 132, 1)',
-      borderWidth: 1,
-    }]
-  })
   return (
+    <>
     <div className={styles.gridcotainer}>
       <div className={styles.griditem}>
         <p>Average credit</p>
@@ -56,9 +47,15 @@ const BankState = () => {
         <p>Monthly average expense</p>
         <h3>45,680 NGN</h3>
       </div>
-
-      {/* <Chart chartData={customerIncome} /> */}
     </div>
+    
+    <h4 className={styles.header}>Income and expenses in the last 12 months</h4>
+    <div className={styles.chart}>
+      <Chart/>
+    </div>
+    </>
+
+   
   )
 }
 

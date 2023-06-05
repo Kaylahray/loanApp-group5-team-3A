@@ -33,7 +33,7 @@ const PersonalDetails = () => {
       </ImageBox>
 
       <FormBox>
-        <div className="logo"> LOGO</div>
+        <div className="logo"> SMARTLEND</div>
         <p className="welcome">Personal Details</p>
         <div className="size">
           <Formik
@@ -78,11 +78,8 @@ const PersonalDetails = () => {
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
                   >
-                    Submit
+                    Continue
                   </button>
-                  <p className="account">
-                    Have an account? <span> Login</span>
-                  </p>
                 </Form>
               );
             }}

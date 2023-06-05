@@ -4,10 +4,11 @@ import ImageBox from "../Component/ImageBox/ImageBox";
 import FormBox from "../Component/FormBox/FormBox";
 import Image from "../Component/Image/Image";
 import FormikControl from "../Component/FormComponent/FormikControl";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const AddTeam = () => {
-  const navigate = useNavigate();
+  const [users, setUsers] = useState([]);
   const dropDown = [
     { key: "select", value: "" },
     { key: "Analyst", value: "User" },
@@ -24,11 +25,14 @@ const AddTeam = () => {
   });
 
   const onSubmit = (values, onSubmitProps) => {
-    console.log(values);
-    console.log(onSubmitProps);
+    setUsers((prev) => [...prev, values]);
     onSubmitProps.setSubmitting(false);
     onSubmitProps.resetForm();
-    navigate("/up");
+  };
+
+  const removeList = (list) => {
+    const newList = users.filter((item) => item.email !== list.email);
+    setUsers(newList);
   };
 
   return (
@@ -44,10 +48,9 @@ const AddTeam = () => {
             initialValues={initialValues}
             validationSchema={validationSchema}
             onSubmit={onSubmit}
-            // validateOnMount
+            validateOnMount
           >
             {(formik) => {
-              console.log(formik);
               return (
                 <Form>
                   <div className="form-control">
@@ -55,7 +58,7 @@ const AddTeam = () => {
                       control="input"
                       type="email"
                       name="email"
-                      label="Work email"
+                      label="Email address(required)"
                       placeholder="e.g @chiomachris@gmail.com"
                     />
                   </div>
@@ -63,11 +66,29 @@ const AddTeam = () => {
                     <FormikControl
                       control="select"
                       name="select"
-                      label="Permission required"
+                      label="Permission(required)"
                       options={dropDown}
                     />
                   </div>
 
+                  <div>
+                    {users.length > 0 &&
+                      users.map((item) => {
+                        const { email } = item;
+                        return (
+                          <div key={email} className="split">
+                            <p>{email} </p>
+                            <button
+                              type="button"
+                              onClick={() => removeList(item)}
+                              className="btn"
+                            >
+                              X
+                            </button>
+                          </div>
+                        );
+                      })}
+                  </div>
                   <button
                     className="btn"
                     type="submit"
@@ -80,83 +101,19 @@ const AddTeam = () => {
             }}
           </Formik>
         </div>
+
+        <div className="skip">
+          <button className="btn">
+            <Link to={"/up"}>Continue</Link>
+          </button>
+
+          <div>
+            <Link to={"/up"}>skip</Link>
+          </div>
+        </div>
       </FormBox>
     </div>
   );
-
-  //
-
-  //             <div className="fetch_container">
-  //               <div className={styles.fetch}>
-  //                 <p>halimaibrahim123@gmail.com</p>
-  //                 <div className={styles.closeicon}>
-  //                   <svg
-  //                     viewBox="0 0 24 24"
-  //                     fill="none"
-  //                     xmlns="http://www.w3.org/2000/svg"
-  //                   >
-  //                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-  //                     <g
-  //                       id="SVGRepo_tracerCarrier"
-  //                       strokeLinecap="round"
-  //                       strokeLinejoin="round"
-  //                     ></g>
-  //                     <g id="SVGRepo_iconCarrier">
-  //                       <g id="Menu / Close_MD">
-  //                         <path
-  //                           id="Vector"
-  //                           d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18"
-  //                           stroke="#000000"
-  //                           strokeWidth="2"
-  //                           strokeLinecap="round"
-  //                           strokeLinejoin="round"
-  //                         ></path>
-  //                       </g>
-  //                     </g>
-  //                   </svg>
-  //                 </div>
-  //               </div>
-  //               <div className={styles.fetch}>
-  //                 <p>chiomachris09@gmail.com</p>
-  //                 <div className={styles.closeicon}>
-  //                   <svg
-  //                     viewBox="0 0 24 24"
-  //                     fill="none"
-  //                     xmlns="http://www.w3.org/2000/svg"
-  //                   >
-  //                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-  //                     <g
-  //                       id="SVGRepo_tracerCarrier"
-  //                       strokeLinecap="round"
-  //                       strokeLinejoin="round"
-  //                     ></g>
-  //                     <g id="SVGRepo_iconCarrier">
-  //                       <g id="Menu / Close_MD">
-  //                         <path
-  //                           id="Vector"
-  //                           d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18"
-  //                           stroke="#000000"
-  //                           strokeWidth="2"
-  //                           strokeLinecap="round"
-  //                           strokeLinejoin="round"
-  //                         ></path>
-  //                       </g>
-  //                     </g>
-  //                   </svg>
-  //                 </div>
-  //               </div>
-  //             </div>
-  //             <p className={styles.errormsg}>{message}</p>
-  //             <Button>
-  //               <Link to={"/upload"}>Continue</Link>
-  //             </Button>
-  //             <div className={styles.skipnav}>
-  //               <p>Skip</p>
-  //             </div>
-  //           </form>
-  //         </div>
-  //       </FormBox>
-  //     </div>
 };
 
 export default AddTeam;

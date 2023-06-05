@@ -16,7 +16,7 @@ const SignUp = () => {
     password: "",
   };
   const validationSchema = Yup.object({
-    email: Yup.string().email("invalid").required("Required"),
+    email: Yup.string().email("Invalid Format").required("Required"),
     company: Yup.string().required("Required"),
     employees: Yup.number().required("Required"),
     password: Yup.string()
@@ -38,7 +38,7 @@ const SignUp = () => {
       </ImageBox>
 
       <FormBox>
-        <div className="logo"> LOGO</div>
+        <div className="logo"> SMARTLEND</div>
         <p className="welcome">Welcome let&apos;s get you started</p>
         <div className="size">
           <Formik
@@ -55,7 +55,7 @@ const SignUp = () => {
                       control="input"
                       type="email"
                       name="email"
-                      label="Work email"
+                      label="Work email address(required)"
                       placeholder="e.g @chiomachris@gmail.com"
                     />
                   </div>
@@ -64,7 +64,7 @@ const SignUp = () => {
                       control="input"
                       type="text"
                       name="company"
-                      label="Company name"
+                      label="Company name(required)"
                       placeholder="e.g Stutern"
                     />
                   </div>
@@ -73,7 +73,7 @@ const SignUp = () => {
                       control="input"
                       type="number"
                       name="employees"
-                      label="Number of employees"
+                      label="Number of employees(required)"
                       placeholder="e.g Stutern"
                     />
                   </div>
@@ -82,8 +82,9 @@ const SignUp = () => {
                       control="input"
                       type="password"
                       name="password"
-                      label="Password"
+                      label="Password (required)"
                       placeholder="*********"
+                      variant={true}
                     />
                   </div>
 
@@ -92,7 +93,7 @@ const SignUp = () => {
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
                   >
-                    Submit
+                    Continue
                   </button>
                   <p className="account">
                     Have an account? <span> Login</span>
