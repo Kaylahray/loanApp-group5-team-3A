@@ -5,7 +5,7 @@
 import { NavLink } from "react-router-dom";
 import styles from "./SideNav.module.scss";
 import Logo from "./SLogo.svg"
-// import { FiSettings } from "react-icons/fi"
+import { FiSettings } from "react-icons/fi"
 import { BiCategory } from "react-icons/bi"
 import { HiOutlineDocumentDuplicate } from "react-icons/hi"
 import { HiOutlineUserGroup } from "react-icons/hi"

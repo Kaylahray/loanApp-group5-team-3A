@@ -20,10 +20,12 @@
     height: 40px;
     
   }
-  
-  .table .teambody:nth-child(even) {
-    background-color: #f2f2f2;
+  .data .teamsbody{
+    background-color: #fff;
   }
+  // .table .teambody:nth-child(even) {
+  //   background-color: #f2f2f2;
+  // }
   
   .table .teamrole {
     font-weight: bold;
@@ -64,5 +66,14 @@
   }
   
   
-  
-  
+  .role{
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    border-radius: 7px;
+    font-weight: 50px;
+    border: 1px thin #4CDC93;;
+    
+}

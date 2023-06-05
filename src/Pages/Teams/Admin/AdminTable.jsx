@@ -1,12 +1,11 @@
+import admindata from "./AdminData";
+import styles from "./AdminTable.module.scss";
+
 /*
  * Copyright (c) 2023 Your Company Name
  * All rights reserved.
  */
-import styles from "./TeamsTable.module.scss";
-import teamsdata from "../TeamsData/TeamsData";
-
-
-const TeamsTable = () => {
+const AdminTable = () => {
     return (
 <div className={styles.table}>
     <table>
@@ -20,7 +19,7 @@ const TeamsTable = () => {
                   </tr>
                 </thead>
                 <tbody>
-                {teamsdata.map((data) => {
+                {admindata.map((data) => {
                     return (
                       <tr key={data.no} className='teambody'>
                             <td>{data.no}</td>
@@ -38,6 +37,6 @@ const TeamsTable = () => {
     )
             }
 
-export default TeamsTable;
+export default AdminTable;
         
     

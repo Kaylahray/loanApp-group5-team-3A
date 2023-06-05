@@ -2,13 +2,13 @@
  * Copyright (c) 2023 Your Company Name
  * All rights reserved.
  */
-const teamsdata = [
+const analystdata = [
 
     { 
       no: 1, 
       userID: "PRE0001A", 
       name: "Tofunmi Idowun", 
-      role: "Admin", 
+      role: "Analyst", 
       lastSeen: "1/5/2023", 
     },
     {
@@ -22,7 +22,7 @@ const teamsdata = [
       no: 3, 
       userID: "PRE0003A", 
       name: "Shakira Akanji", 
-      role: "Admin", 
+      role: "Analyst", 
       lastSeen: "1/5/2023", 
     },
     {
@@ -78,16 +78,16 @@ const teamsdata = [
       no: 11, 
       userID: "PRE0011U", 
       name: "Timmy Adubi", 
-      role: "Admin", 
+      role: "Analyst", 
       lastSeen: "1/5/2023", 
     },
     {
       no: 12, 
       userID: "PRE0012U", 
       name: "Tofunmi", 
-      role: "Admin", 
+      role: "Analyst", 
       lastSeen: "1/5/2023", 
     },
   
   ]
-  export default teamsdata;
+  export default analystdata;

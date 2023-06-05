@@ -2,7 +2,7 @@
  * Copyright (c) 2023 Your Company Name
  * All rights reserved.
  */
-const teamsdata = [
+const admindata = [
 
     { 
       no: 1, 
@@ -15,7 +15,7 @@ const teamsdata = [
       no: 2, 
       userID: "PRE0002U", 
       name: "Constance", 
-      role: "Analyst", 
+      role: "Admin", 
       lastSeen: "30/4/2023", 
     },
     {
@@ -29,49 +29,49 @@ const teamsdata = [
       no: 4, 
       userID: "PRE0004U", 
       name: "Edu Hermans", 
-      role: "Analyst", 
+      role: "Admin", 
       lastSeen: "30/4/2023", 
     },
     {
       no: 5, 
       userID: "PRE0005U", 
       name: "Abdulqudus Adegbite", 
-      role: "Analyst", 
+      role: "Admin", 
       lastSeen: "30/4/2023", 
     },
     {
       no: 6, 
       userID: "PRE0006U", 
       name: "Mercy Hanns", 
-      role: "Analyst", 
+      role: "Admin", 
       lastSeen: "30/4/2023", 
     },
     {
       no: 7, 
       userID: "PRE0007U", 
       name: "Adesewa Smart", 
-      role: "Analyst", 
+      role: "Admin", 
       lastSeen: "30/4/2023", 
     },
     {
       no: 8, 
       userID: "PRE0008U", 
       name: "Constance", 
-      role: "Analyst", 
+      role: "Admin", 
       lastSeen: "30/4/2023", 
     },
     {
       no: 9, 
       userID: "PRE0009U", 
       name: "Alex Oyebade", 
-      role: "Analyst", 
+      role: "Admin", 
       lastSeen: "30/4/2023", 
     },
     {
       no: 10, 
       userID: "PRE0010U", 
       name: "Chiwendu Adams", 
-      role: "Analyst", 
+      role: "Admin", 
       lastSeen: "30/4/2023", 
     },
     {
@@ -90,4 +90,4 @@ const teamsdata = [
     },
   
   ]
-  export default teamsdata;
+  export default admindata;
