@@ -80,12 +80,17 @@ function App() {
 
            
               <Route path="/layout/teams" element={<Teams />} />
-              <Route path="/layout/models" element={<Models />} />
+              {/* <Route path="/layout/models" element={<Models />} /> */}
 
               <Route path="/layout/settings" element={<Settings />} />
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />
               <Route path="/layout/logout" element={<Logout />} />
+
+              <Route path="/models" element={<Models />} />
+
+
+
           </Routes>
         </Container>
       </div>

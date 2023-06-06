@@ -8,7 +8,6 @@
 
 
 .body{
-    // position: relative;
     background-color: white;
 }
 
@@ -19,14 +18,11 @@
     background-image: url("./ModelIcons/profile.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    // background-color: red;
   }
 
 
 
-  form{
-    // background-color: white;
-    // background-color: red;
+  .basicInfoForm{
     width: 30%;
     display: block;
     justify-content: center;
@@ -35,7 +31,7 @@
     gap: 7px;
   }
 
-form h3{
+.basicInfoForm h3{
     text-align: center;
     margin-top: 50px;
     margin-bottom: 20px;
@@ -43,7 +39,7 @@ form h3{
 
 }
 
-input{
+.modelName{
     padding: 6px 8px;
 
 }
@@ -93,20 +89,11 @@ input{
         display: block;
         gap: 40px;
         margin-bottom: 7px;
-
-
-
       }
 
-
-      // .previewcontainer{
-      //   // background-color: red;
-      //   width: 400px;
-      //   margin: auto auto;
-      //   margin-top: 30px;
-
-
-        // display: block;
-        // justify-content: center;
-        // align-content: center;
-    
+      .model{
+        display: block
+      ;
+      justify-content: center;
+      margin: 0 auto;
+      }
