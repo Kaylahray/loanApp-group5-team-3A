@@ -1,7 +1,7 @@
 import FriendListComponent from "./FriendList/FriendList";
 import MessageCenterComponent from "./MessageCenter/MessageCenter";
 import "./Chats.scss"
-// import { useState } from "react";
+import { useState } from "react";
 
 const dummyData = [
   {
