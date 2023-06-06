@@ -62,6 +62,7 @@ const ResetPassword = () => {
                       label="Create new password(required)"
                       placeholder="*********"
                       variant={true}
+                      className="inputBox"
                     />
                   </div>
 
@@ -73,6 +74,8 @@ const ResetPassword = () => {
                       label=" Re-enter Password(required)"
                       placeholder="*********"
                       variant={true}
+                      className="inputBox"
+                      value={null}
                     />
                   </div>
 
