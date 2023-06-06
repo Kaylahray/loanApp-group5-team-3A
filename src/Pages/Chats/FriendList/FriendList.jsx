@@ -12,7 +12,7 @@ export default function FriendList({ setFriend, friends }) {
     <div className="child-container-1">
       <div className="search-area">
         <h3>chat</h3>
-        <input type="text" value={filter} onChange={(e) => setFilter(e.target.value)} />
+        <input className='Input-field' type="text" value={filter} onChange={(e) => setFilter(e.target.value)} />
       </div>
       { friendsArray }
     </div>

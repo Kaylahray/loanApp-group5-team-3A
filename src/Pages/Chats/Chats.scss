@@ -72,6 +72,7 @@ body {
     flex-direction: column;
     border-left: 2px solid #f5f5ff;
 
+
     .EmojiPickerReact {
         position: absolute !important;
         bottom: 10% !important;
@@ -171,7 +172,7 @@ body {
     line-height: 24px;
     color: #616161;
 }
-.input {
+.Input-field {
     width: 305px;
     height: 28px;
     border: 1px solid #dfe0f3;

@@ -11,7 +11,7 @@ const dummyData = [
     time: "12:09",
     active: true,
     unread: 2,
-    image: "https://i.pravatar.cc/300",
+    image: "/chat-Images/person.svg",
     messages: [],
   },
   {
@@ -20,7 +20,7 @@ const dummyData = [
     text: "nice",
     time: "12:09",
     unread: 0,
-    image: "https://i.pravatar.cc/200",
+    image: "/chat-Images/men.jpg",
     messages: [],
   },
   {
@@ -29,7 +29,7 @@ const dummyData = [
     text: "nice",
     time: "12:09",
     unread: 20,
-    image: "https://i.pravatar.cc/250",
+    image: "/chat-Images/gal.jpg",
     messages: [],
   },
   {
@@ -37,7 +37,7 @@ const dummyData = [
     name: "Juliet Four",
     text: "nice",
     time: "12:09",
-    image: "https://i.pravatar.cc/350",
+    image: "/chat-Images/smiley.jpeg",
     messages: [],
   },
 ];

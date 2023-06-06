@@ -37,7 +37,7 @@ export default function MessageFooter({ onSendMessage }) {
       />
       {showEmoji ? <EmojiPicker onEmojiClick={handleEmojiClick} /> : <></>}
       <input
-        className="placeholder text"
+        className="Input-field placeholder text"
         type="text"
         placeholder="Type message"
         value={message}
