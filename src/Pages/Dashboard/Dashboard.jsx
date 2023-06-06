@@ -64,7 +64,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className={styles.chart}>{/* <DashChart /> */}</div>
+          <div className={styles.chart}>{/* {<DashChart />} */}</div>
           <div className={styles.view}>
             <h3> Applications</h3>
             <a href="/">View All</a>
