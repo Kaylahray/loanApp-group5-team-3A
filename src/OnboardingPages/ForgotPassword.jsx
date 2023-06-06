@@ -53,6 +53,7 @@ const ForgotPassword = () => {
                     name="email"
                     label="Work email (required)"
                     placeholder="e.g @chiomachris@gmail.com"
+                    className="inputBox"
                   />
                 </div>
 

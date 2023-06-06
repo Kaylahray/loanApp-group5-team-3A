@@ -64,6 +64,7 @@ const LoginFormTwo = () => {
                       name="email"
                       label="Work email"
                       placeholder="e.g @chiomachris@gmail.com"
+                      className="inputBox"
                     />
                   </div>
 
@@ -75,6 +76,8 @@ const LoginFormTwo = () => {
                       label="Password"
                       placeholder="*********"
                       variant={true}
+                      value={null}
+                      className="inputBox"
                     />
                   </div>
 
@@ -86,6 +89,7 @@ const LoginFormTwo = () => {
                       label=" Confirm Password"
                       placeholder="*********"
                       variant={true}
+                      className="inputBox"
                     />
                   </div>
 
@@ -96,9 +100,6 @@ const LoginFormTwo = () => {
                   >
                     Login
                   </button>
-                  <p className="account">
-                    Have an account? <span> Sign in</span>
-                  </p>
                 </Form>
               );
             }}

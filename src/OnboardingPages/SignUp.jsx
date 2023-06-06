@@ -4,7 +4,7 @@ import ImageBox from "../Component/ImageBox/ImageBox";
 import FormBox from "../Component/FormBox/FormBox";
 import Image from "../Component/Image/Image";
 import FormikControl from "../Component/FormComponent/FormikControl";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const SignUp = () => {
   const validationSchema = Yup.object({
     email: Yup.string().email("Invalid Format").required("Required"),
     company: Yup.string().required("Required"),
-    employees: Yup.number().required("Required"),
+    employees: Yup.number().positive().integer().required("Required"),
     password: Yup.string()
       .required("No password provided.")
       .min(8, "must contain at least 8 letters."),
@@ -57,6 +57,7 @@ const SignUp = () => {
                       name="email"
                       label="Work email address(required)"
                       placeholder="e.g @chiomachris@gmail.com"
+                      className="inputBox"
                     />
                   </div>
                   <div className="form-control">
@@ -66,6 +67,7 @@ const SignUp = () => {
                       name="company"
                       label="Company name(required)"
                       placeholder="e.g Stutern"
+                      className="inputBox"
                     />
                   </div>
                   <div className="form-control">
@@ -75,6 +77,7 @@ const SignUp = () => {
                       name="employees"
                       label="Number of employees(required)"
                       placeholder="e.g Stutern"
+                      className="inputBox"
                     />
                   </div>
                   <div className="form-control">
@@ -85,6 +88,7 @@ const SignUp = () => {
                       label="Password (required)"
                       placeholder="*********"
                       variant={true}
+                      className="inputBox"
                     />
                   </div>
 
@@ -96,7 +100,11 @@ const SignUp = () => {
                     Continue
                   </button>
                   <p className="account">
-                    Have an account? <span> Login</span>
+                    Have an account?{" "}
+                    <span>
+                      {" "}
+                      <Link to={"/login"}> Login </Link>
+                    </span>
                   </p>
                 </Form>
               );

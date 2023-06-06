@@ -60,6 +60,7 @@ const AddTeam = () => {
                       name="email"
                       label="Email address(required)"
                       placeholder="e.g @chiomachris@gmail.com"
+                      className="inputBox"
                     />
                   </div>
                   <div className="form-control">
@@ -68,9 +69,16 @@ const AddTeam = () => {
                       name="select"
                       label="Permission(required)"
                       options={dropDown}
+                      className="selectBox"
                     />
                   </div>
-
+                  <button
+                    className="btn"
+                    type="submit"
+                    disabled={!formik.isValid || formik.isSubmitting}
+                  >
+                    Add team member
+                  </button>
                   <div>
                     {users.length > 0 &&
                       users.map((item) => {
@@ -81,7 +89,7 @@ const AddTeam = () => {
                             <button
                               type="button"
                               onClick={() => removeList(item)}
-                              className="btn"
+                              className="remove"
                             >
                               X
                             </button>
@@ -89,13 +97,6 @@ const AddTeam = () => {
                         );
                       })}
                   </div>
-                  <button
-                    className="btn"
-                    type="submit"
-                    disabled={!formik.isValid || formik.isSubmitting}
-                  >
-                    Add team member
-                  </button>
                 </Form>
               );
             }}

@@ -59,6 +59,7 @@ const LoginForm = () => {
                       name="email"
                       label="Work email address(required)"
                       placeholder="e.g @chiomachris@gmail.com"
+                      className="inputBox"
                     />
                   </div>
 
@@ -70,10 +71,11 @@ const LoginForm = () => {
                       label="Password (required)"
                       placeholder="*********"
                       variant={true}
+                      className="inputBox"
                     />
                   </div>
                   <p className="forgot">
-                    <Link to={"/forgotPassword"}>forgot password?</Link>
+                    <Link to={"/forgotPassword"}>Forgot password?</Link>
                   </p>
                   <button
                     className="btn"
@@ -83,7 +85,7 @@ const LoginForm = () => {
                     Login
                   </button>
                   <p className="account">
-                    Have an account?{" "}
+                    Don&apos;t have an account?{" "}
                     <span>
                       {" "}
                       <Link to={"/signup"}> Sign up</Link>
