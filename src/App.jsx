@@ -67,7 +67,7 @@ function App() {
             />
             <Route path="/verify" element={<VerifyEmail />} />
             <Route path="/verifySuccess" element={<VerificationSuccess />} />
-            <Route path="/layout" element={<Layout />}>
+            <Route path="/layout" element={<Layout />} />
               <Route path="/layout/" element={<Dashboard />} />
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
@@ -85,7 +85,7 @@ function App() {
               <Route path="/layout/settings" element={<Settings />} />
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />
-              <Route path="/layout/logout" element={<Logout />} /
+              <Route path="/layout/logout" element={<Logout />} />
           </Routes>
         </Container>
       </div>
