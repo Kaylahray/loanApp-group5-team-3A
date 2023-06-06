@@ -33,7 +33,7 @@ export default function MessageFooter({ onSendMessage }) {
       <img
         src="/images/emoji.svg"
         alt=""
-        onClick={() => setShowEmoji(!showEmoji)}
+        onClick={() => setShowEmoji(true)}
       />
       {showEmoji ? <EmojiPicker onEmojiClick={handleEmojiClick} /> : <></>}
       <input

@@ -8,9 +8,8 @@ export default function MessageCenter({ friend }) {
   const [filter, setFilter] = useState("");
 
   const onHandleMessageSending = (value, type) => {
-    console.log("About to send ", value, type);
     setAllMessages([
-      { content: value, type },
+      { content: value, type: type },
       { content: value, type, isSent: true },
       ...allMessages,
     ]);
