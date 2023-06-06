@@ -74,7 +74,7 @@ const Parameters = () => {
 
   return (
     <div className="container">
-<SimpleGrid columns={2} w='30%' mx='auto' gap={10} mt={10} > 
+<SimpleGrid columns={2} w='40%' mx='auto' gap={10} mt={10} > 
   <Box><h3>Parameters</h3>
         <Select
         borderRadius={6}
@@ -97,10 +97,12 @@ const Parameters = () => {
   <Box><h3>Selection</h3>
         <Select 
         borderRadius={6}
+
         placeholder="select" size="sm" value={""}>
           {subParams[selected]?.map((item, index) => (
             <option value={item.value} key={index}>
               {item.label}
+              
             </option>
           ))}
         </Select></Box>
