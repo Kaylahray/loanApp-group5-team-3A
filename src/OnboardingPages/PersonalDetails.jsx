@@ -33,7 +33,7 @@ const PersonalDetails = () => {
       </ImageBox>
 
       <FormBox>
-        <div className="logo"> LOGO</div>
+        <div className="logo"> SMARTLEND</div>
         <p className="welcome">Personal Details</p>
         <div className="size">
           <Formik

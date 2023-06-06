@@ -1,0 +1,79 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table table {
+    width: 100%;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table .dataheader th {
+    background-color: #f2f2f2;
+    width: 950px;
+    height: 40px;
+    
+  }
+  .data .teamsbody{
+    background-color: #fff;
+  }
+  // .table .teambody:nth-child(even) {
+  //   background-color: #f2f2f2;
+  // }
+  
+  .table .teamrole {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    border-radius: 9px;
+  }
+  .table .teamrole data.role.admin {
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    // padding: 2px 8px;
+    // gap: 10px;
+    border-radius: 3px;
+    border: 1px solid black;
+    width: 53px;
+    height: 20px;
+    
+    /* Primary/Surface
+    
+    F5F5FF
+    */
+    background: black;
+    /* Primary/Border
+    
+    DFE0F3
+    */
+    border: 1px solid #DFE0F3;
+    border-radius: 6px;
+  }
+  .table .teamrole .analyst{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: red
+  }
+  
+  
+  .role{
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    border-radius: 7px;
+    font-weight: 50px;
+    border: 1px thin #4CDC93;;
+    
+}

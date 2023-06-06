@@ -30,7 +30,7 @@ const ForgotPassword = () => {
       </ImageBox>
 
       <FormBox>
-        <div className="logo"> LOGO</div>
+        <div className="logo"> SMARTLEND</div>
         <p className="welcome">Forgot Password</p>
         <p className="paragraph">
           Enter the email address associated with this account to request

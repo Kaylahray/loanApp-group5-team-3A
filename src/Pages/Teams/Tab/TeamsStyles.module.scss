@@ -1,0 +1,135 @@
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    // gap: 32px;
+    position: absolute;
+    width: 1200px;
+    height: 48px;
+    left: 280px;
+    top: 32px;
+    height: 100%;
+    font-family: 'Inter';
+  font-style: normal;
+  }
+  
+  .tops {
+    display: flex;
+    // text-align: center;
+    // align-items: center;
+    width: fit-content;
+      gap: 10px;
+      background-color: white;
+      
+  }
+  
+  
+  .topleft{
+    display: flex;
+    justify-content: space-around; 
+    row-gap: 100px;
+    height: 24px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.011em;
+      color: #9E9E9E;
+      margin-right: 5px;
+  }
+  
+  .topleft h1 {
+    width: 62px;
+    height: 28px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.017em;
+    color: #000000;
+    top: 10px;
+  }
+  .teaminput{
+    // position: relative;
+    margin-left: 100px;
+    display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 5px;
+      border-radius: 40px;
+      width: 520px;
+      height: 56px;
+      background: #FCFCFC;
+  }
+  .topleft .teamssearchbar{
+      margin-left: 10px;
+      flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+  }
+  .teamssearchbar::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  }
+  .searchicon {
+    color: #555;
+    margin-right: 5px;
+    // position: absolute;
+    // left: 160px; /* Adjust this value to position the icon */
+    // top: 2%;
+    // transform: translateY(-50%);
+    margin-right: 50px;
+  }
+  
+  .teamssearchbar input {
+    width: 57px;
+    height: 24px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1E1E1E;
+    border: none;
+    flex: none;
+    padding-left: 30px;
+  }
+  .topright{
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: center;
+  // align-items: center;
+  // padding: 8px 80px;
+  // gap: 4px;
+  
+    width: 240px;
+    height: 56px;
+    background: #4C4DDC;
+    left: 800px;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+    // gap: 40px;
+    height: 56px;
+    width: 240px;
+    margin-left: 263px;
+  }
+  .topright button{
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 8px 10px 8px 8px;
+    letter-spacing: -0.011em;
+  }

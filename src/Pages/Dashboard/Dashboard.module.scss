@@ -44,18 +44,18 @@
   height: 56px;
   background: #ffffff;
   border-radius: 40px;
-}
-.dashinput input {
-  width: 50%;
-  height: 24px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  color: #1e1e1e;
-  outline: none;
-  border: none;
+  .mysearch {
+    width: 50%;
+    height: 24px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1e1e1e;
+    outline: none;
+    border: none;
+  }
 }
 
 .dashright {
@@ -108,6 +108,10 @@
   background-image: url("./DashboardIcons/profile.svg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.notice {
+  font-weight: bold;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -279,7 +283,7 @@
 .chart {
   width: 640px;
   height: 360px;
-  background-color: #dcdb4c;
+  // background-color: #dcdb4c;
   margin-top: 32px;
   margin: 32px auto;
 }
@@ -386,4 +390,6 @@
   align-items: center;
   gap: 30px;
   text-overflow: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(253, 249, 249);
 }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const ResetPasswordSent = () => {
   return (
     <div className="verify">
-      <h1>LOGO</h1>
+      <div className="logo">SMARTLEND</div>
       <h1 className="h2text">Reset password</h1>
       <div>
         <p className="ptext">

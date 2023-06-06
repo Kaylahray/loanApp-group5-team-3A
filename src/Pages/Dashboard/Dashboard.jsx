@@ -3,6 +3,7 @@ import search from "./DashboardIcons/searchIcon.svg";
 import styles from "./Dashboard.module.scss";
 import DashData from "./DashData";
 import ProfileData from "./Notification";
+import DashChart from "./DashChart";
 
 const Dashboard = () => {
   return (
@@ -14,7 +15,11 @@ const Dashboard = () => {
 
             <div className={styles.dashinput}>
               <img src={search} alt="img" className={styles.img} />
-              <input type="text" placeholder="Search" />
+              <input
+                className={styles.mysearch}
+                type="text"
+                placeholder="Search"
+              />
             </div>
           </div>
 
@@ -44,7 +49,9 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className={styles.chart}> </div>
+          <div className={styles.chart}>
+            <DashChart />
+          </div>
           <div className={styles.view}>
             <h3> Applications</h3>
             <a href="/">View All</a>
@@ -125,8 +132,10 @@ const Dashboard = () => {
                       <img src={item.img} alt="img" />
                     </div>
                     <div>
-                      <p>{item.name}</p>
-                      <p>{item.text}</p>
+                      <p>
+                        <strong> {item.name} </strong>{" "}
+                        <span className="span">{item.text}</span>
+                      </p>
                       <h4>{item.time}</h4>
                     </div>
                   </div>
