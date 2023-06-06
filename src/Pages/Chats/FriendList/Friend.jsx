@@ -1,7 +1,11 @@
-export default function FriendComponent({ friend, setFriend }) {
+import { useContext } from "react";
+import { ChatContext } from "../ChatContext";
+
+export default function FriendComponent({ friend }) {
+  const { setFriend } = useContext(ChatContext);
   const friendClassName = friend.active ? "juliet" : "text";
   return (
-    <div className="friend-main" onClick={() => setFriend(friend)}>
+    <div className="friend-main" onClick={() => setFriend(friend.id)}>
       <div className="friend-list">
         <img src={friend.image} alt="" />
         <div className="friend-name">

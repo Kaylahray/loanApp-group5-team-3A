@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ChatContext } from "../ChatContext";
+import { FiSearch, FiMoreVertical } from "react-icons/fi"
 
-export default function MessageHeader({ friend, onFilterMessage }) {
+export default function MessageHeader() {
+  const { friend, setFilterMessage } = useContext(ChatContext);
   const [show, setShow] = useState(false);
 
   return (
@@ -11,12 +14,19 @@ export default function MessageHeader({ friend, onFilterMessage }) {
       </div>
       <div className="top-2-child">
         {show ? (
-          <input onKeyDown={(event) => onFilterMessage(event.target.value)} />
+          <input
+            className="Input-field"
+            onKeyDown={(event) => setFilterMessage(event.target.value)}
+          />
         ) : (
           <></>
         )}
-        <img src="/images/search.svg" alt="" onClick={() => setShow(!show)} />
-        <img className="dot" src="/images/dot.svg" alt="" />
+        <img
+          src="/chat-Images/search.svg"
+          alt=""
+          onClick={() => setShow(!show)}
+        />
+        <img className="dot" src="/chat-Images/dot.svg" alt="" />
       </div>
     </div>
   );

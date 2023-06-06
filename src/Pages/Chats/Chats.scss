@@ -118,6 +118,9 @@ body {
         padding: 32px 40px;
         width: 105%;
         overflow-x: hidden;
+        img {
+            border-radius: 0;
+        }
         .sent-msg, .received-msg {
             margin-top: 12px;
             article {

@@ -1,57 +1,69 @@
 import FriendListComponent from "./FriendList/FriendList";
 import MessageCenterComponent from "./MessageCenter/MessageCenter";
-import "./Chats.scss"
+import "./Chats.scss";
 import { useState } from "react";
+import { useEffect } from "react";
+import { ChatContext } from "./ChatContext";
 
-const dummyData = [
-  {
-    id: 1,
-    name: "Juliet One",
-    text: "nice",
-    time: "12:09",
-    active: true,
-    unread: 2,
-    image: "/chat-Images/person.svg",
-    messages: [],
-  },
-  {
-    id: 2,
-    name: "Juliet Two",
-    text: "nice",
-    time: "12:09",
-    unread: 0,
-    image: "/chat-Images/men.jpg",
-    messages: [],
-  },
-  {
-    id: 3,
-    name: "Juliet Three",
-    text: "nice",
-    time: "12:09",
-    unread: 20,
-    image: "/chat-Images/gal.jpg",
-    messages: [],
-  },
-  {
-    id: 4,
-    name: "Juliet Four",
-    text: "nice",
-    time: "12:09",
-    image: "/chat-Images/smiley.jpeg",
-    messages: [],
-  },
-];
+const endpoint = "https://demo9085179.mockable.io/friends";
+
+function Chats() {
+  const [friendId, setFriend] = useState(-1);
+  const [messageFilter, setFilterMessage] = useState("");
+  const [friendFilter, setFilterFriends] = useState("");
+  const [friends, setFriends] = useState([]);
+
+  useEffect(() => {
+    fetch(endpoint)
+      .then(data => data.json())
+        .then(response => setFriends(response));
+   }, []);
+
+  const friend = findFriend(friends, friendId);
+  const currentFriends = findMatchingFriends(friends, friendFilter);
+  const currentMessages = friend ? findMatchingMessages(friend.messages, messageFilter) : [];
+  const sendMessage = (content, type) => {
+    const selectedFriend = findFriend(friends, friendId);
+    selectedFriend.messages.unshift({ content, type, isSent: true });
+    selectedFriend.messages.unshift({ content, type });
+    setFriends([...friends])
+  }
 
 
- function Chats() {
-  const [friend, setFriend] = useState(null);
-  const [friends, setFriends] = useState(dummyData);
   return (
-    <div className="main-container">
-      <FriendListComponent setFriend={setFriend} friends={friends} />
-      {friend ? <MessageCenterComponent friend={friend} /> : <h1>Select Friend to view chats</h1>}
-    </div>
+    <ChatContext.Provider value={{ sendMessage, friend, setFriend, setFilterFriends, setFilterMessage, currentFriends, currentMessages  }}>
+          <div className="main-container">
+            <FriendListComponent />
+            {friend ? (
+              <MessageCenterComponent  />
+            ) : (
+              <h1>Select Friend to view chats</h1>
+            )}
+          </div>
+    </ChatContext.Provider>
+
   );
+}
+
+function findFriend(friends, searchValue) {
+  for(let friend of friends) {
+    if (friend.id == searchValue) return friend;
+  }
+}
+function findMatchingMessages(messages, searchValue) {
+  const matchingMessages = [];
+    for (let message of messages) {
+      if (message.content.includes(searchValue)) matchingMessages.push(message);
+    }
+    return matchingMessages;
+}
+
+function findMatchingFriends(friends, searchValue) {
+  const matchingFriends = [];
+  for (let friend of friends) {
+    if (friend.name.includes(searchValue)) matchingFriends.push(friend);
+  }
+  return matchingFriends;
 }
 
 export default Chats;
