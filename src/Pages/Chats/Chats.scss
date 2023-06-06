@@ -9,6 +9,14 @@ body {
         max-height: 75px;
         border-radius: 50%;
     }
+    .chat-input-2 {
+            width: 80%;
+            padding: 0 2rem;
+            input {
+                background-color: white;
+                border-radius: 2rem;
+            }
+        }
 }
 .child-container-1 {
     display: flex;
@@ -23,6 +31,13 @@ body {
             font-weight: 500;
             font-size: 20px;
             line-height: 28px;
+        }
+        .chat-input-2 {
+            width: 80%;
+            padding-left: 3rem;
+            input {
+                border-radius: 2rem;
+            }
         }
     }
     .friend-main {

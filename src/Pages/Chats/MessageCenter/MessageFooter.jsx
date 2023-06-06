@@ -2,9 +2,11 @@ import EmojiPicker from "emoji-picker-react";
 import ReactFileReader from "react-file-reader";
 import { useState, useContext } from "react";
 import { ChatContext } from "../ChatContext";
+import { InputGroup, InputLeftElement, Input } from "@chakra-ui/react";
+import { FiSearch } from "react-icons/fi";
 
 export default function MessageFooter() {
-      const { sendMessage } = useContext(ChatContext);
+  const { sendMessage } = useContext(ChatContext);
   const [showEmoji, setShowEmoji] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -38,14 +40,16 @@ export default function MessageFooter() {
         onClick={() => setShowEmoji(true)}
       />
       {showEmoji ? <EmojiPicker onEmojiClick={handleEmojiClick} /> : <></>}
-      <input
-        className="Input-field placeholder text"
-        type="text"
-        placeholder="Type message"
-        value={message}
-        onChange={(event) => setMessage(event.target.value)}
-        onKeyDown={handleTextMessage}
-      />
+
+      <div className="chat-input-2">
+        <InputGroup>
+          <Input
+            type="text"
+            placeholder="Type message"
+            onKeyDown={handleTextMessage}
+          />
+        </InputGroup>
+      </div>
     </div>
   );
 }
