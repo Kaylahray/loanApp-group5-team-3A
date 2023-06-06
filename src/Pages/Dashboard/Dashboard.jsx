@@ -6,6 +6,7 @@ import DashData from "./DashData";
 import ProfileData from "./Notification";
 // import DashChart from "./DashChart";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const [items, setItems] = useState(DashData);
@@ -35,7 +36,10 @@ const Dashboard = () => {
           </div>
 
           <div className={styles.dashright}>
-            <button className={styles.dashnavbtn}>Create Model</button>
+            <button className={styles.dashnavbtn}>
+              {" "}
+              <Link to={"/model"}> Create Model</Link>
+            </button>
             <div className={styles.profile}> </div>
           </div>
         </div>
