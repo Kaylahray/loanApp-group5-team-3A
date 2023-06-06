@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import style from './Analysis.module.scss'
-import Scores from './Scores'
+import Scores from '../Scores/Scores'
 
 
 function Createanalysis() {

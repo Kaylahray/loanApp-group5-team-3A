@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './Scores.module.scss'
 import { useState } from 'react'
-import Review from "../Components/Review";
+import Review from '../Review/Review'
 
 
 function Scores() {

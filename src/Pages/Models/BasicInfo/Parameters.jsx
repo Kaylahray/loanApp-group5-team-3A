@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Select, Flex, Center, SimpleGrid, Box } from "@chakra-ui/react";
+import Createanalysis from "../Createanalysis/createanalysis";
+
 
 
 const parameters = [
@@ -72,6 +74,8 @@ const subParams = {
 const Parameters = () => {
   const [selected, setSelected] = useState("");
 
+  const [onNext, setOnNext] = useState(false)
+
   return (
     <div className="container">
 <SimpleGrid columns={2} w='40%' mx='auto' gap={10} mt={10} > 
@@ -111,7 +115,13 @@ const Parameters = () => {
 </SimpleGrid>
       
       <Center>
-          <button className="btn">Continue</button>
+      <div>
+    {!onNext && <button  onClick={() => setOnNext(true)}>
+        Continue
+        </button> }
+
+        {onNext && <Createanalysis/>}
+    </div>
         </Center>
     
     </div>
