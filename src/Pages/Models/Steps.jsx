@@ -35,7 +35,7 @@ function Smartlend() {
 
   return (
     <Box position="relative">
-      <Stepper size="sm" index={activeStep} gap="0" w="50%" mx="auto" mt={10}>
+      <Stepper size="sm" index={activeStep} gap="0" w="70%" mx="auto" mt={10}>
         {steps.map((step, index) => (
           <Step key={index} gap="0">
             <Box flexShrink="0">
