@@ -7,8 +7,7 @@ const ModelTop = () => {
   return (
     <div>
       <Container maxW={"container.xl"}>
-      <Flex justifyContent={"space-between"} alignItems={"center"} >
-        <div className="logo"><img src={Logo}/></div>
+      <Flex justifyContent={"end"} alignItems={"center"} >
         <Flex alignItems={"center"} gap={10}>
           <div>
             <InputGroup>

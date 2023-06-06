@@ -14,8 +14,7 @@ import Faq from "./Pages/Faq/Faq";
 import Models from "./Pages/Models/Models";
 import Logout from "./Pages/Logout/Logout";
 
-import CustomerProfile from "./Pages/CustomerProfile/CustomerPro";
-
+import CustomerPro from "./Pages/CustomerProfile/CustomerPro";
 
 import SignUp from "./OnboardingPages/SignUp";
 import PersonalDetails from "./OnboardingPages/PersonalDetails";
@@ -30,6 +29,7 @@ import ResetPasswordSent from "./OnboardingPages/ResetPasswordSent";
 import PasswordResetSuccess from "./OnboardingPages/PasswordResetSuccess";
 import VerifyEmail from "./OnboardingPages/VerifyEmail";
 import VerificationSuccess from "./OnboardingPages/VerificationSuccess";
+import ModelTop from "./Pages/Models/ModelTop";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -65,27 +65,30 @@ function App() {
               element={<PasswordResetSuccess />}
             />
             <Route path="/verify" element={<VerifyEmail />} />
+            <Route path="/model" element={<Models />} />
+
             <Route path="/verifySuccess" element={<VerificationSuccess />} />
+            <Route path="/models" element={<Models />} />
+
             <Route path="/layout" element={<Layout />}>
               <Route path="/layout/" element={<Dashboard />} />
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
-              <Route path="/layout/application" element={<Application />}>
-                <Route
-                  path="/layout/application/customerprofile"
-                  element={<CustomerProfile />}
-                />
-              </Route>
+              <Route path="/layout/application" element={<Application />} />
+
+              <Route
+                path="/layout/application/customerprofile"
+                element={<CustomerPro />}
+              />
+
               <Route path="/layout/teams" element={<Teams />} />
-              <Route path="/layout/models" element={<Models />} />
+              <Route path="/layout/models" element={<ModelTop />} />
 
               <Route path="/layout/settings" element={<Settings />} />
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />
               <Route path="/layout/logout" element={<Logout />} />
             </Route>
-            <Route path="/models" element={<Models />} />
-
           </Routes>
         </Container>
       </div>

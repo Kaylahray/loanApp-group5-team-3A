@@ -52,6 +52,7 @@ const PersonalDetails = () => {
                       name="firstName"
                       label="First name"
                       placeholder="e.g chioma"
+                      className="inputBox"
                     />
                   </div>
                   <div className="form-control">
@@ -61,6 +62,7 @@ const PersonalDetails = () => {
                       name="lastName"
                       label="Last name"
                       placeholder="e.g christopher"
+                      className="inputBox"
                     />
                   </div>
                   <div className="form-control">
@@ -70,6 +72,7 @@ const PersonalDetails = () => {
                       name="role"
                       label="Role"
                       placeholder="e.g Bank manager"
+                      className="inputBox"
                     />
                   </div>
 

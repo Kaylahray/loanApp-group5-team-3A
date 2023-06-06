@@ -5,8 +5,10 @@ import FormBox from "../Component/FormBox/FormBox";
 import Image from "../Component/Image/Image";
 import FormikControl from "../Component/FormComponent/FormikControl";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const AddTeam = () => {
+  const [users, setUsers] = useState([]);
   const dropDown = [
     { key: "select", value: "" },
     { key: "Analyst", value: "User" },
@@ -22,16 +24,15 @@ const AddTeam = () => {
     select: Yup.string().required("Required"),
   });
 
-  const arr = [];
-
   const onSubmit = (values, onSubmitProps) => {
-    arr.push(values);
+    setUsers((prev) => [...prev, values]);
     onSubmitProps.setSubmitting(false);
     onSubmitProps.resetForm();
   };
 
-  const removeList = () => {
-    console.log(arr.length);
+  const removeList = (list) => {
+    const newList = users.filter((item) => item.email !== list.email);
+    setUsers(newList);
   };
 
   return (
@@ -59,6 +60,7 @@ const AddTeam = () => {
                       name="email"
                       label="Email address(required)"
                       placeholder="e.g @chiomachris@gmail.com"
+                      className="inputBox"
                     />
                   </div>
                   <div className="form-control">
@@ -67,28 +69,9 @@ const AddTeam = () => {
                       name="select"
                       label="Permission(required)"
                       options={dropDown}
+                      className="selectBox"
                     />
                   </div>
-
-                  <div>
-                    {arr.length > 0 &&
-                      arr.map((item) => {
-                        const { email } = item;
-                        return (
-                          <div key={email}>
-                            <p>{email} </p>
-                            <button
-                              type="button"
-                              className="btn"
-                              onClick={() => removeList(arr, item)}
-                            >
-                              X
-                            </button>
-                          </div>
-                        );
-                      })}
-                  </div>
-                  {arr.length}
                   <button
                     className="btn"
                     type="submit"
@@ -96,6 +79,24 @@ const AddTeam = () => {
                   >
                     Add team member
                   </button>
+                  <div>
+                    {users.length > 0 &&
+                      users.map((item) => {
+                        const { email } = item;
+                        return (
+                          <div key={email} className="split">
+                            <p>{email} </p>
+                            <button
+                              type="button"
+                              onClick={() => removeList(item)}
+                              className="remove"
+                            >
+                              X
+                            </button>
+                          </div>
+                        );
+                      })}
+                  </div>
                 </Form>
               );
             }}

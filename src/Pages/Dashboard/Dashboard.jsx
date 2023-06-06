@@ -2,9 +2,18 @@ import Top from "../../Component/LayoutComponent/TopSectionComponent/Top";
 import search from "./DashboardIcons/searchIcon.svg";
 import styles from "./Dashboard.module.scss";
 import DashData from "./DashData";
+
 import ProfileData from "./Notification";
+// import DashChart from "./DashChart";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
+  const [items, setItems] = useState(DashData);
+  const [query, setQuery] = useState("");
+  const filteredItems = items.filter((item) => {
+    // item.toLowercase().includes(query.toLowerCase());
+  });
   return (
     <div className={styles.body}>
       <Top>
@@ -14,12 +23,23 @@ const Dashboard = () => {
 
             <div className={styles.dashinput}>
               <img src={search} alt="img" className={styles.img} />
-              <input type="text" placeholder="Search" />
+              <input
+                className={styles.mysearch}
+                type="text"
+                placeholder="Search"
+                value={query}
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                }}
+              />
             </div>
           </div>
 
           <div className={styles.dashright}>
-            <button className={styles.dashnavbtn}>Create Model</button>
+            <button className={styles.dashnavbtn}>
+              {" "}
+              <Link to={"/model"}> Create Model</Link>
+            </button>
             <div className={styles.profile}> </div>
           </div>
         </div>
@@ -44,7 +64,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className={styles.chart}> </div>
+          <div className={styles.chart}>{/* {<DashChart />} */}</div>
           <div className={styles.view}>
             <h3> Applications</h3>
             <a href="/">View All</a>
@@ -86,7 +106,7 @@ const Dashboard = () => {
                 </thead>
 
                 <tbody>
-                  {DashData.map((data) => {
+                  {filteredItems.map((data) => {
                     return (
                       <tr key={data.id} className={styles.app_body}>
                         <td>{data.id}</td>
