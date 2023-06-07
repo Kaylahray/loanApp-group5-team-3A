@@ -82,13 +82,12 @@ function App() {
               />
 
               <Route path="/layout/teams" element={<Teams />} />
-              <Route path="/models" element={<ModelTop />} /> 
+              <Route path="/layout/models" element={<ModelTop />} />
 
               <Route path="/layout/settings" element={<Settings />} />
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />
               <Route path="/layout/logout" element={<Logout />} />
-
             </Route>
           </Routes>
         </Container>

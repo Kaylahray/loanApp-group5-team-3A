@@ -1,83 +1,84 @@
-import React from 'react'
-import style from './Scores.module.scss'
-import { useState } from 'react'
-import Review from '../Review/Review'
-
+import style from "./Scores.module.scss";
+import { useState } from "react";
+import Review from "../Review/Review";
 
 function Scores() {
-
-const [onNext, setOnNext] = useState(false)
-
+  const [onNext, setOnNext] = useState(false);
 
   return (
     <div>
-        <div className={style.body}> 
+      <div className={style.body}>
         <h1>Create Prediction Model</h1>
-        <p>Here are the scores previously stated, please review and edit if needed</p>
-        </div>
-        <div>
-          <table> 
-            <tr className={style.first}>
-                <td>Variable</td>
-                <td>Assigned Score</td>
-            </tr>
-            <tr>
-              <td>Average Credit</td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <td>Total outstanding loan</td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <td>Total watchlisted loan</td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <td>Highest loan amount</td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <td>Average income</td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <td>Average expenses</td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <td>Re-occuring expenses</td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <td>Low inflow rate</td>
-              <td>10</td>
-            </tr>
-            <tr className={style.first}>
-              <td>Total</td>
-              <td>90</td>
-            </tr>
-            </table>
-        </div>
-        <div className={style.scores}>
-          <label htmlFor="">Pass mark (required)</label>
-          <br/>
-          <input type="text" placeholder='select' className={style.scoresplace}/>
-        </div>
-        <div>
+        <p>
+          Here are the scores previously stated, please review and edit if
+          needed
+        </p>
+      </div>
+      <div>
+        <table className={style.tablee}>
+          <tr className={style.first}>
+            <td className={style.tableData}>Variable</td>
+            <td className={style.tableData}>Assigned Score</td>
+          </tr>
+          <tr>
+            <td className={style.tableData}>Average Credit</td>
+            <td className={style.tableData}>10</td>
+          </tr>
+          <tr>
+            <td className={style.tableData}>Total outstanding loan</td>
+            <td className={style.tableData}>10</td>
+          </tr>
+          <tr>
+            <td className={style.tableData}>Total watchlisted loan</td>
+            <td className={style.tableData}>10</td>
+          </tr>
+          <tr>
+            <td className={style.tableData}>Highest loan amount</td>
+            <td className={style.tableData}>10</td>
+          </tr>
+          <tr>
+            <td className={style.tableData}>Average income</td>
+            <td className={style.tableData}>10</td>
+          </tr>
+          <tr>
+            <td className={style.tableData}>Average expenses</td>
+            <td className={style.tableData}>10</td>
+          </tr>
+          <tr>
+            <td className={style.tableData}>Re-occuring expenses</td>
+            <td className={style.tableData}>10</td>
+          </tr>
+          <tr>
+            <td className={style.tableData}>Low inflow rate</td>
+            <td className={style.tableData}>10</td>
+          </tr>
+          <tr className={style.first}>
+            <td className={style.tableData}>Total</td>
+            <td className={style.tableData}>90</td>
+          </tr>
+        </table>
+      </div>
+      <div className={style.scores}>
+        <label htmlFor="">Pass mark (required)</label>
+        <br />
+        <input type="text" placeholder="select" className={style.scoresplace} />
+      </div>
+      <div>
         <label htmlFor="">Least considerable score</label>
-          <br/>
-          <input type="text" placeholder='select' className={style.scoresplace}/>
-        </div>
-        <div className={style.button}>
-    {!onNext && <button className={style.scoresbtn} onClick={() => setOnNext(true)}>
-        Continue
-        </button> }
+        <br />
+        <input type="text" placeholder="select" className={style.scoresplace} />
+      </div>
+      <div className={style.button}>
+        {!onNext && (
+          <button className={style.scoresbtn} onClick={() => setOnNext(true)}>
+            Continue
+          </button>
+        )}
 
-        {onNext && <Review/>}
+        {onNext && <Review />}
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
-export default Scores
+export default Scores;

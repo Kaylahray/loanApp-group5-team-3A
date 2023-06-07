@@ -3,9 +3,7 @@
 // import Logo from "./ModelIcons/SLogo.svg";
 import ModelTop from "./ModelTop";
 import BasicInformation from "./BasicInfo/BasicInformation";
-import Parameters from "./BasicInfo/Parameters";
 import Steps from "./Steps";
-import Previewandconfirm from "./Previewandconfirm";
 
 
 

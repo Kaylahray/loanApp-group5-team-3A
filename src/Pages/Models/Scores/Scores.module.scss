@@ -1,17 +1,14 @@
-body{
-    margin: 0;
-}
 
-table{
+.table{
     width: 40%;
 }
 
-table, th {
+.table, .th {
     border:1px solid rgb(179, 174, 174);
     border-collapse: collapse;
   }
 
-td{
+.tableData{
     border:1px solid rgb(179, 174, 174);
     border-collapse: collapse;
 }
