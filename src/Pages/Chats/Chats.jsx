@@ -5,13 +5,14 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { ChatContext } from "./ChatContext";
 
+
 const endpoint = "https://demo9085179.mockable.io/friends";
 
 function Chats() {
-  const [friendId, setFriend] = useState(-1);
+  const [friendId, setFriendId] = useState();
   const [messageFilter, setFilterMessage] = useState("");
   const [friendFilter, setFilterFriends] = useState("");
-  const [friends, setFriends] = useState([]);
+  const [friends, setFriends] = useState(null);
 
   useEffect(() => {
     fetch(endpoint)
@@ -19,6 +20,9 @@ function Chats() {
         .then(response => setFriends(response));
    }, []);
 
+  if (friends == null) return <></>;
+
+   // Sub-routines
   const friend = findFriend(friends, friendId);
   const currentFriends = findMatchingFriends(friends, friendFilter);
   const currentMessages = friend ? findMatchingMessages(friend.messages, messageFilter) : [];
@@ -29,15 +33,18 @@ function Chats() {
     setFriends([...friends])
   }
 
+ 
 
   return (
-    <ChatContext.Provider value={{ sendMessage, friend, setFriend, setFilterFriends, setFilterMessage, currentFriends, currentMessages  }}>
+    <ChatContext.Provider value={{ sendMessage, friend, setFriend: setFriendId, setFilterFriends, setFilterMessage, currentFriends, currentMessages  }}>
           <div className="main-container">
             <FriendListComponent />
             {friend ? (
               <MessageCenterComponent  />
             ) : (
-              <></>
+              <div className="no-message">
+                <h3 className="float">Pick a friend and chat a-thon.</h3>
+              </div>
             )}
           </div>
     </ChatContext.Provider>

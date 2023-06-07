@@ -10,13 +10,43 @@ body {
         border-radius: 50%;
     }
     .chat-input-2 {
-            width: 80%;
-            padding: 0 1rem;
-            input {
-                background-color: white;
-                border-radius: 2rem;
+        width: 80%;
+        padding: 0 1rem;
+        input {
+            background-color: white;
+            border-radius: 2rem;
+        }
+    }
+    .no-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 63%;
+        h3 {
+            font-family: cursive;
+            font-size: 2rem;
+        }
+        .float {
+            animation: floating 2s linear infinite;
+            margin: 3.5rem auto;
+            padding: 1rem;
+            background: #4c4ddc;
+            color: #ffffff;
+            box-shadow: -20px -17px 8px 0px #5a9bad63;
+        }
+        @keyframes floating {
+            0% {
+                transform: translate(0%, 30%);
+            }
+            50% {
+                transform: translate(0%, -30%);
+            }
+            100% {
+                transform: translate(0%, 30%);
             }
         }
+    }
 }
 .child-container-1 {
     display: flex;
@@ -39,9 +69,9 @@ body {
             input {
                 border: none;
                 border-radius: 2rem;
-                background: #FCFCFC;
-                placeholder{
-                    color: #9E9E9E;
+                background: #fcfcfc;
+                placeholder {
+                    color: #9e9e9e;
                 }
             }
         }
@@ -63,7 +93,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-    
+
         .juliet {
             font-size: 20px;
             font-weight: 500px;
@@ -92,7 +122,6 @@ body {
     overflow: hidden;
     flex-direction: column;
     border-left: 2px solid #f5f5ff;
-
 
     .EmojiPickerReact {
         position: absolute !important;
@@ -142,7 +171,8 @@ body {
         img {
             border-radius: 0;
         }
-        .sent-msg, .received-msg {
+        .sent-msg,
+        .received-msg {
             margin-top: 12px;
             article {
                 font-size: 3rem;

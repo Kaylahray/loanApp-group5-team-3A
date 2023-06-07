@@ -46,6 +46,8 @@ export default function MessageFooter() {
           <Input
             type="text"
             placeholder="Type message"
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
             onKeyDown={handleTextMessage}
           />
         </InputGroup>
