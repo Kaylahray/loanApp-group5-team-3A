@@ -1,7 +1,15 @@
+import DashData from "./DashData";
 import styles from "./Dashboard.module.scss";
 import Trail from "./Trail";
 
 const Left = () => {
+  // const isOdd = (value) => !isEven(value);
+  const assigned = (item) => item.status === "Approved";
+  const asn = DashData.filter(assigned).map((item) => {
+    return item.id;
+  });
+  console.log(asn);
+
   return (
     <div className={styles.left}>
       <div className={styles.applicants}>
@@ -33,7 +41,7 @@ const Left = () => {
             </a>
           </div>
           <div className={styles.two}>
-            <a href="/" className={styles.notif}>
+            <a href="#0" className={styles.notif} onClick={assigned}>
               Assigned(118)
             </a>
           </div>
