@@ -1,8 +1,14 @@
-
 .nav {
   background-color: #fcfcfc;
   font-size: 14px;
-
+  height: 100%;
+  width: 304px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease;
+  overflow-x: hidden;
 }
 
 .slogo {

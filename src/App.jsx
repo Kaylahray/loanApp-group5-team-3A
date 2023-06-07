@@ -42,7 +42,7 @@ function App() {
 
   return (
     <Context.Provider value={{ visiblePassword, show, setTheme }}>
-      <div className={`${theme} application`}>
+      <div className={`${theme}`}>
         <Container>
           {/* <button className="btn" onClick={changeTheme}>
             theme
