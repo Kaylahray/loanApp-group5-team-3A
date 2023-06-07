@@ -11,7 +11,7 @@ const [onNext, setOnNext] = useState(false)
 
   return (
     <div>
-        <div className={style.body}> 
+        <div> 
         <h1>Create Prediction Model</h1>
         <p>Here are the scores previously stated, please review and edit if needed</p>
         </div>
