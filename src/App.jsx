@@ -68,6 +68,8 @@ function App() {
             <Route path="/model" element={<Models />} />
 
             <Route path="/verifySuccess" element={<VerificationSuccess />} />
+            <Route path="/models" element={<Models />} />
+
             <Route path="/layout" element={<Layout />}>
               <Route path="/layout/" element={<Dashboard />} />
               <Route path="/layout/dashboard" element={<Dashboard />} />
@@ -80,7 +82,7 @@ function App() {
               />
 
               <Route path="/layout/teams" element={<Teams />} />
-              {/*<Route path="/models" element={<ModelTop />} /> */}
+              <Route path="/models" element={<ModelTop />} /> 
 
               <Route path="/layout/settings" element={<Settings />} />
               <Route path="/layout/chats" element={<Chats />} />
@@ -88,7 +90,6 @@ function App() {
               <Route path="/layout/logout" element={<Logout />} />
 
             </Route>
-            <Route path="/models" element={<Models />} />
           </Routes>
         </Container>
       </div>
