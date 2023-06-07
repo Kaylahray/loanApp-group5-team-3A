@@ -50,6 +50,7 @@ function findFriend(friends, searchValue) {
     if (friend.id == searchValue) return friend;
   }
 }
+
 function findMatchingMessages(messages, searchValue) {
   const matchingMessages = [];
     for (let message of messages) {

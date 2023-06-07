@@ -37,7 +37,7 @@ export default function MessageFooter() {
       <img
         src="/chat-Images/emoji.svg"
         alt=""
-        onClick={() => setShowEmoji(true)}
+        onClick={() => setShowEmoji(!showEmoji)}
       />
       {showEmoji ? <EmojiPicker onEmojiClick={handleEmojiClick} /> : <></>}
 
