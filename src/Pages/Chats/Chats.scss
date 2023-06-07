@@ -11,7 +11,7 @@ body {
     }
     .chat-input-2 {
             width: 80%;
-            padding: 0 2rem;
+            padding: 0 1rem;
             input {
                 background-color: white;
                 border-radius: 2rem;
@@ -34,9 +34,15 @@ body {
         }
         .chat-input-2 {
             width: 80%;
-            padding-left: 3rem;
+            padding-left: 1rem;
+            padding-top: 1.5rem;
             input {
+                border: none;
                 border-radius: 2rem;
+                background: #FCFCFC;
+                placeholder{
+                    color: #9E9E9E;
+                }
             }
         }
     }
@@ -57,7 +63,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+    
         .juliet {
             font-size: 20px;
             font-weight: 500px;

@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { ChatContext } from "../ChatContext";
-import { FiSearch, FiMoreVertical } from "react-icons/fi"
+
 
 export default function MessageHeader() {
   const { friend, setFilterMessage } = useContext(ChatContext);

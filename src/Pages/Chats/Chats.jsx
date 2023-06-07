@@ -37,7 +37,7 @@ function Chats() {
             {friend ? (
               <MessageCenterComponent  />
             ) : (
-              <h1>Select Friend to view chats</h1>
+              <></>
             )}
           </div>
     </ChatContext.Provider>
