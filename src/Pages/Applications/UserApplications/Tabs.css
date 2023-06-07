@@ -22,6 +22,7 @@
   
   .bloc-tabs {
     display: flex;
+    color: rgb(129, 129, 129);
   }
   
   .tabs {
