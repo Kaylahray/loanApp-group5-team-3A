@@ -7,19 +7,16 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+#root {
+  height: 100%;
+  width: 100%;
+  background-color: #dc4cc4;
+  // overflow: auto;
+}
 
 .main {
   @include flexCenter(row);
   margin-block: 2rem;
-  // background-color: red;
-}
-
-.application {
-  min-height: $Main-height;
-
-  .btn {
-    margin-top: 2rem;
-  }
 }
 
 .dark {
@@ -193,8 +190,7 @@ span {
   width: 24px;
 }
 
-button:disabled,
-button[disabled] {
+.formbutton:disabled {
   border: 1px solid #999999;
   background-color: #b0adad;
   color: #363333;
