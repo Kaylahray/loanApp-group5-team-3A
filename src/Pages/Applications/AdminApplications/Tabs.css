@@ -22,6 +22,7 @@
   
   .bloc-tabs {
     display: flex;
+    color: grey;
   }
   
   .tabs {
