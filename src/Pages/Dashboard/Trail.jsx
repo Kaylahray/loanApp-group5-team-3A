@@ -6,12 +6,24 @@ import Pagination from "./Pagination";
 const Trail = () => {
   const [currentPages, setCurrentPage] = useState(1);
   const [postPerPage] = useState(5);
+  const [search, setSearch] = useState(DashData);
 
   const indexOfLast = postPerPage * currentPages;
   const indexOfFirst = indexOfLast - postPerPage;
   const currentPost = DashData.slice(indexOfFirst, indexOfLast);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const page = Math.ceil(DashData.length / postPerPage);
+  console.log(DashData);
+
+  const onSearchHandler = (e) => {
+    if (!e.target.value) return setSearch(DashData);
+
+    const filteredProducts = DashData.filter((product) => {
+      return product.title.toLowerCase().includes(e.target.value.toLowerCase());
+    });
+    console.log(filteredProducts);
+    setSearch(filteredProducts);
+  };
 
   return (
     <div className={styles.fetch}>
