@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 /*
  * Copyright (c) 2023 Your Company Name
  * All rights reserved.
  */
 
+=======
+>>>>>>> 02a631471d23d26e483808808b5024a2bfa96df0
 import { useState } from "react";
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
@@ -19,7 +22,6 @@ import Faq from "./Pages/Faq/Faq";
 import Models from "./Pages/Models/Models";
 import Logout from "./Pages/Logout/Logout";
 
-
 import CustomerPro from "./Pages/CustomerProfile/CustomerPro";
 
 import SignUp from "./OnboardingPages/SignUp";
@@ -35,6 +37,7 @@ import ResetPasswordSent from "./OnboardingPages/ResetPasswordSent";
 import PasswordResetSuccess from "./OnboardingPages/PasswordResetSuccess";
 import VerifyEmail from "./OnboardingPages/VerifyEmail";
 import VerificationSuccess from "./OnboardingPages/VerificationSuccess";
+import ModelTop from "./Pages/Models/ModelTop";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -47,7 +50,7 @@ function App() {
 
   return (
     <Context.Provider value={{ visiblePassword, show, setTheme }}>
-      <div className={`${theme} application`}>
+      <div className={`${theme}`}>
         <Container>
           {/* <button className="btn" onClick={changeTheme}>
             theme
@@ -70,27 +73,38 @@ function App() {
               element={<PasswordResetSuccess />}
             />
             <Route path="/verify" element={<VerifyEmail />} />
+            <Route path="/model" element={<Models />} />
+
             <Route path="/verifySuccess" element={<VerificationSuccess />} />
+<<<<<<< HEAD
             <Route path="/layout" element={<Layout />}/> 
+=======
+            <Route path="/models" element={<Models />} />
+
+            <Route path="/layout" element={<Layout />}>
+>>>>>>> 02a631471d23d26e483808808b5024a2bfa96df0
               <Route path="/layout/" element={<Dashboard />} />
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
-              <Route path="/layout/application" element={<Application />}/>
-               
-           <Route
-                  path="/layout/application/customerprofile"
-                  element={<CustomerPro />}
-                />
+              <Route path="/layout/application" element={<Application />} />
 
-           
+              <Route
+                path="/layout/application/customerprofile"
+                element={<CustomerPro />}
+              />
+
               <Route path="/layout/teams" element={<Teams />} />
-              <Route path="/layout/models" element={<Models />} />
+              <Route path="/layout/models" element={<ModelTop />} />
 
               <Route path="/layout/settings" element={<Settings />} />
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />
               <Route path="/layout/logout" element={<Logout />} />
+<<<<<<< HEAD
             
+=======
+            </Route>
+>>>>>>> 02a631471d23d26e483808808b5024a2bfa96df0
           </Routes>
         </Container>
       </div>

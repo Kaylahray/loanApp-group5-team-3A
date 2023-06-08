@@ -1,12 +1,41 @@
+.paginationDiv {
+  margin-block: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .pagBtn {
+    // border: 1px solid gray;
+    padding: 8px;
+  }
+  .pagBtn:active,
+  .pagBtn:focus {
+    background-color: #4c4ddc;
+  }
+}
+.pagBtn a:focus,
+.pagBtn a:active {
+  background-color: #4c4ddc;
+}
+.disabled {
+  color: #4c4ddc;
+}
+.disabled:disabled {
+  color: #d6d6e3;
+}
 .dashnav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  // position: absolute;
   width: 100%;
   height: 56px;
-  // left: 360px;
   top: 30px;
 }
 
@@ -127,9 +156,9 @@
 // }
 .down {
   display: grid;
-  grid-template-columns: 4fr 2fr;
+  grid-template-columns: 4fr 320px;
   // background-color: aqua;
-  height: 500px;
+  // height: 500px;
   margin: 10px 0;
 }
 
@@ -144,8 +173,10 @@
   height: 100px;
 }
 .body {
-  width: 94%;
+  // width: 94%;
   margin: 20px auto;
+  height: 100%;
+  // background-color: #dcdb4c;
 }
 .applicant_blue {
   box-sizing: border-box;
@@ -299,7 +330,7 @@
 
 .applic {
   width: 680px;
-  height: 336px;
+  height: 400px;
   // background-color: #4c4ddc;
 }
 .slide {
@@ -380,9 +411,8 @@
 }
 .comments {
   width: 280px;
-  margin: 30px auto;
-
-  height: 300px;
+  margin: 20px auto;
+  height: 600px;
 }
 .post {
   display: flex;
@@ -390,6 +420,10 @@
   align-items: center;
   gap: 30px;
   text-overflow: none;
-  margin-bottom: 20px;
-  border-bottom: 1px solid rgb(253, 249, 249);
+  margin-bottom: 40px;
+  border-bottom: 3px solid rgb(253, 249, 249);
+}
+.itemImg {
+  height: 50px;
+  width: 50px;
 }

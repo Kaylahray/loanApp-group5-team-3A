@@ -1,7 +1,3 @@
-
-
-
-
 const DashData = [
   {
     id: 1,
@@ -27,6 +23,62 @@ const DashData = [
 
   {
     id: 4,
+    name: "Edu Hermans",
+    date: "20/4/2023",
+    analyst: "Tofunmi",
+    status: "Approved",
+  },
+  {
+    id: 5,
+    name: "Edu Hermans",
+    date: "20/4/2023",
+    analyst: "Tofunmi",
+    status: "Approved",
+  },
+  {
+    id: 6,
+    name: "Edu Hermans",
+    date: "20/4/2023",
+    analyst: "Tofunmi",
+    status: "Approved",
+  },
+  {
+    id: 7,
+    name: "Edu Hermans",
+    date: "20/4/2023",
+    analyst: "Tofunmi",
+    status: "Approved",
+  },
+  {
+    id: 8,
+    name: "Edu Hermans",
+    date: "20/4/2023",
+    analyst: "Tofunmi",
+    status: "Approved",
+  },
+  {
+    id: 9,
+    name: "Edu Hermans",
+    date: "20/4/2023",
+    analyst: "Tofunmi",
+    status: "Approved",
+  },
+  {
+    id: 10,
+    name: "Edu Hermans",
+    date: "20/4/2023",
+    analyst: "Tofunmi",
+    status: "Approved",
+  },
+  {
+    id: 11,
+    name: "Edu Hermans",
+    date: "20/4/2023",
+    analyst: "Tofunmi",
+    status: "Approved",
+  },
+  {
+    id: 12,
     name: "Edu Hermans",
     date: "20/4/2023",
     analyst: "Tofunmi",
