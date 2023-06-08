@@ -3,10 +3,16 @@ import "./Tabs.css";
 import styles from "./Application.module.scss";
 import { TbSearch } from "react-icons/tb";
 import ApplicationTable from "../UserApplications/ApplicationTables/ApplicationTable";
-import { MdArrowBackIosNew } from "react-icons/md";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
+import Pagination from './Pagination/Pagination';
 
 const Tabs = () => {
+  const [currentPage, setCurrentPage] = useState (1);
+  //const [itemsPerPage] = useState (12);
+  const totalPages = 20; // Total number of pages
+
+  const handlePageChange = page => {
+    setCurrentPage (page);
+  };
   const [toggleState, setToggleState] = useState(1);
   const [filteredValue, setfilteredValue] = useState("");
 
@@ -97,7 +103,16 @@ const Tabs = () => {
       </div>
     </div>
 
-    <div className={styles.appfooter}>
+    <div className={styles.paginationC}>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+          currentPageStyle={styles.currentP}
+        />
+      </div>
+
+    {/*<div className={styles.appfooter}>
             <div className={styles.appfooterback}>
               <MdArrowBackIosNew className="appfootericon" />
               <a href="">Previous</a>
@@ -118,7 +133,7 @@ const Tabs = () => {
               <a href="">Next</a>
               <MdOutlineArrowForwardIos className="appfootericon" />
             </div>
-          </div>
+  </div>*/}
    </div>
   );
 }

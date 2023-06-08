@@ -25,7 +25,7 @@ const ApplicationTable = ({ value }) => {
                     <td>{data.name}</td>
                     <td>{data.date}</td>
                     <td>{data.analyst}</td>
-                    <td><div className={styles.status} style={{backgroundColor: data.status === "Approved" ? "#deece5" : data.status === "Pending" ? "#f0d5bb" : "#f6c6c2" , color: data.status === "Approved" ? "#20573D" : data.status === "Pending" ? "#734011" : "#CB3A31"}}>{data.status}</div></td> 
+                    <td><div className={styles.status} style={{backgroundColor: data.status === "Approved" ? "#f2f9f5" : data.status === "Pending" ? " #ffebd8" : "#ffe4e2" , color: data.status === "Approved" ? "#20573D" : data.status === "Pending" ? "#734011" : "#CB3A31"}}>{data.status}</div></td> 
                     <td className={styles.tableA}>{data.action}</td>
                   </tr>
                 ))
@@ -37,7 +37,7 @@ const ApplicationTable = ({ value }) => {
                     <td>{data.name}</td>
                     <td>{data.date}</td>
                     <td>{data.analyst}</td>
-                    <td><div className={styles.status} style={{backgroundColor: data.status === "Approved" ? "#deece5" : data.status === "Pending" ? "#f0d5bb" : "#f6c6c2" , color: data.status === "Approved" ? "#20573D" : data.status === "Pending" ? "#734011" : "#CB3A31"}}>{data.status}</div></td>
+                    <td><div className={styles.status} style={{backgroundColor: data.status === "Approved" ? "#f2f9f5" : data.status === "Pending" ? " #ffebd8" : "#ffe4e2" , color: data.status === "Approved" ? "#20573D" : data.status === "Pending" ? "#734011" : "#CB3A31"}}>{data.status}</div></td>
                     <td className={styles.tableA}>{data.action}</td>
                   </tr>
               ))}

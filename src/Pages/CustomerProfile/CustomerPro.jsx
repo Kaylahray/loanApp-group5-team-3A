@@ -1,9 +1,16 @@
-import styles from './CustomerPro.module.scss'
+
+import styles from './CustomerPro.module.scss'  
 import { HiOutlineChevronDown, HiOutlineChevronRight, } from 'react-icons/hi'
 import CustomerBio from './CutomerDetails/CustomerBio'
 import CustomerDoc from './CutomerDetails/CustomerDoc'
-import Top from '../../Component/LayoutComponent/TopSectionComponent/Top'
-import Tab from './NavigationTab/Tab'
+
+// import NavTab from './NavigationTab/NavTab'
+// import BankState from './CustomerAnalysis/BankState'
+// import Top from '../../Component/LayoutComponent/TopSectionComponent/Top'
+
+// import Top from '../../Component/LayoutComponent/TopSectionComponent/Top'
+// import Tab from './NavigationTab/Tab'
+
 
 
 const CustomerPro = () => {
@@ -11,7 +18,7 @@ const CustomerPro = () => {
   return (
     <div className={styles.customerpro}>
 
-      <Top>
+      {/* <Top> */}
         {/* <div> */}
 
           <div className={styles.breadcrumb}>
@@ -27,10 +34,10 @@ const CustomerPro = () => {
             </button>
           </div>
         {/* </div> */}
-      </Top>
+      {/* </Top> */}
       <CustomerBio />
       <CustomerDoc />
-      <Tab />
+      {/* <Tab /> */}
     </div>
   )
 }

@@ -27,7 +27,7 @@ const ResetPasswordSent = () => {
       </div>
 
       <p className="account">
-        Didn&apos;t get the email?<span>Request again</span>
+        Didn&apos;t get the email?<span> Request again</span>
       </p>
     </div>
   );
