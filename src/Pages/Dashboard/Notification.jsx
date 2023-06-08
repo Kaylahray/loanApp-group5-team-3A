@@ -1,9 +1,9 @@
-import chi from "../../../public/DashboardImages/icon.svg";
-import one from "../../../public/DashboardImages/one.svg";
-import two from "../../../public/DashboardImages/two.svg";
-import three from "../../../public/DashboardImages/three.svg";
-import four from "../../../public/DashboardImages/four.svg";
-import five from "../../../public/DashboardImages/five.svg";
+import one from "../../Assets/DashboardImages/one.svg";
+import two from "../../Assets/DashboardImages/two.svg";
+import three from "../../Assets/DashboardImages/three.svg";
+import four from "../../Assets/DashboardImages/four.svg";
+import five from "../../Assets/DashboardImages/five.svg";
+import chi from "../../Assets/DashboardImages/icon.svg";
 
 const ProfileData = [
   {

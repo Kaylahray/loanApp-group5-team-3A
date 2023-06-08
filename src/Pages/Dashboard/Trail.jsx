@@ -6,7 +6,7 @@ import Pagination from "./Pagination";
 const Trail = () => {
   const [currentPages, setCurrentPage] = useState(1);
   const [postPerPage] = useState(5);
-  const [search, setSearch] = useState(DashData);
+  // const [search, setSearch] = useState(DashData);
 
   const indexOfLast = postPerPage * currentPages;
   const indexOfFirst = indexOfLast - postPerPage;

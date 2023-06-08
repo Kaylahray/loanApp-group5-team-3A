@@ -29,7 +29,7 @@ import ResetPasswordSent from "./OnboardingPages/ResetPasswordSent";
 import PasswordResetSuccess from "./OnboardingPages/PasswordResetSuccess";
 import VerifyEmail from "./OnboardingPages/VerifyEmail";
 import VerificationSuccess from "./OnboardingPages/VerificationSuccess";
-import ModelTop from "./Pages/Models/ModelTop";
+// import ModelTop from "./Pages/Models/ModelTop";
 import ModelIndex from "./Pages/Models/Index";
 
 function App() {
