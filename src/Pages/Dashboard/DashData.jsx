@@ -84,12 +84,5 @@ const DashData = [
     analyst: "Tofunmi",
     status: "Approved",
   },
-  {
-    id: 13,
-    name: "Edu Hermans",
-    date: "20/4/2023",
-    analyst: "Tofunmi",
-    status: "Approved",
-  },
 ];
 export default DashData;
