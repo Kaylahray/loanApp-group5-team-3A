@@ -6,7 +6,7 @@
     width: 950px;
     height: 40px;
     background: #F5F5FF;
-    color: #404040;
+    color: #000000;
 }
 
 .appH th {
@@ -32,7 +32,7 @@
 
 .appB:hover{
     background-color: #F5F5FF;
-    color: rgb(108, 108, 108);
+    color: rgb(96, 94, 94);
 }
 
 .appB {
@@ -69,4 +69,21 @@
     width: 60%;
     border-radius: 7px;
     font-weight: 50px;
+    background-color: #ffe4e2; 
+    
 }
+
+
+.pagD {
+    //margin-block: 40px;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 7px;
+    //font-size: 10px;
+  }

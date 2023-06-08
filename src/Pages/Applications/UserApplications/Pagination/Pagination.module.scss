@@ -1,0 +1,87 @@
+.pag {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 10px;
+  }
+  
+  .pagB {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid white;
+    // background-color: #f5f5f5;
+    cursor: pointer;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    cursor: pointer;
+
+  }
+  .pagB:first-child {
+    color: blue;
+  }
+  .pagB:last-child {
+    color: blue; /* Blue color for second to last child */
+  }
+
+  .pag p {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    // background-color: #f5f5f5;
+    cursor: pointer;
+  }
+  
+  .pag p.active {
+    background-color: blue;
+    color: white;
+  }
+  
+  .pag p:hover {
+    background-color: #ddd;
+  }
+  
+
+
+
+  
+  .pagD {
+    //margin-block: 40px;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    //gap: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 10px;
+  }
+  
+  .pag {
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    .pagB {
+      // border: 1px solid gray;
+      padding: 8px;
+    }
+    .pagB:active,
+    .pagB:focus {
+      background-color: #4c4ddc;
+    }
+  }
+  .pagB a:focus,
+  .pagB a:active {
+    background-color: #4c4ddc;
+  }
+  .disabled {
+    color: #4c4ddc;
+  }
+  .disabled:disabled {
+    color: #d6d6e3;
+  }
