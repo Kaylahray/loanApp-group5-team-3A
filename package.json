@@ -15,18 +15,17 @@
     "@emotion/styled": "^11.11.0",
     "axios": "^1.4.0",
     "chart.js": "^4.3.0",
+    "emoji-picker-react": "^4.4.9",
     "formik": "^2.4.0",
     "framer-motion": "^10.12.12",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+    "react-file-reader": "^1.1.4",
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.11.2",
-
-    "recharts": "^2.6.2",
-
     "react-tabs": "^6.0.1",
-
+    "recharts": "^2.6.2",
     "sass": "^1.62.1",
     "yup": "^1.2.0"
   },
