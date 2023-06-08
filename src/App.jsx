@@ -1,11 +1,12 @@
-<<<<<<< HEAD
+/*
+ * Copyright (c) 2023 Your Company Name
+ * All rights reserved.
+ */
 /*
  * Copyright (c) 2023 Your Company Name
  * All rights reserved.
  */
 
-=======
->>>>>>> 02a631471d23d26e483808808b5024a2bfa96df0
 import { useState } from "react";
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
@@ -77,13 +78,12 @@ function App() {
             <Route path="/model" element={<Models />} />
 
             <Route path="/verifySuccess" element={<VerificationSuccess />} />
-<<<<<<< HEAD
+
             <Route path="/layout" element={<Layout />}/> 
-=======
+
             <Route path="/models" element={<Models />} />
 
             <Route path="/layout" element={<Layout />}>
->>>>>>> 02a631471d23d26e483808808b5024a2bfa96df0
               <Route path="/layout/" element={<Dashboard />} />
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
@@ -101,11 +101,10 @@ function App() {
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />
               <Route path="/layout/logout" element={<Logout />} />
-<<<<<<< HEAD
-            
-=======
+
+
             </Route>
->>>>>>> 02a631471d23d26e483808808b5024a2bfa96df0
+
           </Routes>
         </Container>
       </div>
