@@ -8,7 +8,7 @@ const Models = () => {
   return (
     <div>
       <ModelTop />
-      <OmitModel />
+      {/* <OmitModel /> */}
     </div>
   );
 };
