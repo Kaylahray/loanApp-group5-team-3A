@@ -29,6 +29,8 @@ import ResetPasswordSent from "./OnboardingPages/ResetPasswordSent";
 import PasswordResetSuccess from "./OnboardingPages/PasswordResetSuccess";
 import VerifyEmail from "./OnboardingPages/VerifyEmail";
 import VerificationSuccess from "./OnboardingPages/VerificationSuccess";
+import ModelTop from "./Pages/Models/ModelTop";
+import ModelIndex from "./Pages/Models/Index";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -41,7 +43,7 @@ function App() {
 
   return (
     <Context.Provider value={{ visiblePassword, show, setTheme }}>
-      <div className={`${theme} application`}>
+      <div className={`${theme}`}>
         <Container>
           {/* <button className="btn" onClick={changeTheme}>
             theme
@@ -64,7 +66,11 @@ function App() {
               element={<PasswordResetSuccess />}
             />
             <Route path="/verify" element={<VerifyEmail />} />
+            <Route path="/model" element={<Models />} />
+
             <Route path="/verifySuccess" element={<VerificationSuccess />} />
+            <Route path="/models" element={<Models />} />
+
             <Route path="/layout" element={<Layout />}>
               <Route path="/layout/" element={<Dashboard />} />
               <Route path="/layout/dashboard" element={<Dashboard />} />
@@ -76,14 +82,14 @@ function App() {
               
            
               <Route path="/layout/teams" element={<Teams />} />
-              <Route path="/layout/models" element={<Models />} />
+              <Route path="/layout/models" element={<ModelIndex />} />
+              {/* <Route path="/layout/models/" element={<Models />} /> */}
 
               <Route path="/layout/settings" element={<Settings />} />
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />
               <Route path="/layout/logout" element={<Logout />} />
             </Route>
-            <Route path="/models" element={<Models />} />
           </Routes>
         </Container>
       </div>
