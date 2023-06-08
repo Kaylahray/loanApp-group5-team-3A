@@ -44,3 +44,28 @@
     background-color: #ddd;
   }
   
+
+
+  .pag {
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    .pagB {
+      // border: 1px solid gray;
+      padding: 8px;
+    }
+    .pagB:active,
+    .pagB:focus {
+      background-color: #4c4ddc;
+    }
+  }
+  .pagB a:focus,
+  .pagB a:active {
+    background-color: #4c4ddc;
+  }
+  .disabled {
+    color: #4c4ddc;
+  }
+  .disabled:disabled {
+    color: #d6d6e3;
+  }
