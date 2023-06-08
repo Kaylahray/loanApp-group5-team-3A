@@ -75,13 +75,12 @@ function App() {
               <Route path="/layout/" element={<Dashboard />} />
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
-              <Route path="/layout/application" element={<Application />} />
-
+              <Route path="/layout/application" element={<Application />}/>
               <Route
-                path="/layout/application/customerprofile"
-                element={<CustomerPro />}
-              />
-
+                  path="/layout/customerprofile"
+                  element={<CustomerPro />}/>
+              
+           
               <Route path="/layout/teams" element={<Teams />} />
               <Route path="/layout/models" element={<ModelIndex />} />
               {/* <Route path="/layout/models/" element={<Models />} /> */}
