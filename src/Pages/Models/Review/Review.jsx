@@ -1,7 +1,7 @@
 import React from 'react'
 import style from "./Review.module.scss"
 
-function Review() {
+function Review(props) {
   return (
     <div>
         <div className={style.body}> 
@@ -276,7 +276,11 @@ function Review() {
         <br/>
         <input type="text" className={style.scoresplace}/>
       </div>
-        </div>
+        
+        <button  onClick={() => props.stepHandler(4)}>
+        Confirm model
+        </button> 
+    </div>
     </div>
   )
 }

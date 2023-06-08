@@ -2,12 +2,12 @@ import style from "./Scores.module.scss";
 import { useState } from "react";
 import Review from "../Review/Review";
 
-function Scores() {
+function Scores(props) {
   const [onNext, setOnNext] = useState(false);
 
   return (
     <div>
-      <div className={style.body}>
+      <div className={style.container}>
         <h1>Create Prediction Model</h1>
         <p>
           Here are the scores previously stated, please review and edit if
@@ -69,13 +69,12 @@ function Scores() {
         <input type="text" placeholder="select" className={style.scoresplace} />
       </div>
       <div className={style.button}>
-        {!onNext && (
-          <button className={style.scoresbtn} onClick={() => setOnNext(true)}>
-            Continue
-          </button>
-        )}
-
-        {onNext && <Review />}
+        <button
+          className={style.scoresbtn}
+          onClick={() => props.stepHandler(3)}
+        >
+          Continue
+        </button>
       </div>
     </div>
   );
