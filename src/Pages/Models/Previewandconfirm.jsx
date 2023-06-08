@@ -2,20 +2,17 @@ import { Button, Card, Flex, background } from "@chakra-ui/react";
 import React from "react";
 // import styles from "./ModelIcons/Models.module.scss";
 import styles from "./Models.module.scss";
+import { useNavigate } from "react-router-dom";
+
 
 import { Text } from "@chakra-ui/react";
-// import { Modal,
-//     ModalOverlay,
-//     ModalContent,
-//     ModalHeader,
-//     ModalFooter,
-//     ModalBody,
-//     ModalCloseButton, } from "@chakra-ui/react";
 
-const Previewandconfirm = () => {
+
+const Previewandconfirm = (props) => {
+
   return (
     <div className={styles.modal}>
-        <Card w={380}  m='0 auto'>
+      
         <div className={styles.textcont}>
           <Text fontSize="18px" as="b">
             Successful!
@@ -24,9 +21,10 @@ const Previewandconfirm = () => {
         </div>
 
         <div className={styles.btncont}>
-          <button className={styles.btns}>Go back to models</button>
+          <button className={styles.btns} onClick={()=> props.onClose()}>
+          Go back to models</button> 
         </div>
-      </Card>
+      
     </div>
   );
 };

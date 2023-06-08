@@ -3,7 +3,7 @@ import style from './Analysis.module.scss'
 import Scores from '../Scores/Scores'
 
 
-function Createanalysis() {
+function Createanalysis(props) {
 
 const [onContinue, setOnContinue] = useState(false)
 
@@ -78,11 +78,10 @@ const [onContinue, setOnContinue] = useState(false)
 
     </div>
     <div className={style.createbtn1}>
-    {!onContinue && <button className={style.createbtn} onClick={() => setOnContinue(true)}>
+    {!onContinue && <button className={style.createbtn} onClick={() => props.stepHandler(2)}>
         Continue
         </button> }
 
-        {onContinue && <Scores/>}
     </div>
     </div>
   )
