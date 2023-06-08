@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Select, Flex, Center, SimpleGrid, Box } from "@chakra-ui/react";
+import { Select, Flex, Center, SimpleGrid, Box, FormControl, FormLabel, Container } from "@chakra-ui/react";
 import Createanalysis from "../Createanalysis/createanalysis";
 
 
@@ -71,16 +71,23 @@ const subParams = {
   ],
 };
 
-const Parameters = () => {
+const Parameters = (props) => {
   const [selected, setSelected] = useState("");
 
   const [onNext, setOnNext] = useState(false)
 
   return (
-    <div className="container">
-<SimpleGrid columns={2} w='40%' mx='auto' gap={10} mt={10} > 
-  <Box><h3>Parameters</h3>
-        <Select
+    <div>
+      <Container maxW={490}> 
+  <div>
+
+      
+<SimpleGrid columns={2} 
+  gap={5} mt={10} > 
+
+<FormControl>
+  <FormLabel fontSize={14} p={0} m={0} mb={2} > Parameters</FormLabel>
+  <Select
         borderRadius={6}
           placeholder="select"
           size="sm"
@@ -95,35 +102,73 @@ const Parameters = () => {
             </option>
           ))}
         </Select>
-        </Box>
+        <Select mt={2}
+        borderRadius={6}
+          placeholder="select"
+          size="sm"
+          value={selected}
+          onChange={(e) => {
+            setSelected(e.target.value);
+          }}
+        >
+          {parameters.map((item, index) => (
+            <option value={item.value} key={index}>
+              {item.label}
+            </option>
+          ))}
+        </Select>
+</FormControl>
 
 
-  <Box><h3>Selection</h3>
-        <Select 
+
+
+<FormControl>
+  <FormLabel fontSize={14} p={0} m={0} mb={2}>Selection</FormLabel>
+  <Select 
         borderRadius={6}
 
-        placeholder="select" size="sm" value={""}>
+        placeholder="select" size="sm" color="D4D4D4"
+        //  value={""}
+        _placeholder={{
+          color:"#D4D4D4",
+        }}
+         >
           {subParams[selected]?.map((item, index) => (
             <option value={item.value} key={index}>
               {item.label}
               
             </option>
           ))}
-        </Select></Box>
+        </Select>
+
+        <Select mt={2}
+        borderRadius={6}
+
+        placeholder="select" size="sm">
+          {subParams[selected]?.map((item, index) => (
+            <option value={item.value} key={index}>
+              {item.label}
+              
+            </option>
+          ))}
+        </Select>
+
+</FormControl>
+
+
 
 
 </SimpleGrid>
       
-      <Center>
+      <Center mt={10}>
       <div>
-    {!onNext && <button  onClick={() => setOnNext(true)}>
+   <button className="btn" onClick={() => props.stepHandler(1)}>
         Continue
-        </button> }
-
-        {onNext && <Createanalysis/>}
+        </button>
     </div>
         </Center>
-    
+        </div>
+    </Container>
     </div>
   );
 };
