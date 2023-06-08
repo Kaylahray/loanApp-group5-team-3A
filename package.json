@@ -10,26 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.6.1",
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "axios": "^1.4.0",
-    "chart.js": "^4.3.0",
-    "formik": "^2.4.0",
-    "framer-motion": "^10.12.12",
     "react": "^18.2.0",
-    "react-chartjs-2": "^5.2.0",
-    "react-copy-to-clipboard": "^5.1.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.9.0",
-    "react-router-dom": "^6.11.2",
-
-    "recharts": "^2.6.2",
-
-    "react-tabs": "^6.0.1",
-
-    "sass": "^1.62.1",
-    "yup": "^1.2.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
