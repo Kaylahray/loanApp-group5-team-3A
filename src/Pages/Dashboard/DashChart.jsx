@@ -33,7 +33,7 @@ const DashChart = () => {
         data: [0, 20, 20, 30, 25, 45, 40, 55, 50, 57],
         // background: "none",
         borderWidth: 1,
-        borderColor: "blue",
+        // borderColor: "blue",
         id: 1,
         pointStyle: false,
         tension: 0.1,

@@ -44,3 +44,44 @@
     background-color: #ddd;
   }
   
+
+
+
+  
+  .pagD {
+    //margin-block: 40px;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    //gap: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 10px;
+  }
+  
+  .pag {
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    .pagB {
+      // border: 1px solid gray;
+      padding: 8px;
+    }
+    .pagB:active,
+    .pagB:focus {
+      background-color: #4c4ddc;
+    }
+  }
+  .pagB a:focus,
+  .pagB a:active {
+    background-color: #4c4ddc;
+  }
+  .disabled {
+    color: #4c4ddc;
+  }
+  .disabled:disabled {
+    color: #d6d6e3;
+  }

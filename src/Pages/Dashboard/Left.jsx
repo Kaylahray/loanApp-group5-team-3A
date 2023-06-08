@@ -1,3 +1,4 @@
+import DashChart from "./DashChart";
 import DashData from "./DashData";
 import styles from "./Dashboard.module.scss";
 import Trail from "./Trail";
@@ -27,7 +28,9 @@ const Left = () => {
         </div>
       </div>
 
-      <div className={styles.chart}>{/* <DashChart /> */}</div>
+      <div className={styles.chart}>
+        <DashChart />
+      </div>
       <div className={styles.view}>
         <h3> Applications</h3>
         <a href="/">View All</a>
