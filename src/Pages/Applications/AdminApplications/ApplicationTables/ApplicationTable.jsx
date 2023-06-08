@@ -1,8 +1,19 @@
 /*eslint-disable react/prop-types*/
 import styles from "./ApplicationTable.module.scss";
 import ApplicationData from "../ApplicationData";
+import Pagination from '../Pagination/Pagination';
+import { useState } from "react";
 
 const ApplicationTable = ({ value }) => {
+  const [currentPages, setCurrentPage] = useState(1);
+  const [postPerPage] = useState(12);
+
+  const indexOfLast = postPerPage * currentPages;
+  const indexOfFirst = indexOfLast - postPerPage;
+  const currentPost = ApplicationData.slice(indexOfFirst, indexOfLast);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const page = Math.ceil(ApplicationData.length / postPerPage);
+
   return (
     <div>
       <table className={styles.appT}>
@@ -18,7 +29,7 @@ const ApplicationTable = ({ value }) => {
         </thead>
 
         <tbody>
-                {value? ApplicationData.filter((data) => data.name.includes(value))
+                {value? currentPost.filter((data) => data.name.includes(value))
             .map((data) => (
                   <tr key={data.id} className={styles.appB}>
                     <td>{data.id}</td>
@@ -31,7 +42,7 @@ const ApplicationTable = ({ value }) => {
                 ))
 
          
-            : ApplicationData.map((data) => (
+            : currentPost.map((data) => (
                   <tr key={data.id} className={styles.appB}>
                     <td>{data.id}</td>
                     <td>{data.name}</td>
@@ -43,6 +54,29 @@ const ApplicationTable = ({ value }) => {
               ))}
         </tbody>
       </table>
+
+      <div className={styles.pagD}>
+        <button
+          onClick={() => setCurrentPage((curr) => curr - 1)}
+          className={styles.disabled}
+          disabled={currentPages === 1 ? true : false}
+        >
+          previous
+        </button>
+
+        <Pagination
+          totalPost={ApplicationData.length}
+          postPerPage={postPerPage}
+          paginate={paginate}
+        />
+        <button
+          className={styles.disabled}
+          onClick={() => setCurrentPage((curr) => curr + 1)}
+          disabled={currentPages === page ? true : false}
+        >
+          next
+        </button>
+      </div>
     </div>
   );
 };
