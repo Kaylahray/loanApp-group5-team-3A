@@ -3,6 +3,7 @@
 // import Logo from "./ModelIcons/SLogo.svg";
 // import Index from "./Index"
 import ModelTop from "./ModelTop";
+// import OmitModel from "./OmitedModel/OmitModel";
 
 import BasicInformation from "./BasicInfo/BasicInformation";
 import Steps from "./Steps";
