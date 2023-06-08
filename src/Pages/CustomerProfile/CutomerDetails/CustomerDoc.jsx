@@ -16,7 +16,7 @@ const CustomerDoc = () => {
                     <HiOutlinePaperClip />
                     <p >Attachments</p>
                 </div>
-                <p className={styles.nav} onClick={() => navigate("/application")}>View all</p>
+                <p className={styles.nav} onClick={() => navigate("/layout/application")}>View all</p>
             </div>
 
             <div className={styles.customer_document_wrapper}>

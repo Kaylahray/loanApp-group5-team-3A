@@ -2,11 +2,21 @@
 import styles from './PredictionAnalysis.module.scss'
 import { HiOutlineChevronDown, HiOutlineCheck } from 'react-icons/hi'
 import { useNavigate } from 'react-router-dom'
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  Button,
+  useDisclosure,
+} from '@chakra-ui/react'
 
 
 const PredictionAnalysis = () => {
-  const navigate = useNavigate();
-
+  const navigate = useNavigate("");
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <div className={styles.wrraper}>
 
@@ -17,7 +27,7 @@ const PredictionAnalysis = () => {
           <HiOutlineChevronDown />
         </button>
         <button className={styles.btn2}>
-          <p className={styles.nav} onClick={() => navigate("/model")}>Change applied prediction model</p>
+          <p className={styles.nav} onClick={() => navigate("/layout/models")}>Change applied prediction model</p>
         </button>
       </div>
 
@@ -105,7 +115,31 @@ const PredictionAnalysis = () => {
             </div>
             <p className={styles.reject}>Reject candidate</p>
           </div>
-          <button className={styles.btn4}>Confirm selection</button>
+          <button className={styles.btn4} onClick={ onOpen }>Confirm selection</button>
+          <Modal isOpen={isOpen} onClose={onClose}>
+            <ModalOverlay 
+             bg='blackAlpha.600'
+             backdropFilter='blur(1px)'
+            />
+            <ModalContent>
+              <ModalHeader>Candidate approved!</ModalHeader>
+              <ModalBody>
+                <p className={styles.decision}>
+                  An acceptance email will be sent to the candidate in 
+                  <span className={styles.time}> 15 minutes</span>.
+                  This gives you the opportunity to modify your decision in case of mistake.
+                </p>
+              </ModalBody>
+
+              <ModalFooter className={styles.modal_Footer}>
+                <div >
+                  <Button className={styles.btn5} colorScheme='blue' mr={3} onClick={onClose}>
+                    Confirm
+                  </Button>
+                </div>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
         </div>
       </div>
     </div>

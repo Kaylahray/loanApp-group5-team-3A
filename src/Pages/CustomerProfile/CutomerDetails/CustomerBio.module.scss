@@ -30,16 +30,17 @@
     padding: 8px 8px;
  }
 
-.customer__details {
+.customer__details{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     color: #0c0c0c;
     font-size: 14px;
     padding: 8px 8px;
-    background: #F5F5FF;
     width: 340px;
     height: 40px;
+    background: #F5F5FF;
+    cursor: copy;
  }
 
 .customer_details_wrraper {
