@@ -1,4 +1,4 @@
-import one from "../../assets/DashboardImages/one.svg";
+// import one from "../../assets/DashboardImages/one.svg";
 import two from "../../assets/DashboardImages/two.svg";
 import three from "../../assets/DashboardImages/three.svg";
 import four from "../../assets/DashboardImages/four.svg";
@@ -19,7 +19,7 @@ const ProfileData = [
     text: "  assigned you to Oluwatofunmi Idowu ",
     time: "30m ago",
     id: 2,
-    img: one,
+    // img: one,
   },
   {
     name: "oluwatofumi idowu ",
