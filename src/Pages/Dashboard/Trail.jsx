@@ -15,15 +15,15 @@ const Trail = () => {
   const page = Math.ceil(DashData.length / postPerPage);
   console.log(DashData);
 
-  const onSearchHandler = (e) => {
-    if (!e.target.value) return setSearch(DashData);
+  // const onSearchHandler = (e) => {
+  //   if (!e.target.value) return setSearch(DashData);
 
-    const filteredProducts = DashData.filter((product) => {
-      return product.title.toLowerCase().includes(e.target.value.toLowerCase());
-    });
-    console.log(filteredProducts);
-    setSearch(filteredProducts);
-  };
+  //   const filteredProducts = DashData.filter((product) => {
+  //     return product.title.toLowerCase().includes(e.target.value.toLowerCase());
+  //   });
+  //   console.log(filteredProducts);
+  //   setSearch(filteredProducts);
+  // };
 
   return (
     <div className={styles.fetch}>
