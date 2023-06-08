@@ -8,7 +8,6 @@ const Models = () => {
   return (
     <div>
       <ModelTop />
-      {/* <OmitModel /> */}
     </div>
   );
 };
