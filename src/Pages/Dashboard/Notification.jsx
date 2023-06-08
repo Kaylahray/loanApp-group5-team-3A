@@ -7,7 +7,7 @@ import chi from "../../assets/DashboardImages/icon.svg";
 
 const ProfileData = [
   {
-    name: "Oluwatofumi idowus ",
+    name: "Oluwatofumi idowu ",
     text: " application database successfully downloaded ",
     time: "30m ago",
     id: 1,
