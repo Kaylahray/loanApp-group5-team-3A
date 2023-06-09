@@ -78,7 +78,7 @@ const LoginForm = () => {
                     <Link to={"/forgotPassword"}>Forgot password?</Link>
                   </p>
                   <button
-                    className="btn"
+                    className="btno"
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
                   >

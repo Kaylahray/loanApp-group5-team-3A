@@ -94,7 +94,7 @@ const LoginFormTwo = () => {
                   </div>
 
                   <button
-                    className="btn"
+                    className="btno"
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
                   >

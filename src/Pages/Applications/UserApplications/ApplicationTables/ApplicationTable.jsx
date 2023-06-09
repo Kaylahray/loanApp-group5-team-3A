@@ -1,10 +1,9 @@
 /*eslint-disable react/prop-types*/
 import styles from "./ApplicationTable.module.scss";
 import ApplicationData from "../ApplicationData";
-import Pagination from '../Pagination/Pagination';
+import Pagination from "../Pagination/Pagination";
 import { useState } from "react";
-
-
+import { Link } from "react-router-dom";
 
 const ApplicationTable = ({ value }) => {
   const [currentPages, setCurrentPage] = useState(1);
@@ -31,28 +30,73 @@ const ApplicationTable = ({ value }) => {
         </thead>
 
         <tbody>
-                {value? currentPost.filter((data) => data.name.includes(value))
-            .map((data) => (
+          {value
+            ? currentPost
+                .filter((data) => data.name.includes(value))
+                .map((data) => (
                   <tr key={data.id} className={styles.appB}>
                     <td>{data.id}</td>
-                    <td>{data.name}</td>
+                    <td>
+                      {" "}
+                      <Link to="/layout/customerProfile"> {data.name}</Link>
+                    </td>
                     <td>{data.date}</td>
                     <td>{data.analyst}</td>
-                    <td><div className={styles.status} style={{backgroundColor: data.status === "Approved" ? "#f2f9f5" : data.status === "Pending" ? " #ffebd8" : "#ffe4e2" , color: data.status === "Approved" ? "#20573D" : data.status === "Pending" ? "#734011" : "#CB3A31"}}>{data.status}</div></td> 
+                    <td>
+                      <div
+                        className={styles.status}
+                        style={{
+                          backgroundColor:
+                            data.status === "Approved"
+                              ? "#f2f9f5"
+                              : data.status === "Pending"
+                              ? " #ffebd8"
+                              : "#ffe4e2",
+                          color:
+                            data.status === "Approved"
+                              ? "#20573D"
+                              : data.status === "Pending"
+                              ? "#734011"
+                              : "#CB3A31",
+                        }}
+                      >
+                        {data.status}
+                      </div>
+                    </td>
                     <td className={styles.tableA}>{data.action}</td>
                   </tr>
                 ))
-
-         
             : currentPost.map((data) => (
-                  <tr key={data.id} className={styles.appB}>
-                    <td>{data.id}</td>
-                    <td>{data.name}</td>
-                    <td>{data.date}</td>
-                    <td>{data.analyst}</td>
-                    <td><div className={styles.status} style={{backgroundColor: data.status === "Approved" ? "#f2f9f5" : data.status === "Pending" ? " #ffebd8" : "#ffe4e2" , color: data.status === "Approved" ? "#20573D" : data.status === "Pending" ? "#734011" : "#CB3A31"}}>{data.status}</div></td>
-                    <td className={styles.tableA}>{data.action}</td>
-                  </tr>
+                <tr key={data.id} className={styles.appB}>
+                  <td>{data.id}</td>
+                  <td>
+                    <Link to="/layout/customerProfile"> {data.name}</Link>
+                  </td>
+                  <td>{data.date}</td>
+                  <td>{data.analyst}</td>
+                  <td>
+                    <div
+                      className={styles.status}
+                      style={{
+                        backgroundColor:
+                          data.status === "Approved"
+                            ? "#f2f9f5"
+                            : data.status === "Pending"
+                            ? " #ffebd8"
+                            : "#ffe4e2",
+                        color:
+                          data.status === "Approved"
+                            ? "#20573D"
+                            : data.status === "Pending"
+                            ? "#734011"
+                            : "#CB3A31",
+                      }}
+                    >
+                      {data.status}
+                    </div>
+                  </td>
+                  <td className={styles.tableA}>{data.action}</td>
+                </tr>
               ))}
         </tbody>
       </table>
