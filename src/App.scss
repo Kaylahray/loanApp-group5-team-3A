@@ -116,7 +116,7 @@ label {
   letter-spacing: 3px;
 }
 
-.btn {
+.btno {
   text-align: center;
   font-size: 12px;
   font-weight: 300;
@@ -124,6 +124,18 @@ label {
   background-color: #4c4ddc;
   padding: 10px 50px;
   border: none;
+  border-radius: 4px;
+  margin-block: 10px;
+}
+.btnoo {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  color: white;
+  background-color: #4c4ddc;
+  padding: 10px 50px;
+  border: none;
+  margin-block: 20px;
   border-radius: 4px;
 }
 .btnnn {
@@ -190,10 +202,13 @@ span {
   width: 24px;
 }
 
-.formbutton:disabled {
+.btno:disabled {
   border: 1px solid #999999;
   background-color: #b0adad;
   color: #363333;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 4px;
 }
 .landing {
   display: grid;

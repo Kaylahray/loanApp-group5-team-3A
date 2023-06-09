@@ -17,27 +17,27 @@ const CustomerPro = () => {
 
   return (
     <div className={styles.customerpro}>
-        
-      <Top>
-        {/* <div className={styles.top}> */}
 
-            <div className={styles.breadcrumb}>
+      {/* <Top> */}
+        {/* <div> */}
+
+          <div className={styles.breadcrumb}>
             <p>Applications</p>
             <HiOutlineChevronRight />
             <p>Naomi Igimoh</p>
-            </div>
+          </div>
 
-            <div className={styles.btn_decision}>
-              <button className={styles.btn}>Make decision <HiOutlineChevronDown/></button>             
-            </div>          
+          <div className={styles.btn_decision}>
+            <button className={styles.btn}>
+              Make decision
+              <HiOutlineChevronDown />
+            </button>
+          </div>
         {/* </div> */}
-      </Top>
-      <CustomerBio/>
-      <CustomerDoc/>
-      <Tab/>
-      {/* <BankState/> */}
-      
-           
+      {/* </Top> */}
+      <CustomerBio />
+      <CustomerDoc />
+      {/* <Tab /> */}
     </div>
   )
 }

@@ -18,43 +18,6 @@
   background-size: cover;
 }
 
-.basicInfoForm {
-  width: 30%;
-  display: block;
-  justify-content: center;
-  align-content: center;
-  margin: 0 auto;
-  gap: 7px;
-}
-
-.basicInfoForm h3 {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-
-.modelName {
-  padding: 6px 8px;
-}
-
-.btn {
-  text-align: center;
-  font-size: 12px;
-  font-weight: 300;
-  color: white;
-  background-color: #4c4ddc;
-  padding: 10px 50px;
-  border: none;
-  border-radius: 2px;
-  margin-top: 30px;
-}
-
-.span {
-  font-size: 12px;
-  color: black;
-  margin-top: 0px;
-}
 
 .btncont {
   background-color: #f5f5f5;
@@ -80,10 +43,4 @@
   display: block;
   gap: 40px;
   margin-bottom: 7px;
-}
-
-.model {
-  display: block;
-  justify-content: center;
-  margin: 0 auto;
 }

@@ -27,7 +27,20 @@
     align-items: flex-start;
     color: #0c0c0c;
     font-size: 14px;
-    padding: 9px 0px;
+    padding: 8px 8px;
+ }
+
+.customer__details{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    color: #0c0c0c;
+    font-size: 14px;
+    padding: 8px 8px;
+    width: 340px;
+    height: 40px;
+    background: #F5F5FF;
+    cursor: copy;
  }
 
 .customer_details_wrraper {
@@ -35,4 +48,5 @@
     flex-direction: column;
     justify-content: flex-start;
     padding: 6px 40px;
+    margin-right: 40px;
 }

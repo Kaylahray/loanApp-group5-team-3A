@@ -19,7 +19,8 @@ const ModelTop = () => {
           </div>
           <div className={styles.profiles}> </div>
         </Flex>
-      </Flex>
+        </Flex>
+      
 
       </Container>
       

@@ -36,7 +36,7 @@ const links = [
   {
     id: 3,
     name: "Settings",
-    to: "/layout/setting",
+    to: "/layout/settings",
     icon: <FiSettings />,
   },
   {

@@ -29,7 +29,8 @@ import ResetPasswordSent from "./OnboardingPages/ResetPasswordSent";
 import PasswordResetSuccess from "./OnboardingPages/PasswordResetSuccess";
 import VerifyEmail from "./OnboardingPages/VerifyEmail";
 import VerificationSuccess from "./OnboardingPages/VerificationSuccess";
-import ModelTop from "./Pages/Models/ModelTop";
+// import ModelTop from "./Pages/Models/ModelTop";
+import ModelIndex from "./Pages/Models/Index";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -75,15 +76,10 @@ function App() {
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
               <Route path="/layout/application" element={<Application />} />
-
-              <Route
-                path="/layout/application/customerprofile"
-                element={<CustomerPro />}
-              />
+              <Route path="/layout/customerprofile" element={<CustomerPro />} />
 
               <Route path="/layout/teams" element={<Teams />} />
-              <Route path="/layout/models" element={<ModelTop />} />
-
+              <Route path="/layout/models" element={<ModelIndex />} />
               <Route path="/layout/settings" element={<Settings />} />
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />

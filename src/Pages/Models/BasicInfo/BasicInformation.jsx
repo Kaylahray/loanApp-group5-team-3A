@@ -1,49 +1,55 @@
 import React, { useState } from "react";
-import { Center, Select, Box } from "@chakra-ui/react";
+import { Center, Select, Box, Container, Input } from "@chakra-ui/react";
 import Parameters from "./Parameters";
+import { FormControl, FormLabel, FormHelperText } from "@chakra-ui/react";
 // import styles from "./ModelIcons/Models.module.scss";
 
-const BasicInformation = () => {
+const BasicInformation = (props) => {
   const [onContinue, setOnContinue] = useState(false);
   return (
-    <div className="model">
-      <Box m='0 auto'> 
-      <Center>
-      <form className="basicInfoForm">
-        <Center mt={10} mb={3}>
-        Create Prediction Model</Center> 
+    <div>
+      <Container color="black" centerContent>
+        <Center mt={10}>
+          <h3>
+            <b>Create Prediction Model</b>
+          </h3>
+        </Center>
         <div>
-          <label htmlfor="modelname">Model name </label>
-          <input className="modelName" type="text"></input>
-          <span>The name you want to call this model</span>
+          <FormControl >
+            <FormLabel size="12px" p={0} m={0} fontSize={14} mt={5}>
+              Model Name
+            </FormLabel>
+            <Input p="0px 14px" w={450} type="text" />
+            <FormHelperText m={0} fontSize={12}>
+              The name you want to call this model
+            </FormHelperText>
+          </FormControl>
         </div>
 
         <br />
 
         <div>
-          <label htmlfor="modelapp">Condition for model application</label>
-          <Select placeholder="select" size="sm">
-            <option value="new applicants">
-              Apply model to all new applicants
-            </option>
-            <option value="selected applicants">
-              Apply model to selected applicants
-            </option>
-          </Select>
+          <FormControl>
+            <FormLabel p={0} m={0} fontSize={14}>
+              Condition for model application
+            </FormLabel>
+            <Select placeholder="select"size="sm" w={450} textColor="D4D4D4">
+              <option>Apply model to all new applicants</option>
+              <option>Apply model to selected applicants</option>
+            </Select>
+          </FormControl>
         </div>
         
-      </form>
-      </Center>
+      </Container>
       {!onContinue && (
-        <Center>
+        <Center mt={8}>
           <button className="btn" onClick={() => setOnContinue(true)}>
-            Continue
-          </button>
+          Continue
+        </button>
         </Center>
       )}
 
-      {onContinue && <Parameters />}
-      </Box>
+      {onContinue && <Parameters stepHandler={props.stepHandler} />}
     </div>
   );
 };

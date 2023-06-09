@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import DashChart from "./DashChart";
 import DashData from "./DashData";
 import styles from "./Dashboard.module.scss";
 import Trail from "./Trail";
@@ -27,35 +29,15 @@ const Left = () => {
         </div>
       </div>
 
-      <div className={styles.chart}>{/* <DashChart /> */}</div>
+      <div className={styles.chart}>
+        <DashChart />
+      </div>
       <div className={styles.view}>
         <h3> Applications</h3>
-        <a href="/">View All</a>
+        <Link to={"/layout/application"}>View All</Link>
       </div>
 
       <div className={styles.applic}>
-        <div className={styles.slide}>
-          <div className={styles.one}>
-            <a href="/" className={styles.notif}>
-              All(200)
-            </a>
-          </div>
-          <div className={styles.two}>
-            <a href="#0" className={styles.notif} onClick={assigned}>
-              Assigned(118)
-            </a>
-          </div>
-          <div className={styles.three}>
-            <a href="/" className={styles.notif}>
-              Unassigned(108)
-            </a>
-          </div>
-          <div className={styles.four}>
-            <a href="/" className={styles.notif}>
-              Closed(72)
-            </a>
-          </div>
-        </div>
         {/* <Table /> */}
         <Trail />
       </div>

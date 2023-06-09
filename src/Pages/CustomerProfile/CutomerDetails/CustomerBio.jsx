@@ -1,4 +1,6 @@
 import styles from './CustomerBio.module.scss'
+import copyData from 'copy-to-clipboard'
+import { useState} from 'react'
 import {
     HiOutlineCalendar,
     HiOutlineIdentification,
@@ -10,6 +12,17 @@ import {
 } from 'react-icons/hi'
 
 const CustomerBio = () => {
+
+    const [copyText, setCopyText] = useState('');
+        let customernum = "+2349067878607"
+    const copyToClipboard = () => {
+        setCopyText(customernum);
+        copyData(copyText);
+        // alert(`You have copied "${copyText}"`);
+    }
+
+   const [showBackground, setShowBackground] = useState(false)
+
     return (
         <div className={styles.customer_details_wrraper}>
 
@@ -38,16 +51,25 @@ const CustomerBio = () => {
                 <p className="customer_details_value">1234569878</p>
 
             </div>
-            <div className={styles.customer_details}>
+            <div className={styles.customer__details}
+                   onMouseEnter = {() => {setShowBackground(true)}}
+                   onMouseOut={() => {setShowBackground(false)}}
+            >
                 <div className={styles.customer_details_title}>
                     <HiOutlinePhone />
                     <p>Contact No</p>
                 </div>
-                <div className={styles.customer_details__title}>
-                    <p className="customer_details_value">+234 906 7878 607</p>
-                    <HiOutlineDuplicate />
-                </div>
 
+                <div className={styles.customer_details__title}>
+                    <p className="customer_details_value" 
+                    onClick={copyToClipboard} 
+                    >
+                    {customernum}
+                    </p>
+                    <HiOutlineDuplicate onClick={copyToClipboard}/>                 
+                </div>
+            
+                { showBackground ? <div className={styles.customer__details} ></div>: null}
             </div>
             <div className={styles.customer_details}>
                 <div className={styles.customer_details_title}>
