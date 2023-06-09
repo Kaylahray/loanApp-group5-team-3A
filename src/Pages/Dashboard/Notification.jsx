@@ -1,13 +1,13 @@
-import chi from "../../../public/DashboardImages/icon.svg";
-import one from "../../../public/DashboardImages/one.svg";
-import two from "../../../public/DashboardImages/two.svg";
-import three from "../../../public/DashboardImages/three.svg";
-import four from "../../../public/DashboardImages/four.svg";
-import five from "../../../public/DashboardImages/five.svg";
+import chi from "../Dashboard/DashboardIcons/icon.svg";
+import one from "../Dashboard/DashboardIcons/one.svg";
+import two from "../Dashboard/DashboardIcons/two.svg";
+import three from "../Dashboard/DashboardIcons/three.svg";
+import four from "../Dashboard/DashboardIcons/four.svg";
+import five from "../Dashboard/DashboardIcons/five.svg";
 
 const ProfileData = [
   {
-    name: "Oluwatofumi idowus ",
+    name: "Oluwatofumi idowu ",
     text: " application database successfully downloaded ",
     time: "30m ago",
     id: 1,

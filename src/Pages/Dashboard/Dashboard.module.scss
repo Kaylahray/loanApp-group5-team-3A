@@ -156,7 +156,7 @@
 // }
 .down {
   display: grid;
-  grid-template-columns: 4fr 320px;
+  grid-template-columns: 4fr 2fr;
   // background-color: aqua;
   // height: 500px;
   margin: 10px 0;
@@ -312,9 +312,8 @@
 }
 
 .chart {
-  width: 640px;
+  width: 90%;
   height: 360px;
-  // background-color: #dcdb4c;
   margin-top: 32px;
   margin: 32px auto;
 }
@@ -322,19 +321,19 @@
 .view {
   display: flex;
   height: 28px;
-  width: 640px;
+  width: 90%;
   justify-content: space-between;
   align-items: center;
   margin: 30px auto;
 }
 
 .applic {
-  width: 680px;
+  width: 96%;
   height: 400px;
-  // background-color: #4c4ddc;
+  margin: 30px auto;
 }
 .slide {
-  width: 480px;
+  width: 70%;
   height: 40px;
   display: flex;
   justify-content: space-evenly;
@@ -343,9 +342,16 @@
 .notif {
   font-size: 16px;
 }
-.one {
-  border-bottom: 2px solid #4c4ddc;
+
+.tab {
+  border-bottom: transparent;
 }
+
+.active_tab {
+  border-bottom: 2px solid #4c4ddc;
+  color: black;
+}
+
 .fetch {
   height: 272px;
   width: 680px;

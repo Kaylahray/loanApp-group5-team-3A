@@ -36,20 +36,13 @@ const links = [
   {
     id: 3,
     name: "Settings",
-    to: "/layout/setting",
+    to: "/layout/settings",
     icon: <FiSettings />,
   },
   {
     id: 4,
     name: "Teams",
     to: "/layout/teams",
-    icon: <BiGroup />,
-  },
-  
-  {
-    id: 8,
-    name: "customer",
-    to: "/layout/customerprofile",
     icon: <BiGroup />,
   },
 ];

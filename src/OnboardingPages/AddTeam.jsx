@@ -20,6 +20,8 @@ const AddTeam = () => {
     select: " ",
   };
   const validationSchema = Yup.object({
+    firstName: Yup.string().required("Required"),
+    lastName: Yup.string().required("Required"),
     email: Yup.string().email("invalid").required("Required"),
     select: Yup.string().required("Required"),
   });
@@ -56,6 +58,26 @@ const AddTeam = () => {
                   <div className="form-control">
                     <FormikControl
                       control="input"
+                      type="text"
+                      name="firstName"
+                      label="First name"
+                      placeholder="e.g chioma"
+                      className="inputBox"
+                    />
+                  </div>
+                  <div className="form-control">
+                    <FormikControl
+                      control="input"
+                      type="text"
+                      name="lastName"
+                      label="Last name"
+                      placeholder="e.g christopher"
+                      className="inputBox"
+                    />
+                  </div>
+                  <div className="form-control">
+                    <FormikControl
+                      control="input"
                       type="email"
                       name="email"
                       label="Email address(required)"
@@ -73,7 +95,7 @@ const AddTeam = () => {
                     />
                   </div>
                   <button
-                    className="btn"
+                    className="btno"
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
                   >
@@ -104,7 +126,7 @@ const AddTeam = () => {
         </div>
 
         <div className="skip">
-          <button className="btn">
+          <button className="btnoo">
             <Link to={"/up"}>Continue</Link>
           </button>
 
