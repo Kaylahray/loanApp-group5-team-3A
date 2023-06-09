@@ -4,10 +4,6 @@
     padding: 0;
   }
   
-  /* body {
-    background: #ffffff;
-  } */
-  
   .container {
     display: flex;
     flex-direction: column;
@@ -42,28 +38,8 @@
   }
   
   .active-tabs::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% + 2px);
-    height: 3px;
+    top: 51px;
     background:  #4C4DDC;
-    color: #9E9E9E;
-  }
-  
-  
-  /* button {
-    border: none;   
-  } */
-  .content-tabs {
-    flex-grow : 1;
-  }
-  .content {
-    background: white;
-    display: none;
   }
  
   .active-content {

@@ -1,18 +1,17 @@
-// .top {
-//     display: flex;
-//     flex-direction: row;
-//     height: 80px;
-//     justify-content: space-evenly;
-//     padding: 0px 40px;
-//     align-items: center;
-//     // background-color: #fff;
-//   }
+.top {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-content: space-between;
+    padding: 0px 40px;
+    align-items: center;
+  }
 
 .breadcrumb {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400px;
 }
 
@@ -32,8 +31,4 @@
   align-items: center;
 }
 
-.customerpro {
-  height: 1442px;
-  width: 1440px;
-}
 

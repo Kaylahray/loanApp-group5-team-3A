@@ -3,8 +3,6 @@
     grid-template-columns: auto auto auto auto;
     row-gap: 30px;
     column-gap: 30px;
-    background: #FFFFFF;
-    margin-top: 30px;
 }
 
 .griditem {
@@ -32,8 +30,7 @@
     position: absolute;
     width: 398px;
     height: 28px;
-    top: 350px;
-    margin: 15px 0px 0px 0px;
+    top: 330px;
     font-weight: 600;
   }
   
@@ -41,5 +38,5 @@
     position: absolute;
     width: 840px;
     height: 380px;
-    top: 450px;
+    top: 380px;
   }

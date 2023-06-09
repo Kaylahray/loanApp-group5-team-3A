@@ -11,6 +11,7 @@ import {
   ModalBody,
   Button,
   useDisclosure,
+  ModalCloseButton
 } from '@chakra-ui/react'
 
 
@@ -119,10 +120,11 @@ const PredictionAnalysis = () => {
           <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay 
              bg='blackAlpha.600'
-             backdropFilter='blur(1px)'
             />
+            
             <ModalContent>
               <ModalHeader>Candidate approved!</ModalHeader>
+              <ModalCloseButton />
               <ModalBody>
                 <p className={styles.decision}>
                   An acceptance email will be sent to the candidate in 
@@ -133,7 +135,9 @@ const PredictionAnalysis = () => {
 
               <ModalFooter className={styles.modal_Footer}>
                 <div >
-                  <Button className={styles.btn5} colorScheme='blue' mr={3} onClick={onClose}>
+                  <Button className={styles.btn5} onClick={onClose}
+                  variant='background: #4C4DDC;'
+                  >
                     Confirm
                   </Button>
                 </div>
