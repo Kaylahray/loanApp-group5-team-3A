@@ -8,7 +8,7 @@ const PasswordResetSuccess = () => {
         <h2 className="h2text">Password Reset Successful!</h2>
       </div>
       <div>
-        <button className="btn">
+        <button className="btno">
           <Link to={"/login"}>Continue home </Link>
         </button>
       </div>

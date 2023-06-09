@@ -36,7 +36,7 @@ const links = [
   {
     id: 3,
     name: "Settings",
-    to: "/layout/setting",
+    to: "/layout/settings",
     icon: <FiSettings />,
   },
   {
@@ -45,7 +45,7 @@ const links = [
     to: "/layout/teams",
     icon: <BiGroup />,
   },
-  
+
   {
     id: 8,
     name: "customer",

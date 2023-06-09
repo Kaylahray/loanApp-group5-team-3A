@@ -16,7 +16,7 @@ const VerifyEmail = () => {
           Please note that the link will expire in 4 hours.
         </p>
         <div>
-          <button className="btn">
+          <button className="btno">
             {" "}
             <Link to={"/verifySuccess"}>Open email </Link>
           </button>
