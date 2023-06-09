@@ -20,7 +20,6 @@ import Scores from "./Scores/Scores";
 import Review from "./Review/Review";
 import Previewandconfirm from "./Previewandconfirm";
 import { useNavigate } from "react-router-dom";
-import OmitModel from "./OmitedModel/OmitModel";
 
 const steps = [
   { title: "First", description: "Basic Information" },
@@ -44,7 +43,7 @@ const Models = () => {
 
   return (
     <div>
-        <OmitModel />
+  
       <ModelTop />
       {/* <Index/> */}
       <Steps
