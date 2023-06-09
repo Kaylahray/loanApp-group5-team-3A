@@ -3,6 +3,7 @@
 .container {
   // margin-inline: 1.5rem;
   width: 100%;
+  min-height: auto;
   @media screen and (min-width: 1440px) {
     margin-inline: auto;
   }

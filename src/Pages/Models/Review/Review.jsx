@@ -1,282 +1,268 @@
 import React from 'react'
 import style from "./Review.module.scss"
+import { Select, Input, FormControl, FormLabel} from "@chakra-ui/react";
 
-function Review() {
+function Review(props) {
   return (
     <div>
-        <div className={style.body}> 
-        <h1>Review details</h1>
-        <h5>Basic information</h5>
+        <div className={style.reviewcontainer}> 
+        <h1 className={style.peacereview}>Review details</h1>
         </div>
-        <div>
-        <label htmlFor="">Model name</label>
-        <br/>
-        <input type="text" placeholder='Alpha model' className={style.Alpha}/>
+        <div className={style.reviewcontainer}> 
+        <h2 className={style.peacebasicinfo}>Basic information</h2>
+        </div>
+        <div className={style.modelreview}>
+        <label htmlFor="" className={style.peacemodelname}>Model name</label>
+        <Input type="text" placeholder='Alpha model' className={style.Alpha} w={330}/>
          <div className={style.condition}>
-        <label htmlFor="" >Condition for model application</label>
-        <br/>
-        <select className={style.apply}>
+        <label htmlFor="" className={style.peacemodelname} >Condition for model application</label>
+        <Select className={style.apply}>
         <option value="">Apply Model to selected participants</option>
         <option value="">Apply Model to selected participants</option>
-    </select>
+    </Select>
         </div>
         <div className={style.review}> 
         <div> 
-    <label htmlFor="">Parameters</label>
-    <br/>
-    <select name="" id="" className={style.apply} >
+          <FormControl>
+    <label>Parameters</label>
+    <Select name="" id="" className={style.peaceapply} >
         <option value="" >Age</option>
         <option value="">Date of birth</option>
-    </select>
+    </Select>
+    </FormControl>
      <br/>
-    <select name="" id="" className={style.apply}>
+    <Select name="" id="" className={style.peaceapply}>
         <option value="">Location</option>
         <option value="">Date of birth</option>
-    </select>
+    </Select>
     <br/>
-    <select name="" id="" className={style.apply}>
+    <Select name="" id="" className={style.peaceapply}>
         <option value="">Loan amount range</option>
-    </select>
+    </Select>
         </div>
+
         <div>
-        <label htmlFor="">Selection</label>
-    <br/>
-    <select name="" id="" className={style.apply}>
+          <FormControl> 
+        <label className={style.peaceselection}>Selection</label>
+    <Select name="" id="" className={style.apply1}>
         <option value="">25-35</option>
         <option value=""></option>
-    </select>
+    </Select>
      <br/>
-    <select name="" id="" className={style.apply}>
+    <Select name="" id="" className={style.apply1}>
         <option value="">Lagos</option>
         <option value=""></option>
-    </select>
+    </Select>
     <br/>
-    <select name="" id="" className={style.apply}>
+    <Select name="" id="" className={style.apply1}>
         <option value="">100,000-250,000</option>
-    </select>
+    </Select>
+    </FormControl>
         </div>
-        </div>
+    </div>
+
+
+    
         <hr/>
-        <div>
+        <div className={style.peacebank}>
             <p>Bank statement analysis</p>
         </div>
         <div className={style.review}>
             <div>
-        <label htmlFor="">Variable</label>
-        <br/>
-        <select className={style.apply}>
+        <label htmlFor="" className={style.peaceheading1}>Variable</label>
+        <Select className={style.peaceapply2}>
             <option>Average Debit</option>
-        </select>
+        </Select>
         <br/>
-        <select className={style.apply}>
+        <Select className={style.peaceapply2}>
             <option>Average Debit</option>
-        </select>
+        </Select>
         <br/>
-        <select className={style.apply}>
+        <Select className={style.peaceapply2}>
             <option>Average Debit</option>
-        </select>
+        </Select>
         <br/>
-        <select className={style.apply}>
+        <Select className={style.peaceapply2}>
             <option>Average Debit</option>
-        </select>
+        </Select>
         <br/>
             </div>
 
             <div>
-        <label htmlFor="">Operator</label>
-        <br/>
-          <select className={style.apply}>
+        <label htmlFor="" className={style.peaceheading1}>Operator</label>
+          <Select className={style.apply2}>
             <option>Less than</option>
-          </select>
+          </Select>
           <br/>
-          <select name="" id="" className={style.apply}>
-            <option value="">Less than</option>
-          </select>
+          <Select name="" id="" className={style.apply2}>
+            <option value="">Greater than</option>
+          </Select>
           <br/>
-          <select name="" id="" className={style.apply}>
-            <option value="">Less than</option>
-          </select>
+          <Select name="" id="" className={style.apply2}>
+            <option value="">Greater than or equal to</option>
+          </Select>
           <br/>
-          <select name="" id="" className={style.apply}>
-            <option value="">Less than</option>
-          </select>
+          <Select name="" id="" className={style.apply2}>
+            <option value="">Less than or equal to</option>
+          </Select>
           <br/>
             </div>
 
             <div>
-        <label htmlFor="">Value</label>
-        <br/>
-        <label htmlFor="">₦</label>
-          <select className={style.apply}>
+        <label htmlFor="" className={style.peaceheading1}>Value</label>
+          <Select className={style.apply9}>
             <option>5000</option>
-          </select>
+          </Select>
           <br/>
-          <label htmlFor="">₦</label>
-          <select name="" id="" className={style.apply}>
-            <option value="">6000</option>
-          </select>
+          <Select name="" id="" className={style.apply9}>
+            <option value="">80000</option>
+          </Select>
           <br/>
-          <label htmlFor="">₦</label>
-          <select name="" id="" className={style.apply}>
-            <option value="">7000</option>
-          </select>
+          <Select name="" id="" className={style.apply9}>
+            <option value="">10000</option>
+          </Select>
           <br/>
-          <label htmlFor="">₦</label>
-          <select name="" id="" className={style.apply}>
-            <option value="" >8000</option>
-          </select>
+          <Select name="" id="" className={style.apply9}>
+            <option value="">70000</option>
+          </Select>
           <br/>
             </div>
 
             <div>
-        <label htmlFor="">Assigned score</label>
-        <br/>
-          <select className={style.apply}>
-            <option>10</option>
-          </select>
-          <br/>
-           <select name="" id="" className={style.apply}>
-           <option>10</option>
-           </select>
-           <br/>
-           <select name="" id="" className={style.apply}>
-            <option>15</option>
-           </select>
-           <br/>
-           <select name="" id="" className={style.apply}>
-            <option>30</option>
-           </select>
+            <label htmlFor="" className={style.peaceheading}>Assigned score</label>
+        <div className={style.peaceapply7}> 
+        <Input type="text"  placeholder='60' w={150}  className={style.peaceapply5} />
+          </div>
+          <div className={style.peaceapply7}> 
+        <Input type="text"  placeholder='60' w={150}  className={style.peaceapply5} />
+          </div>
+          <div className={style.peaceapply7}> 
+        <Input type="text"  placeholder='60' w={150}  className={style.peaceapply5} />
+          </div>
+          <div className={style.peaceapply7}> 
+        <Input type="text"  placeholder='60' w={150}  className={style.peaceapply5} />
+          </div>
             </div>
         </div>
 
         <hr/>
-        <div>
+        
+        <div className={style.peacereviewtop}>
             <p>Credit report analysis</p>
         </div>
         <div className={style.review}>
             <div>
         <label htmlFor="">Variable</label>
-        <br/>
-        <select className={style.apply}>
+        <Select className={style.apply}>
             <option>Highest loan amount</option>
-        </select>
+        </Select>
         <br/>
-        <select className={style.apply}>
+        <Select className={style.apply}>
             <option>Total watchlisted loan</option>
-        </select>
+        </Select>
         <br/>
-        <select className={style.apply}>
+        <Select className={style.apply}>
             <option>Total credit account</option>
-        </select>
+        </Select>
         <br/>
-        <select className={style.apply}>
+        <Select className={style.apply}>
             <option>Total outstanding laon</option>
-        </select>
+        </Select>
         <br/>
-        <select className={style.apply}>
+        <Select className={style.apply}>
             <option>Total overdue laon</option>
-        </select>
+        </Select>
         <br/>
             </div>
 
             <div>
         <label htmlFor="">Operator</label>
-        <br/>
-          <select className={style.apply}>
+          <Select className={style.peaceapply6}>
             <option>Less than</option>
-          </select>
+          </Select>
           <br/>
-          <select name="" id="" className={style.apply}>
+          <Select name="" id="" className={style.peaceapply6}>
             <option value="">Less than</option>
-          </select>
+          </Select>
           <br/>
-          <select name="" id="" className={style.apply}>
+          <Select name="" id="" className={style.peaceapply6}>
             <option value="">Greater than</option>
-          </select>
+          </Select>
           <br/>
-          <select name="" id="" className={style.apply}>
+          <Select name="" id="" className={style.peaceapply6}>
             <option value="">Less than</option>
-          </select>
+          </Select>
           <br/>
-          <select name="" id="" className={style.apply}>
+          <Select name="" id="" className={style.peaceapply6}>
             <option value="">Less than</option>
-          </select>
+          </Select>
             </div>
 
             <div>
-        <label htmlFor="">Value</label>
-        <br/>
-        <label htmlFor="">₦</label>
-          <select className={style.apply}>
+        <label htmlFor="" className={style.peaceheading}>Value</label>
+          <Select className={style.peaceapply4}>
             <option>5000</option>
-          </select>
+          </Select>
           <br/>
-          <label htmlFor="">₦</label>
-          <select name="" id="" className={style.apply}>
+          <Select name="" id="" className={style.peaceapply4}>
             <option value="">3</option>
             <option value="">15000</option>
-          </select>
+          </Select>
           <br/>
-          <label htmlFor="">₦</label>
-          <select name="" id="" className={style.apply}>
+          <Select name="" id="" className={style.peaceapply4}>
             <option value="">15000</option>
-          </select>
+          </Select>
           <br/>
-          <label htmlFor="">₦</label>
-          <select name="" id="" className={style.apply}>
+          <Select name="" id="" className={style.peaceapply4}>
             <option value="">120000</option>
-          </select>
+          </Select>
           <br/>
-          <label htmlFor="">₦</label>
-          <select name="" id="" className={style.apply}>
+          <Select name="" id="" className={style.peaceapply4}>
             <option value="">120000</option>
-          </select>
+          </Select>
             </div>
 
             <div>
-        <label htmlFor="">Assigned score</label>
-        <br/>
-          <select className={style.apply}>
-            <option>10</option>
-          </select>
-          <br/>
-           <select name="" id="" className={style.apply}>
-           <option>10</option>
-           </select>
-           <br/>
-           <select name="" id="" className={style.apply}>
-            <option>15</option>
-           </select>
-           <br/>
-           <select name="" id="" className={style.apply}>
-            <option>30</option>
-           </select>
-           <br/>
-           <select name="" id="" className={style.apply}>
-            <option>10</option>
-           </select>
+            <label htmlFor="" className={style.peaceheading}>Assigned score</label>
+        <div className={style.peaceapply7}> 
+        <Input type="text"  placeholder='10' w={150}  className={style.peaceapply5} />
+          </div>
+          <div className={style.peaceapply7}> 
+        <Input type="text"  placeholder='15' w={150}  className={style.peaceapply5} />
+          </div>
+          <div className={style.peaceapply7}> 
+        <Input type="text"  placeholder='5' w={150}  className={style.peaceapply5} />
+          </div>
+          <div className={style.peaceapply7}> 
+        <Input type="text"  placeholder='10' w={150}  className={style.peaceapply5} />
+          </div>
+          <div className={style.peaceapply7}> 
+        <Input type="text"  placeholder='10' w={150}  className={style.peaceapply5} />
+          </div>
             </div>
         </div>
+
         <hr/>
-        <div>
+        <div className={style.peacewrapup}>
             <p>Wrap up</p>
         </div>
       <div>
-        <label htmlFor="">Total Score</label>
-        <br/>
-        <input type="text" className={style.scoresplace}/>
+        <label htmlFor="" className={style.peacewrapheading}>Total Score</label>
+        <Input type="text" className={style.scoresplace}/>
       </div>
       <div>
-        <label htmlFor="">Pass mark (required)</label>
-        <br/>
-        <input type="text" className={style.scoresplace}/>
+        <label htmlFor="" className={style.peacewrapheading}>Pass mark (required)</label>
+        <Input type="text" className={style.scoresplace}/>
       </div>
       <div>
-        <label htmlFor="">Least considerable score</label>
-        <br/>
-        <input type="text" className={style.scoresplace}/>
+        <label htmlFor="" className={style.peacewrapheading}>Least considerable score</label>
+        <Input type="text" className={style.scoresplace}/>
       </div>
-        </div>
+        
+        <button  onClick={() => props.stepHandler(4)} className={style.createbtn}>
+        Confirm model
+        </button> 
+    </div>
     </div>
   )
 }

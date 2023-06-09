@@ -44,33 +44,17 @@ const Tab = () => {
 
       <div className="content-tabs">
         <div
-          className={toggleState === 2 ? "content  active-content" : "content"}
-        >
-          {/* <h2>Content 1</h2>
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
-            vel voluptatum?
-          </p> */}
+          className={toggleState === 2 ? "content  active-content" : "content"}>
           <BankState/>
         </div>
 
         <div
-          className={toggleState === 3 ? "content  active-content" : "content"}
-        >
+          className={toggleState === 3 ? "content  active-content" : "content"}>
           <CreditAnalysis/>
-          {/* <h2>Content 2</h2>
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            voluptatum qui adipisci.
-          </p> */}
         </div>
 
         <div
-          className={toggleState === 4 ? "content  active-content" : "content"}
-        >
+          className={toggleState === 4 ? "content  active-content" : "content"}>
          <PredictionAnalysis/>
         </div>
       </div>

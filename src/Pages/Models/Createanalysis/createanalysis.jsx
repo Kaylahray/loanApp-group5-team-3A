@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import style from './Analysis.module.scss'
+import { Select, Input} from "@chakra-ui/react";
 import Scores from '../Scores/Scores'
 
 
-function Createanalysis() {
+function Createanalysis(props) {
 
 const [onContinue, setOnContinue] = useState(false)
 
@@ -17,7 +18,7 @@ const [onContinue, setOnContinue] = useState(false)
       <div>  
     <label htmlFor="">Variable</label>
     <br/>
-    <select name="" id="" className={style.createselect}>
+    <Select name="" id="" className={style.optionselect} w={150}>
         <option value="">Select</option>
         <option value="">Monthly average income</option>
         <option value="">Monthly average expense</option>
@@ -26,9 +27,9 @@ const [onContinue, setOnContinue] = useState(false)
         <option value="">Average Credit</option>
         <option value="">Average balance</option>
         <option value="">Most frequent balance</option>
-    </select>
+    </Select>
          <br/>
-    <select name="" id="" className={style.createselect}>
+    <Select name="" id="" className={style.optionselect} w={150}>
         <option value="">Select</option>
         <option value="">Monthly average income</option>
         <option value="">Monthly average expense</option>
@@ -37,52 +38,51 @@ const [onContinue, setOnContinue] = useState(false)
         <option value="">Average Credit</option>
         <option value="">Average balance</option>
         <option value="">Most frequent balance</option>
-    </select>
+    </Select>
     </div> 
 
      <div>   
     <label htmlFor="">Operator</label>
     <br/>
-    <select className={style.createselect}>
+    <Select className={style.optionselect1} w={150}>
         <option value="">Select</option>
         <option value="">Less than or equal to</option>
         <option value="">Greater than</option>
         <option value="">Greater than or equal to</option>
         <option value="">Equal to</option>
-    </select>
+    </Select>
         <br/>
-    <select className={style.createselect}>
+    <Select className={style.optionselect1} placeholder="select" w={150}>
         <option value="">Select</option>
         <option value="">Less than or equal to</option>
         <option value="">Greater than</option>
         <option value="">Greater than or equal to</option>
         <option value="">Equal to</option>
-    </select>
+    </Select>
     </div>
 
     <div>
         <label htmlFor="">Value</label>
         <br/>
-        <input type="nothing" className={style.create}/>
+        <Input type="nothing" className={style.create} w={150}/>
         <br/>
-        <input type="nothing" className={style.create}/>
+        <Input type="nothing" className={style.create} w={150}/>
     </div>
+
 
     <div>
         <label htmlFor="">Assigned Score</label>
         <br/>
-        <input type="nothing" className={style.create}/>
+        <Input type="nothing" className={style.assignedcreate} w={150}/>
         <br/>
-        <input type="nothing" className={style.create}/>
+        <Input type="nothing" className={style.assignedcreate} w={150}/>
     </div>
-
     </div>
     <div className={style.createbtn1}>
-    {!onContinue && <button className={style.createbtn} onClick={() => setOnContinue(true)}>
+    {!onContinue && <button className={style.createbtn} onClick={() => props.stepHandler(2)}>
         Continue
         </button> }
 
-        {onContinue && <Scores/>}
     </div>
     </div>
   )

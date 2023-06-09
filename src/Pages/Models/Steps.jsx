@@ -13,20 +13,9 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-const steps = [
-  { title: "First", description: "Basic Information" },
-  { title: "Second", description: "Bank statement analysis" },
-  { title: "Third", description: "Credit report analysis" },
-  { title: "Fourth", description: "Wrap up" },
 
-  { title: "Fifth", description: "Preview and continue" },
-];
-
-function Smartlend() {
-  const { activeStep, setActiveStep } = useSteps({
-    index: 1,
-    count: steps.length,
-  });
+function Smartlend({activeStep, steps, setActiveStep}) {
+ 
 
   const activeStepText = steps[activeStep].description;
 

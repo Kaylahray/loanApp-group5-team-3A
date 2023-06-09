@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from './CustomerDoc.module.scss'
 import Add from '../CProfileIcons/plusicon.svg'
 import Image from '../CProfileIcons/imageicon.svg'
@@ -6,6 +6,8 @@ import Bank from '../CProfileIcons/bankstateicon.svg'
 import {HiOutlinePaperClip} from 'react-icons/hi'
 
 const CustomerDoc = () => {
+    const navigate = useNavigate();
+
     return (
         <div className={styles.customer_details_wrraper}>
 
@@ -14,7 +16,7 @@ const CustomerDoc = () => {
                     <HiOutlinePaperClip />
                     <p >Attachments</p>
                 </div>
-                <NavLink className={styles.nav} to={"/apllication"}>View all</NavLink>
+                <p className={styles.nav} onClick={() => navigate("/layout/application")}>View all</p>
             </div>
 
             <div className={styles.customer_document_wrapper}>
