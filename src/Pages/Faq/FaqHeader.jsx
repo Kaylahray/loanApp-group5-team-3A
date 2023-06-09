@@ -8,6 +8,7 @@ import {
   AccordionPanel,
   AccordionIcon,
   Box,
+
 } from "@chakra-ui/react";
 
 export default function FaqHeader() {
@@ -44,7 +45,10 @@ export default function FaqHeader() {
                 nisi ut aliquip ex ea commodo consequat.
               </AccordionPanel>
             </AccordionItem>
+            
+            
           </Accordion>
+          
         }
       />
     </div>

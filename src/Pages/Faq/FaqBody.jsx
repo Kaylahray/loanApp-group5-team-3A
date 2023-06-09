@@ -7,6 +7,7 @@ export default function FaqBody({Accordion}) {
         </div>
       <div>
         {Accordion}
+        
       </div>
     </div>
   );
