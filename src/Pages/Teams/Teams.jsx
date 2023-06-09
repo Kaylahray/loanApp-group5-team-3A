@@ -14,12 +14,16 @@ const Teams = () => {
 
   
   return (
-    
-      <div className={styles.maincontainer}>
+    <div>
+    <div className={styles.teamscontain}>
+      <div className={styles.mainteamscontainer}>
       
+      <div className={styles.teamstops}>
         <Tab />
-      
     </div>
+    </div>
+    </div>
+  </div>
   );
 };
 

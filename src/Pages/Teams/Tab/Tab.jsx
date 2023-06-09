@@ -45,8 +45,8 @@ const Tab = () => {
     };
     
   return (
-    <div className={styles.teamscontainer}>
-      <div className={styles.tops}>
+    <div className={styles.mainteamscontainer}>
+      <nav className={styles.tops}>
         <div className={styles.topleft}>
           <h1>Teams</h1>
           <div className={styles.teaminput}>
@@ -67,7 +67,7 @@ const Tab = () => {
         onAddTeamMember={handleAddTeamMember}
       />
         </div>
-      </div>
+      </nav>
 
       <div className="team-container">
         <div className="team-bloc-tabs">

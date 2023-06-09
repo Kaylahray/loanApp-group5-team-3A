@@ -36,20 +36,23 @@ const AddTeamMemberModal = ({ isOpen, onClose, onAddTeamMember }) => {
       {isOpen && <div className={styles.teamdimmed}></div>}
       <div className={`${styles.teammodal} ${isOpen ? styles.teamopen : ''}`}>
         <div className={styles.teammodalContent}>
-          <h2>Add a team member</h2>
+          <h1 className={styles.addteamheading}>Add a team member</h1>
+          <form>
+            <div>
+            <label>Email address (required)</label>
+            <input type="email" value={email} placeholder="e.g. idowu.oluwatofunmi@gmail.com" onChange={handleEmailChange} />
+            </div>
+          
           <div>
-            <label>Email:</label>
-            <input type="email" value={email} onChange={handleEmailChange} />
-          </div>
-          <div>
-            <label>Permission:</label>
+            <label>Permission (required)</label>
             <input
               type="text"
               value={permission}
               onChange={handlePermissionChange}
             />
           </div>
-          <button onClick={handleAddTeamMember}>Add team member</button>
+          </form>
+          <button className={styles.AddTeamMemberbtn} onClick={handleAddTeamMember}>Add team member</button>
         </div>
       </div>
     </>

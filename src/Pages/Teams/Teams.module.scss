@@ -3,24 +3,35 @@
   margin: 0;
   box-sizing: border-box;
 }
-.maincontainer{
-  display: flex;
-  flex-direction: column;
-  // position: absolute;
-  left: 60px;
-  top: 40px;
+.teamscontain{
+  position: absolute; 
+  margin-left: 25px;
+}
+.mainteamscontainer{
   
+  //  align-items: flex-start;
+  //  padding: 0px;
+  //  gap: 30px;
+  //position: absolute;
+   //width: 1000px;
+  // height: 872px;
+  //  left: 344px;
+  //  top: 40px;
+  //  margin-left: 30px;
+  //  margin-top: 15px;
+   
+   
 }
 .tops{
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
+  margin-top: 25px;
 }
+
 
 
 .topleft{
   display: flex;
-  justify-content: space-around; 
-  height: 24px;
   font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -28,12 +39,12 @@
     line-height: 24px;
     letter-spacing: -0.011em;
     color: #9E9E9E;
-    margin-right: 5px;
+    // margin-right: 5px;
 }
 
 .topleft h1 {
-  // width: 115px;
-  //   height: 28px;
+  width: 115px;
+  height: 28px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
@@ -44,13 +55,12 @@
 }
 
 .teaminput{
-  // position: relative;
   display: flex;
     flex-direction: row;
     align-items: center;
     padding: 16px 20px;
-    
-    // width: 350px;
+    gap: 8px;
+    width: 510px;
     height: 50px;
     background: #FCFCFC;
     border-radius: 40px;
@@ -59,9 +69,7 @@
 
 .topleft .teamssearchbar{
   background: #FCFCFC;
-    // height: 30px;
     border-width: 0;
-    // width: 500px;
     font-family: "Inter", sans-serif;
     outline: none;
 }
@@ -107,13 +115,13 @@
 .topright{
 
   background: #4C4DDC;
-  margin-right: 200px;
+  margin-right: 20px;
   border-radius: 6px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
   // gap: 40px;
   height: 56px;
   width: 240px;
-  margin-left: 263px;
+  margin-left: 200px;
   color: white;
 }
 .topright button{

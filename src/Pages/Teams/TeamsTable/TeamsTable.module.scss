@@ -1,6 +1,6 @@
 
 .teamtable{
-  // width: 1040px;
+  width: 1040px;
   margin-top: 0;
 }
 
@@ -15,10 +15,18 @@
 
 .teamtable .teamdataheader th {
   background-color: #f2f2f2;
+  
+  
 }
-.data .teamsbody{
+.teamsbody{
   background-color: #fff;
 }
+
+
+
+
+
+
 .role{
   padding: 2px;
   display: flex;
@@ -27,4 +35,6 @@
   width: 30%;
   border-radius: 7px;
   font-weight: 50px;
+  
+  
 }
