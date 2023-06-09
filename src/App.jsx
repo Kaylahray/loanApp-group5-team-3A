@@ -10,7 +10,7 @@ import Application from "./Pages/Applications/UserApplications/Application";
 import Teams from "./Pages/Teams/Teams";
 import Chats from "./Pages/Chats/Chats";
 import Settings from "./Pages/Settings/Settings";
-import Faq from "./Pages/Faq/Faq";
+import Faq from "./Pages/Faq/FaqHeader";
 import Models from "./Pages/Models/Models";
 import Logout from "./Pages/Logout/Logout";
 
