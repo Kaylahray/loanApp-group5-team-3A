@@ -1,0 +1,35 @@
+
+.teamtable{
+  width: 1040px;
+  margin-top: 0;
+}
+
+.teamtable th,
+.teamtable td {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  width: 1040px;
+  font-weight: 400;
+}
+
+.teamtable .teamdataheader th {
+  background-color: #f2f2f2;
+  
+  
+}
+.teamsbody{
+  background-color: #fff;
+}
+
+.role{
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  border-radius: 7px;
+  font-weight: 50px;
+  
+  
+}
