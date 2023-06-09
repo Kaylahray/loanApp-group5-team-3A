@@ -4,6 +4,7 @@
  */
 import React, { useState } from 'react';
 import styles from './AddTeamMembersModal.module.scss';
+// import Icon from './Icon.svg';
 
 const AddTeamMemberModal = ({ isOpen, onClose, onAddTeamMember }) => {
   const [email, setEmail] = useState('');
@@ -36,7 +37,10 @@ const AddTeamMemberModal = ({ isOpen, onClose, onAddTeamMember }) => {
       {isOpen && <div className={styles.teamdimmed}></div>}
       <div className={`${styles.teammodal} ${isOpen ? styles.teamopen : ''}`}>
         <div className={styles.teammodalContent}>
-          <h1 className={styles.addteamheading}>Add a team member</h1>
+          <div className={styles.addteamheading}>
+          <h1 className={styles.addteamheadingp}>Add a team member</h1>
+          {/* <img src={Icon} alt="img" className={styles.cancel} /> */}
+          </div>
           <form>
             <div>
             <label>Email address (required)</label>

@@ -51,11 +51,11 @@
   .teams-active-tabs::before {
     content: "";
     display: block;
-   
+    position: absolute;
     top: 55px;
-    left: 50px;
+    margin-left: 35px;
     transform: translateX(-50%);
-    width: 7px;
+    width: calc(8% + 2px);
     height: 3px;
     background: rgb(50, 146, 249);
   }
