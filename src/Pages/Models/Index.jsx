@@ -25,7 +25,7 @@ const ModelIndex = (props) => {
               <InputLeftElement>
                 <BiSearch />
               </InputLeftElement>
-              <Input placeholder="Search" />
+              <Input placeholder="Search" borderRadius={50} />
             </InputGroup>
           </Flex>
           <div>

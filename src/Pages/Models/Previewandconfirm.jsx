@@ -1,6 +1,5 @@
-import { Button, Card, Flex, background } from "@chakra-ui/react";
+import { Button, Card, Center, Container, Flex, background } from "@chakra-ui/react";
 import React from "react";
-// import styles from "./ModelIcons/Models.module.scss";
 import styles from "./Models.module.scss";
 import { useNavigate } from "react-router-dom";
 
@@ -11,8 +10,9 @@ import { Text } from "@chakra-ui/react";
 const Previewandconfirm = (props) => {
 
   return (
-    <div className={styles.modal}>
-      
+    <div>
+    <div>
+      <Center>
         <div className={styles.textcont}>
           <Text fontSize="18px" as="b">
             Successful!
@@ -24,7 +24,8 @@ const Previewandconfirm = (props) => {
           <button className={styles.btns} onClick={()=> props.onClose()}>
           Go back to models</button> 
         </div>
-      
+        </Center>
+        </div>
     </div>
   );
 };
