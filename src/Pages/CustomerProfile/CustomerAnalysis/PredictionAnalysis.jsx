@@ -1,7 +1,5 @@
-// import React from 'react'
 import styles from './PredictionAnalysis.module.scss'
-import { HiOutlineChevronDown, HiOutlineCheck } from 'react-icons/hi'
-import { useNavigate } from 'react-router-dom'
+import { HiOutlineCheck } from 'react-icons/hi'
 import {
   Modal,
   ModalOverlay,
@@ -11,23 +9,31 @@ import {
   ModalBody,
   Button,
   useDisclosure,
+  ModalCloseButton
 } from '@chakra-ui/react'
+import { Select } from '@chakra-ui/react'
 
 
 const PredictionAnalysis = () => {
-  const navigate = useNavigate("");
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <div className={styles.wrraper}>
 
       <div className={styles.container}>
         <h3 className={styles.loan}>Loan Selection</h3>
-        <button className={styles.btn1}>
-          20/03/2021 Application for 130,000 NGN
-          <HiOutlineChevronDown />
-        </button>
+
+        <Select size='sm'
+          className={styles.btn1}
+          variants='border: 1px solid #C2C2C2;
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+          font-size: 14px;'
+        >  
+            <option disabled selected>  20/03/2021 Application for 130,000 NGN</option>
+            <option value='option1'>Alpha model </option>
+            <option value='option2'>Omega model</option>
+          </Select>
         <button className={styles.btn2}>
-          <p className={styles.nav} onClick={() => navigate("/layout/models")}>Change applied prediction model</p>
+          <p className={styles.nav}>Change applied prediction model</p>
         </button>
       </div>
 
@@ -103,26 +109,28 @@ const PredictionAnalysis = () => {
             <h3>20.5%</h3>
           </div>
 
-          <button className={styles.btn3}>
-            Make decision
-            <HiOutlineChevronDown />
-          </button>
+          <Select className={styles.btn3}
+            variant=' border: 1px solid #4C4DDC;
+            font-size: 14px;
+            color: #757575;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);'
+          >  
+            <option disabled selected> Make decision</option>
+            <option value='option1' className={styles.approved} 
+            >
+              Approve candidate  <HiOutlineCheck /> </option>
+            <option value='option2' className={styles.reject}>Reject candidate</option>
+          </Select>
 
-          <div className={styles.select}>
-            <div className={styles.approved}>
-              <p>Approve candidate</p>
-              <HiOutlineCheck />
-            </div>
-            <p className={styles.reject}>Reject candidate</p>
-          </div>
           <button className={styles.btn4} onClick={ onOpen }>Confirm selection</button>
           <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay 
              bg='blackAlpha.600'
-             backdropFilter='blur(1px)'
             />
+            
             <ModalContent>
               <ModalHeader>Candidate approved!</ModalHeader>
+              <ModalCloseButton />
               <ModalBody>
                 <p className={styles.decision}>
                   An acceptance email will be sent to the candidate in 
@@ -133,7 +141,9 @@ const PredictionAnalysis = () => {
 
               <ModalFooter className={styles.modal_Footer}>
                 <div >
-                  <Button className={styles.btn5} colorScheme='blue' mr={3} onClick={onClose}>
+                  <Button className={styles.btn5} onClick={onClose}
+                  variant='background: #4C4DDC;'
+                  >
                     Confirm
                   </Button>
                 </div>

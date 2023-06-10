@@ -110,8 +110,46 @@
 
 }
 
+.decision {
+    font-size: 14px;
+    color: #616161;
+}
+
 .btn_Close {
     margin-left: 75px;
     color: #404040;
     size: 20px;
 }
+
+.modal_Footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background: #F5F5F5;
+    border-radius: 0px 0px 6px 6px;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.btnCancel {
+    width: 80px;
+    height: 32px;
+    border: 1px solid #E0E0E0;
+    color: #0A0A0A;
+    z-index: 1;
+    border-radius: 6px;
+    margin-right: 20px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.btnDeactiv {
+    padding: 6px 16px;
+    background: #CD7B2E;
+    width: 96px;
+    height: 32px;
+    z-index: 1;
+    color: #fff;
+    border-radius: 6px;
+}
+
