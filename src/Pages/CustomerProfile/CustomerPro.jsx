@@ -1,8 +1,9 @@
 import styles from './CustomerPro.module.scss'  
-import { HiOutlineChevronDown, HiOutlineChevronRight, } from 'react-icons/hi'
+import {  HiOutlineChevronRight, } from 'react-icons/hi'
 import CustomerBio from './CutomerDetails/CustomerBio'
 import CustomerDoc from './CutomerDetails/CustomerDoc'
 import Tab from './NavigationTab/Tab'
+import { Select } from '@chakra-ui/react'
 
 
 const CustomerPro = () => {
@@ -18,12 +19,20 @@ const CustomerPro = () => {
             <p>Naomi Igimoh</p>
           </div>
 
-          <div className={styles.btn_decision}>
-            <button className={styles.btn}>
-              Make decision
-              <HiOutlineChevronDown />
-            </button>
-          </div>
+          <Select 
+            bg= '#4c4ddc'
+            width= '200px'
+            height= '48px'
+            font-size= '16px'
+            color= '#DFE0F3'
+            borderColor= '#fff'
+            borderRadius= '6px'
+          >  
+            <option disabled selected> Make decision</option>
+            <option value='option1' >
+              Approve candidate</option>
+            <option value='option2' >Reject candidate</option>
+          </Select>
         </div>      
 
       <CustomerBio />
