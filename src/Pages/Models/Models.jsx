@@ -10,11 +10,11 @@ import Steps from "./Steps";
 import { Modal, useSteps,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
+  // ModalHeader,
+  // ModalFooter,
   ModalBody,
   ModalCloseButton, 
-  Button} from "@chakra-ui/react";
+ } from "@chakra-ui/react";
 import Createanalysis from "./Createanalysis/createanalysis";
 import Scores from "./Scores/Scores";
 import Review from "./Review/Review";

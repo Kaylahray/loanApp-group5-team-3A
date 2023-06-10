@@ -33,7 +33,7 @@ const DashData = [
     name: "Edu Hermans",
     date: "20/4/2023",
     analyst: "Tofunmi",
-    status: "Approved",
+    status: "Disapproved",
   },
   {
     id: 6,
@@ -54,14 +54,14 @@ const DashData = [
     name: "Edu Hermans",
     date: "20/4/2023",
     analyst: "Tofunmi",
-    status: "Approved",
+    status: "Disapproved",
   },
   {
     id: 9,
     name: "Edu Hermans",
     date: "20/4/2023",
     analyst: "Tofunmi",
-    status: "Approved",
+    status: "Pending",
   },
   {
     id: 10,
@@ -75,7 +75,7 @@ const DashData = [
     name: "Edu Hermans",
     date: "20/4/2023",
     analyst: "Tofunmi",
-    status: "Approved",
+    status: "Disapproved",
   },
   {
     id: 12,

@@ -20,7 +20,7 @@ const ResetPasswordSent = () => {
       </div>
 
       <div>
-        <button className="btn">
+        <button className="btno">
           {" "}
           <Link to={"/resetPassword"}>Open email </Link>
         </button>

@@ -7,7 +7,7 @@ const VerificationSuccess = () => {
         <h2 className="h2text">Verification successful!</h2>
       </div>
       <div>
-        <button className="btn">
+        <button className="btno">
           <Link to={"/login"}>Continue home </Link>
         </button>
       </div>

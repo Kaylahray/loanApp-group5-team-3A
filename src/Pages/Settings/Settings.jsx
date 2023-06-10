@@ -1,9 +1,17 @@
-import React from 'react'
-
 const Settings = () => {
   return (
-    <div>Settings</div>
-  )
-}
+    <div>
+      <nav>
+        <ul>
+          <li>hi</li>
+          <li>hello</li>
+          <li>hi</li>
+          <li>hi</li>
+          <li>hi</li>
+        </ul>
+      </nav>
+    </div>
+  );
+};
 
-export default Settings
+export default Settings;

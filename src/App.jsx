@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2023 Your Company Name
+ * All rights reserved.
+ */
+/*
+ * Copyright (c) 2023 Your Company Name
+ * All rights reserved.
+ */
+
 import { useState } from "react";
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
@@ -69,27 +78,28 @@ function App() {
             <Route path="/model" element={<Models />} />
 
             <Route path="/verifySuccess" element={<VerificationSuccess />} />
+
+            <Route path="/layout" element={<Layout />}/> 
+
             <Route path="/models" element={<Models />} />
 
             <Route path="/layout" element={<Layout />}>
               <Route path="/layout/" element={<Dashboard />} />
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
-              <Route path="/layout/application" element={<Application />}/>
-              <Route
-                  path="/layout/customerprofile"
-                  element={<CustomerPro />}/>
-              
-           
+              <Route path="/layout/application" element={<Application />} />
+              <Route path="/layout/customerprofile" element={<CustomerPro />} />
+
               <Route path="/layout/teams" element={<Teams />} />
               <Route path="/layout/models" element={<ModelIndex />} />
-              {/* <Route path="/layout/models/" element={<Models />} /> */}
-
               <Route path="/layout/settings" element={<Settings />} />
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />
               <Route path="/layout/logout" element={<Logout />} />
+
+
             </Route>
+
           </Routes>
         </Container>
       </div>
