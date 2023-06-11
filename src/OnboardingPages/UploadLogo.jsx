@@ -4,6 +4,7 @@ import Image from "../Component/Image/Image";
 import ImageBox from "../Component/ImageBox/ImageBox";
 import { useState } from "react";
 import { FcNext } from "react-icons/fc";
+
 const UploadLogo = () => {
   const [file, setFile] = useState("");
 
