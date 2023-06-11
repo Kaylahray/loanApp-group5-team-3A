@@ -1,18 +1,19 @@
 /*eslint-disable react/prop-types*/
-import styles from "./ApplicationTable.module.scss";
-import ApplicationData from "../ApplicationData";
+import styles from "../ApplicationTables/ApplicationTable.module.scss";
+import AssignedData from "./AssignedData";
 import Pagination from '../Pagination/Pagination';
 import { useState } from "react";
 
-const ApplicationTable = ({ value }) => {
+
+const MineTable = ({ value }) => {
   const [currentPages, setCurrentPage] = useState(1);
   const [postPerPage] = useState(12);
 
   const indexOfLast = postPerPage * currentPages;
   const indexOfFirst = indexOfLast - postPerPage;
-  const currentPost = ApplicationData.slice(indexOfFirst, indexOfLast);
+  const currentPost = AssignedData.slice(indexOfFirst, indexOfLast);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  const page = Math.ceil(ApplicationData.length / postPerPage);
+  const page = Math.ceil(AssignedData.length / postPerPage);
 
   return (
     <div>
@@ -36,7 +37,7 @@ const ApplicationTable = ({ value }) => {
                     <td>{data.name}</td>
                     <td>{data.date}</td>
                     <td>{data.analyst}</td>
-                    <td><div className={styles.status} style={{backgroundColor: data.status === "Approved" ? "#f2f9f5" : data.status === "Pending" ? " #ffebd8" : "#ffe4e2" , color: data.status === "Approved" ? "#20573D" : data.status === "Pending" ? "#734011" : "#CB3A31"}}>{data.status}</div></td>
+                    <td><div className={styles.status} style={{backgroundColor: data.status === "Approved" ? "#f2f9f5" : data.status === "Pending" ? " #ffebd8" : "#ffe4e2" , color: data.status === "Approved" ? "#20573D" : data.status === "Pending" ? "#734011" : "#CB3A31"}}>{data.status}</div></td> 
                     <td className={styles.tableA}>{data.action}</td>
                   </tr>
                 ))
@@ -65,7 +66,7 @@ const ApplicationTable = ({ value }) => {
         </button>
 
         <Pagination
-          totalPost={ApplicationData.length}
+          totalPost={AssignedData.length}
           postPerPage={postPerPage}
           paginate={paginate}
         />
@@ -81,4 +82,4 @@ const ApplicationTable = ({ value }) => {
   );
 };
 
-export default ApplicationTable;
+export default MineTable;
