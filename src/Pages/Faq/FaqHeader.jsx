@@ -1,58 +1,69 @@
-import FaqBody from "./FaqBody";
-import "./Faq.scss"
-// import styles from "./Dashboard.module.scss";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Box,
-
-} from "@chakra-ui/react";
+import FaqQuestion from "./FaqQuestion";
+import "./Faq.scss";
+import styles from "../Dashboard/Dashboard.module.scss";
+import { Accordion } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 export default function FaqHeader() {
+  const allQuestion = [
+    { question: "How to add a team member?", answer: "Go to the teams page" },
+    {
+      question: "Are you confused on how to create models?",
+      answer: "A click on the create model button ll help",
+    },
+    {
+      question: "Access customer profile",
+      answer: "Go back to the models page,",
+    },
+    {
+      question: "Lost your password?",
+      answer: "No wories, set a new one in our reset password page",
+    },
+    {
+      question: "Do you want to understand the application procedures?",
+      answer: "Study the applications page again,",
+    },
+    {
+      question: "you wanna meet up with friends?",
+      answer: "chat a-thon with our chat feature,",
+    },
+  ];
   return (
-    <div>
+    <div className="top">
       <div className="Faq-top">
         <div className="faq-child">
-          <h1>FAQs</h1>
+          <h1 className="heading-FAQ">FAQs</h1>
           <div>
-            <button>
+            <button className="FAQ-btn">
               <img src="/chat-Images/search.svg" alt="" />
-              search
+              <span className="FAQ-span"> search</span>
             </button>
           </div>
         </div>
-        <div>create model</div>
+        <div className={styles.dashright}>
+          <button className={styles.dashnavbtn}>
+            {" "}
+            <Link to={"/model"}> Create Model</Link>
+          </button>
+        </div>
       </div>
-      <FaqBody
-        Accordion={
-          <Accordion allowToggle>
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <Box as="span" flex="1" textAlign="left">
-                    Section 1 title
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </AccordionPanel>
-            </AccordionItem>
-            
-            
-          </Accordion>
-          
-        }
-      />
+      <div>
+        <Accordion
+          defaultIndex={[0]}
+          allowToggle
+          borderRadius="0.3rem"
+          border="1px solid"
+          borderColor="blackAlpha.300"
+        >
+          {allQuestion.map((item, i) => (
+            <FaqQuestion
+              key={i}
+              question={item.question}
+              answer={item.answer}
+            />
+          ))}
+        </Accordion>
+      </div>
     </div>
   );
-};
-
-
+}
