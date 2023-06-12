@@ -21,11 +21,11 @@ export default function FaqHeader() {
     },
     {
       question: "Do you want to understand the application procedures?",
-      answer: "Study the applications page again,",
+      answer: "Study the applications page again",
     },
     {
       question: "you wanna meet up with friends?",
-      answer: "chat a-thon with our chat feature,",
+      answer: "chat a-thon with our chat feature",
     },
   ];
   return (
