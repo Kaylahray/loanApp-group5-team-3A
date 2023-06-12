@@ -7,7 +7,7 @@ const PasswordResetSuccess = () => {
         <div className="logo"> SMARTLEND</div>
         <h2 className="h2text">Password Reset Successful!</h2>
       </div>
-      <div style={{}}>
+      <div className="gif">
         <img src="src/OnboardingPages/OnboardingGIF/pasword.gif" alt="gif" />
       </div>
       <div>

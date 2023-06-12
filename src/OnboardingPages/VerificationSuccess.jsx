@@ -6,8 +6,11 @@ const VerificationSuccess = () => {
       <div>
         <h2 className="h2text">Verification successful!</h2>
       </div>
-      <div style={{}}>
-        <img src="src/OnboardingPages/OnboardingGIF/mailverified.gif" alt="gif" />
+      <div className="gif">
+        <img
+          src="src/OnboardingPages/OnboardingGIF/mailverified.gif"
+          alt="gif"
+        />
       </div>
       <div>
         <button className="btno">
