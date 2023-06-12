@@ -1,8 +1,17 @@
 import React, { useState } from "react";
-import { Select, Flex, Center, SimpleGrid, Box, FormControl, FormLabel, Container } from "@chakra-ui/react";
+import {
+  Select,
+  Flex,
+  Center,
+  SimpleGrid,
+  Box,
+  FormControl,
+  FormLabel,
+  Container,
+  Button,
+  background,
+} from "@chakra-ui/react";
 import Createanalysis from "../Createanalysis/createanalysis";
-
-
 
 const parameters = [
   {
@@ -72,103 +81,104 @@ const subParams = {
 };
 
 const Parameters = (props) => {
-  const [selected, setSelected] = useState("");
-
-  const [onNext, setOnNext] = useState(false)
+  // const [selected, setSelected] = useState("");
+const [parameter1, setParameter1] = useState("")
+const [parameter2, setParameter2] = useState("")
+  const [onNext, setOnNext] = useState(false);
 
   return (
     <div>
-      <Container maxW={490}> 
-  <div>
+      <Container maxW={490}>
+        <div>
+          <SimpleGrid columns={2} gap={5} mt={10}>
+            <FormControl>
+              <FormLabel fontSize={14} p={0} m={0} mb={2}>
+                {" "}
+                Parameters
+              </FormLabel>
+              <Select
+                borderRadius={6}
+                placeholder="select"
+                size="sm"
+                value={parameter1}
+                onChange={(e) => {
+                  setParameter1(e.target.value);
+                }}
+              >
+                {parameters.map((item, index) => (
+                  <option value={item.value} key={index}>
+                    {item.label}
+                  </option>
+                ))}
+              </Select>
+              <Select
+                mt={2}
+                borderRadius={6}
+                placeholder="select"
+                size="sm"
+                value={parameter2}
+                onChange={(e) => {
+                  setParameter2(e.target.value);
+                }}
+              >
+                {parameters.map((item, index) => (
+                  <option value={item.value} key={index}>
+                    {item.label}
+                  </option>
+                ))}
+              </Select>
+            </FormControl>
 
-      
-<SimpleGrid columns={2} 
-  gap={5} mt={10} > 
+            <FormControl>
+              <FormLabel fontSize={14} p={0} m={0} mb={2}>
+                Selection
+              </FormLabel>
+              <Select
+                borderRadius={6}
+                placeholder="select"
+                size="sm"
+                color="D4D4D4"
+                //  value={""}
+                _placeholder={{
+                  color: "#D4D4D4",
+                }}
+              >
+                {subParams[parameter1]?.map((item, index) => (
+                  <option value={item.value} key={index}>
+                    {item.label}
+                  </option>
+                ))}
+              </Select>
 
-<FormControl>
-  <FormLabel fontSize={14} p={0} m={0} mb={2} > Parameters</FormLabel>
-  <Select
-        borderRadius={6}
-          placeholder="select"
-          size="sm"
-          value={selected}
-          onChange={(e) => {
-            setSelected(e.target.value);
-          }}
-        >
-          {parameters.map((item, index) => (
-            <option value={item.value} key={index}>
-              {item.label}
-            </option>
-          ))}
-        </Select>
-        <Select mt={2}
-        borderRadius={6}
-          placeholder="select"
-          size="sm"
-          value={selected}
-          onChange={(e) => {
-            setSelected(e.target.value);
-          }}
-        >
-          {parameters.map((item, index) => (
-            <option value={item.value} key={index}>
-              {item.label}
-            </option>
-          ))}
-        </Select>
-</FormControl>
+              <Select mt={2} borderRadius={6} placeholder="select" size="sm">
+                {subParams[parameter2]?.map((item, index) => (
+                  <option value={item.value} key={index}>
+                    {item.label}
+                  </option>
+                ))}
+              </Select>
+            </FormControl>
+          </SimpleGrid>
 
-
-
-
-<FormControl>
-  <FormLabel fontSize={14} p={0} m={0} mb={2}>Selection</FormLabel>
-  <Select 
-        borderRadius={6}
-
-        placeholder="select" size="sm" color="D4D4D4"
-        //  value={""}
-        _placeholder={{
-          color:"#D4D4D4",
-        }}
-         >
-          {subParams[selected]?.map((item, index) => (
-            <option value={item.value} key={index}>
-              {item.label}
-              
-            </option>
-          ))}
-        </Select>
-
-        <Select mt={2}
-        borderRadius={6}
-
-        placeholder="select" size="sm">
-          {subParams[selected]?.map((item, index) => (
-            <option value={item.value} key={index}>
-              {item.label}
-              
-            </option>
-          ))}
-        </Select>
-
-</FormControl>
-
-
-
-
-</SimpleGrid>
-      
-      <Center mt={10}>
-      <div>
-   <button className="btn" onClick={() => props.stepHandler(1)}>
-        Continue
-        </button>
-    </div>
-        </Center>
+          <Center mt={10}>
+            <div>
+              <Button
+                bg="#4c4dd4"
+                fontSize="12px"
+                p="10px 50px"
+                border="none"
+                textAlign="center"
+                fontWeight={300}
+                color="white"
+      _hover="none"
+                onClick={() => props.stepHandler(1)}
+              >
+                Continue
+              </Button>
+            </div>
+          </Center>
         </div>
-    </Container>
+      </Container>
     </div>
   );
 };

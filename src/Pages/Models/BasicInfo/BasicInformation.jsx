@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Center, Select, Box, Container, Input } from "@chakra-ui/react";
+import { Center, Select, Button, Container, Input } from "@chakra-ui/react";
 import Parameters from "./Parameters";
 import { FormControl, FormLabel, FormHelperText } from "@chakra-ui/react";
 // import styles from "./ModelIcons/Models.module.scss";
@@ -43,9 +43,17 @@ const BasicInformation = (props) => {
       </Container>
       {!onContinue && (
         <Center mt={8}>
-          <button className="btn" onClick={() => setOnContinue(true)}>
+          <Button 
+          bg="#4c4dd4" fontSize="12px"
+          p="10px 50px"
+          border="none"
+          textAlign="center"
+          fontWeight={300}
+          color="white"
+          _hover="none"
+          onClick={() => setOnContinue(true)}>
           Continue
-        </button>
+        </Button>
         </Center>
       )}
 
