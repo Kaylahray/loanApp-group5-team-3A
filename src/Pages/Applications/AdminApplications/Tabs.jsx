@@ -3,6 +3,9 @@ import "./Tabs.css";
 import styles from "./Application.module.scss";
 import { TbSearch } from "react-icons/tb";
 import ApplicationTable from "./ApplicationTables/ApplicationTable";
+import UnassignedTable from "./Unassigned/UnassignedTable";
+import AssignedTable from "./Assigned/AssignedTable";
+import ClosedTable from "./Closed/ClosedTable";
 import Pagination from './Pagination/Pagination';
 
 
@@ -80,7 +83,7 @@ const Tabs = () => {
         >
         
           <p>
-          <ApplicationTable value={filteredValue} />
+          <AssignedTable value={filteredValue} />
           </p>
         </div>
 
@@ -89,7 +92,7 @@ const Tabs = () => {
         >
         
           <p>
-          <ApplicationTable value={filteredValue} />
+          <UnassignedTable value={filteredValue} />
           </p>
         </div>
 
@@ -98,7 +101,7 @@ const Tabs = () => {
         >
     
           <p>
-          <ApplicationTable value={filteredValue} />
+          <ClosedTable value={filteredValue} />
           </p>
         </div>
       </div>

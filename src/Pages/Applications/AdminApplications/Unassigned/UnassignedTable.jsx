@@ -1,20 +1,19 @@
 /*eslint-disable react/prop-types*/
-import styles from "./ApplicationTable.module.scss";
-import ApplicationData from "../ApplicationData";
-import Pagination from "../Pagination/Pagination";
+import styles from "../ApplicationTables/ApplicationTable.module.scss";
+import UnassignedData from "./UnassignedData";
+import Pagination from '../Pagination/Pagination';
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 
-const ApplicationTable = ({ value }) => {
+const PendingTable = ({ value }) => {
   const [currentPages, setCurrentPage] = useState(1);
   const [postPerPage] = useState(12);
 
   const indexOfLast = postPerPage * currentPages;
   const indexOfFirst = indexOfLast - postPerPage;
-  const currentPost = ApplicationData.slice(indexOfFirst, indexOfLast);
+  const currentPost = UnassignedData.slice(indexOfFirst, indexOfLast);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  const page = Math.ceil(ApplicationData.length / postPerPage);
+  const page = Math.ceil(UnassignedData.length / postPerPage);
 
   return (
     <div>
@@ -31,21 +30,19 @@ const ApplicationTable = ({ value }) => {
         </thead>
 
         <tbody>
-          {value
-            ? currentPost
-                .filter((data) => data.name.includes(value))
-                .map((data) => (
+                {value? currentPost.filter((data) => data.name.includes(value))
+            .map((data) => (
                   <tr key={data.id} className={styles.appB}>
                     <td>{data.id}</td>
-                    <td>
-                      <Link to="/layout/customerProfile"> {data.name}</Link>
-                    </td>
+                    <td>{data.name}</td>
                     <td>{data.date}</td>
                     <td>{data.analyst}</td>
-                    <td><div className={styles.status} style={{backgroundColor: data.status === "Approved" ? "#f2f9f5" : data.status === "Pending" ? " #ffebd8" : "#ffe4e2" , color: data.status === "Approved" ? "#20573D" : data.status === "Pending" ? "#734011" : "#CB3A31"}}>{data.status}</div></td>
+                    <td><div className={styles.status} style={{backgroundColor: data.status === "Approved" ? "#f2f9f5" : data.status === "Pending" ? " #ffebd8" : "#ffe4e2" , color: data.status === "Approved" ? "#20573D" : data.status === "Pending" ? "#734011" : "#CB3A31"}}>{data.status}</div></td> 
                     <td className={styles.tableA}>{data.action}</td>
                   </tr>
                 ))
+
+         
             : currentPost.map((data) => (
                   <tr key={data.id} className={styles.appB}>
                     <td>{data.id}</td>
@@ -69,7 +66,7 @@ const ApplicationTable = ({ value }) => {
         </button>
 
         <Pagination
-          totalPost={ApplicationData.length}
+          totalPost={UnassignedData.length}
           postPerPage={postPerPage}
           paginate={paginate}
         />
@@ -85,4 +82,4 @@ const ApplicationTable = ({ value }) => {
   );
 };
 
-export default ApplicationTable;
+export default PendingTable;

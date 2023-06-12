@@ -57,11 +57,13 @@
     .pagB:active,
     .pagB:focus {
       background-color: #4c4ddc;
+      color: white;
     }
   }
   .pagB a:focus,
   .pagB a:active {
     background-color: #4c4ddc;
+    color: white;
   }
   .disabled {
     color: #4c4ddc;
