@@ -1,9 +1,3 @@
-
-// import { Chart } from 'chart.js'
-import styles from './BankState.module.scss'
-// import { useState } from 'react-router-dom'
-import {CustomerIncome} from '../CustomerData/Data'
-
 import styles from './BankState.module.scss'
 import Chart from './Chart'
 

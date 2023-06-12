@@ -2,7 +2,7 @@
  * Copyright (c) 2023 Your Company Name
  * All rights reserved.
  */
-import React, {useState} from 'react';
+import {useState} from 'react';
 import './Tab.css';
 import TeamsTable from '../TeamsTable/TeamsTable';
 import AnalystTable from '../Analyst/AnalystTable';
@@ -10,7 +10,18 @@ import AdminTable from '../Admin/AdminTable';
 import {TbSearch} from 'react-icons/tb';
 import Pagination from '../Pagination/Pagination';
 import styles from '../Teams.module.scss';
-import AddTeamMemberModal from '../AddTeamMembers/AddTeamMembersModals';
+// import AddTeamMemberModal from '../AddTeamMembers/AddTeamMembersModals';
+import React from 'react'
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  Button,
+  useDisclosure,FormControl,Input,FormLabel,Select,
+} from '@chakra-ui/react'
 
 
 const Tab = () => {
@@ -27,22 +38,25 @@ const Tab = () => {
   const toggleTab = index => {
     setToggleState (index);
   };
+
+     const { isOpen, onOpen, onClose } = useDisclosure()
   
+    const initialRef = React.useRef(null)
+    const finalRef = React.useRef(null)
   
-    const [isModalOpen, setModalOpen] = useState(false);
+    // const [isModalOpen, setModalOpen] = useState(false);
   
-    const handleOpenModal = () => {
-      setModalOpen(true);
-    };
+    // const handleOpenModal = () => {
+    //   setModalOpen(true);
+    // };
   
-    const handleCloseModal = () => {
-      setModalOpen(false);
-    };
+    // const handleCloseModal = () => {
+    //   setModalOpen(false);
+    // };
   
-    const handleAddTeamMember = (email, permission) => {
-      // Perform any logic to add the team member
-      console.log('Adding team member:', email, permission);
-    };
+    // const handleAddTeamMember = (email, permission) => {
+    //   console.log('Adding team member:', email, permission);
+    // };
     
   return (
     <div className={styles.mainteamscontainer}>
@@ -60,12 +74,44 @@ const Tab = () => {
           </div>
         </div>
         <div className={styles.right}>
-          <button onClick={handleOpenModal} className={styles.topright}>Add Team Member</button>
-          <AddTeamMemberModal
+          <button onClick={onOpen} className={styles.topright}>Add Team Member</button>
+          <Modal
+        initialFocusRef={initialRef}
+        finalFocusRef={finalRef}
+        isOpen={isOpen}
+        onClose={onClose}
+      >
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Add a team member</ModalHeader>
+          <ModalBody pb={6}>
+            <FormControl>
+              <FormLabel>Email address (required)</FormLabel>
+              <Input ref={initialRef} placeholder='e.g. idowu.oluwatofunmi@gmail.com' />
+            </FormControl>
+
+            <FormControl mt={4}>
+              <FormLabel>Permission (required)</FormLabel>
+              <Select>
+                <option disabled selected>Select</option>
+                <option value='option1'>Analyst</option>
+                <option value='option2'>Admin</option>
+              </Select>
+            </FormControl>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme='blue' mr={3}>
+              Add team member
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+          {/* <AddTeamMemberModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         onAddTeamMember={handleAddTeamMember}
-      />
+      /> */}
         </div>
       </nav>
 
