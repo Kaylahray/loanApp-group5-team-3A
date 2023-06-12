@@ -39,8 +39,8 @@ import PasswordResetSuccess from "./OnboardingPages/PasswordResetSuccess";
 import VerifyEmail from "./OnboardingPages/VerifyEmail";
 import VerificationSuccess from "./OnboardingPages/VerificationSuccess";
 // import ModelTop from "./Pages/Models/ModelTop";
-import ModelIndex from "./Pages/Models/Index";
-import OmitModel from "./Pages/Models/OmitedModel/OmitModel";
+//import ModelIndex from "./Pages/Models/Index";
+//import OmitModel from "./Pages/Models/OmitedModel/OmitModel";
 import ModelPage from "./Pages/Models/Model LandingPage/ModelLandingPage";
 
 function App() {
