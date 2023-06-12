@@ -12,20 +12,20 @@ export default function FaqHeader() {
       answer: "A click on the create model button ll help",
     },
     {
-      question: "Access customer profile",
+      question: "Do you want to access customer profile?",
       answer: "Go back to the models page,",
     },
     {
       question: "Lost your password?",
-      answer: "No wories, set a new one in our reset password page",
+      answer: "No worries, set a new one in our reset password page",
     },
     {
       question: "Do you want to understand the application procedures?",
-      answer: "Study the applications page again,",
+      answer: "Study the applications page again",
     },
     {
       question: "you wanna meet up with friends?",
-      answer: "chat a-thon with our chat feature,",
+      answer: "chat a-thon with our chat feature",
     },
   ];
   return (
