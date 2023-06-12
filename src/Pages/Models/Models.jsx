@@ -20,7 +20,6 @@ import Scores from "./Scores/Scores";
 import Review from "./Review/Review";
 import Previewandconfirm from "./Previewandconfirm";
 import { useNavigate } from "react-router-dom";
-
 const steps = [
   { title: "First", description: "Basic Information" },
   { title: "Second", description: "Bank statement analysis" },
@@ -43,6 +42,7 @@ const Models = () => {
 
   return (
     <div>
+     
       <ModelTop />
       {/* <Index/> */}
       <Steps

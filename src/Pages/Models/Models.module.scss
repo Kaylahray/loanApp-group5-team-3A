@@ -1,4 +1,4 @@
-// @import "../../variables";
+@import "../../variables";
 
 * {
   padding: 0;
@@ -27,7 +27,7 @@
   padding-right: 10px;
 }
 
-.btns {
+.btnG{
   text-align: center;
   font-size: 12px;
   font-weight: 300;
@@ -37,10 +37,4 @@
   border: none;
 
   border-radius: 6px;
-}
-
-.textcont {
-  display: block;
-  gap: 40px;
-  margin-bottom: 7px;
 }
