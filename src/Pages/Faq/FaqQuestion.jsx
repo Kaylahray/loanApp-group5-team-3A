@@ -18,7 +18,7 @@ export default function FaqQuestion({ question, answer }) {
             color= "black"
             fontWeight="500"
             fontsize="bold"
-            padding="1rem 0.5rem"
+            padding="0.2rem 0.2rem"
           >
             {question}
           </Box>
