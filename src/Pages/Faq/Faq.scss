@@ -1,0 +1,24 @@
+.top {
+   margin-left: 2rem;
+}
+.Faq-top {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   // margin-bottom: 2rem;
+   // margin-left: 2rem;
+   margin: 1rem 0 2rem 0;
+   .faq-child {
+      display: flex;
+      .heading-FAQ {
+         margin-right: 5rem;
+      }
+      .FAQ-btn {
+         display: flex;
+      }
+   }
+}
+.FAQ-span{
+   margin-left: 1rem;
+   color: black;
+}
