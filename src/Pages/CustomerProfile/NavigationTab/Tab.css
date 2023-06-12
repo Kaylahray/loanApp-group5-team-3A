@@ -1,0 +1,47 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 800px;
+    background: #ffffff;
+    word-break: break-all;
+    margin: 20px 0px 0px 24px;
+  }
+  
+  .bloc-tabs {
+    display: flex;
+    border-bottom: 1px solid #DFE0F3;
+    width: 1000px;
+  }
+  
+  .tabs {
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: content-box;
+    position: relative;
+    outline: none;
+    color: #9E9E9E;
+    font-size: 14px;
+    
+  }
+ 
+  .active-tabs  {
+    background: white;
+    color: black;
+  }
+  
+  .active-tabs::before {
+    top: 51px;
+    background:  #4C4DDC;
+  }
+ 
+  .active-content {
+    display: block;
+  }

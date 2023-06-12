@@ -1,0 +1,42 @@
+.gridcotainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+
+.griditem {
+    width: 200px;
+    height: 90px;
+    text-align: justify;
+    background: #F5F5FF;
+    border: 1px solid #DFE0F3;
+    border-radius: 8px;
+    padding: 10px 0px 10px 20px;
+}
+
+.griditem h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.griditem p{
+    color: #616161;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.header {
+    position: absolute;
+    width: 398px;
+    height: 28px;
+    top: 330px;
+    font-weight: 600;
+  }
+  
+  .chart {
+    position: absolute;
+    width: 840px;
+    height: 380px;
+    top: 380px;
+  }

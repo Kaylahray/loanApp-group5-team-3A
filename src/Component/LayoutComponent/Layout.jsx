@@ -8,11 +8,9 @@ const Layout = () => {
     <div className={styles.grid}>
       <SideNav />
       <div className={styles.left}>
-        
-          <Outlet />
-        </div>
+        <Outlet />
       </div>
-    
+    </div>
   );
 };
 

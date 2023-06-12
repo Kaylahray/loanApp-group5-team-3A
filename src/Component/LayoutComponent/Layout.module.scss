@@ -1,5 +1,10 @@
 .grid {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  height: 100vh;
+  grid-template-columns: 1fr auto;
+  // height: min-content;
+  // background-color: bisque;
+  // height: 100vh;
+}
+.left {
+  margin-left: 304px;
 }

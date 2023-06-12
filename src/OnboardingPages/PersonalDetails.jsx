@@ -24,7 +24,7 @@ const PersonalDetails = () => {
     console.log(onSubmitProps);
     onSubmitProps.setSubmitting(false);
     onSubmitProps.resetForm();
-    navigate("./add");
+    navigate("/add");
   };
   return (
     <div className="main">
@@ -33,7 +33,7 @@ const PersonalDetails = () => {
       </ImageBox>
 
       <FormBox>
-        <div className="logo"> LOGO</div>
+        <div className="logo"> SMARTLEND</div>
         <p className="welcome">Personal Details</p>
         <div className="size">
           <Formik
@@ -52,6 +52,7 @@ const PersonalDetails = () => {
                       name="firstName"
                       label="First name"
                       placeholder="e.g chioma"
+                      className="inputBox"
                     />
                   </div>
                   <div className="form-control">
@@ -61,6 +62,7 @@ const PersonalDetails = () => {
                       name="lastName"
                       label="Last name"
                       placeholder="e.g christopher"
+                      className="inputBox"
                     />
                   </div>
                   <div className="form-control">
@@ -70,19 +72,17 @@ const PersonalDetails = () => {
                       name="role"
                       label="Role"
                       placeholder="e.g Bank manager"
+                      className="inputBox"
                     />
                   </div>
 
                   <button
-                    className="btn"
+                    className="btno"
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
                   >
-                    Submit
+                    Continue
                   </button>
-                  <p className="account">
-                    Have an account? <span> Login</span>
-                  </p>
                 </Form>
               );
             }}

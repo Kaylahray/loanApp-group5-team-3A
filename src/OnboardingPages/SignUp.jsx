@@ -4,7 +4,7 @@ import ImageBox from "../Component/ImageBox/ImageBox";
 import FormBox from "../Component/FormBox/FormBox";
 import Image from "../Component/Image/Image";
 import FormikControl from "../Component/FormComponent/FormikControl";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -16,9 +16,9 @@ const SignUp = () => {
     password: "",
   };
   const validationSchema = Yup.object({
-    email: Yup.string().email("invalid").required("Required"),
+    email: Yup.string().email("Invalid Format").required("Required"),
     company: Yup.string().required("Required"),
-    employees: Yup.number().required("Required"),
+    employees: Yup.number().positive().integer().required("Required"),
     password: Yup.string()
       .required("No password provided.")
       .min(8, "must contain at least 8 letters."),
@@ -29,7 +29,7 @@ const SignUp = () => {
     console.log(onSubmitProps);
     onSubmitProps.setSubmitting(false);
     onSubmitProps.resetForm();
-    navigate("./pdetails");
+    navigate("/pdetails");
   };
   return (
     <div className="main">
@@ -38,7 +38,7 @@ const SignUp = () => {
       </ImageBox>
 
       <FormBox>
-        <div className="logo"> LOGO</div>
+        <div className="logo"> SMARTLEND</div>
         <p className="welcome">Welcome let&apos;s get you started</p>
         <div className="size">
           <Formik
@@ -55,8 +55,9 @@ const SignUp = () => {
                       control="input"
                       type="email"
                       name="email"
-                      label="Work email"
+                      label="Work email address(required)"
                       placeholder="e.g @chiomachris@gmail.com"
+                      className="inputBox"
                     />
                   </div>
                   <div className="form-control">
@@ -64,8 +65,9 @@ const SignUp = () => {
                       control="input"
                       type="text"
                       name="company"
-                      label="Company name"
+                      label="Company name(required)"
                       placeholder="e.g Stutern"
+                      className="inputBox"
                     />
                   </div>
                   <div className="form-control">
@@ -73,8 +75,9 @@ const SignUp = () => {
                       control="input"
                       type="number"
                       name="employees"
-                      label="Number of employees"
+                      label="Number of employees(required)"
                       placeholder="e.g Stutern"
+                      className="inputBox"
                     />
                   </div>
                   <div className="form-control">
@@ -82,20 +85,26 @@ const SignUp = () => {
                       control="input"
                       type="password"
                       name="password"
-                      label="Password"
+                      label="Password (required)"
                       placeholder="*********"
+                      variant={true}
+                      className="inputBox"
                     />
                   </div>
 
                   <button
-                    className="btn"
+                    className="btno"
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
                   >
-                    Submit
+                    Continue
                   </button>
                   <p className="account">
-                    Have an account? <span> Login</span>
+                    Have an account?{" "}
+                    <span>
+                      {" "}
+                      <Link to={"/login"}> Login </Link>
+                    </span>
                   </p>
                 </Form>
               );

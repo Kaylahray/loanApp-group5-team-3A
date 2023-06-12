@@ -1,0 +1,155 @@
+.ModelWrapper {
+    position: relative;
+    flex-direction: row;
+    width: 1000px;
+    height: 250px;
+}
+
+.ModelAlpha {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 24px;
+    position: absolute;
+    width: 272px;
+    height: 116px;
+    top: 50px;
+    background: #F5F5FF;
+    border: 1px solid #DFE0F3;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.ModelOmega {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 24px;
+    position: absolute;
+    width: 272px;
+    height: 116px;
+    top: 50px;
+    background: #F5F5FF;
+    border: 1px solid #DFE0F3;
+    border-radius: 8px;
+    left: 300px;
+
+}
+
+.activeModel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+    height: 36px;
+}
+
+.inactiveModel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 208px;
+    height: 36px;
+}
+
+.createdBy {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.title_type {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+// .iconMenu {
+//     // margin-left: 10px;
+// }
+
+.btn_active {
+    width: 52px;
+    height: 24px;
+    background: #F7F7F7;
+    border: 1px solid #BBDBCA;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #20573D;
+    margin-left: 8px;
+}
+
+.btn_inactive {
+    width: 52px;
+    height: 24px;
+    background: #FFF4F2;
+    border: 1px solid #EEB4B0;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #CB3A31;
+    margin-left: 8px;
+}
+
+.activeList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100px;
+    height: 36px;
+    color: #404040;
+    font-size: 14px;
+    gap: 15px;
+}
+
+.dropDialog {
+    width: 144px;
+    height: 136px;
+    border: 1px solid #E0E0E0;
+    background-color: fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    color: #404040;
+
+}
+
+.decision {
+    font-size: 14px;
+    color: #616161;
+}
+
+.btn_Close {
+    margin-left: 75px;
+    color: #404040;
+    size: 20px;
+}
+
+.modal_Footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background: #F5F5F5;
+    border-radius: 0px 0px 6px 6px;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.btnCancel {
+    width: 80px;
+    height: 32px;
+    border: 1px solid #E0E0E0;
+    color: #0A0A0A;
+    z-index: 1;
+    border-radius: 6px;
+    margin-right: 20px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.btnDeactiv {
+    padding: 6px 16px;
+    background: #CD7B2E;
+    width: 96px;
+    height: 32px;
+    z-index: 1;
+    color: #fff;
+    border-radius: 6px;
+}
+

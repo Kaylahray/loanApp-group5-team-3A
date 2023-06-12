@@ -11,7 +11,7 @@ import ImageBox from "../Component/ImageBox/ImageBox";
 import FormBox from "../Component/FormBox/FormBox";
 import Image from "../Component/Image/Image";
 import FormikControl from "../Component/FormComponent/FormikControl";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const LoginForm = () => {
     console.log(onSubmitProps);
     onSubmitProps.setSubmitting(false);
     onSubmitProps.resetForm();
-    navigate("./pdetails");
+    navigate("/layout");
   };
   return (
     <div className="main">
@@ -40,7 +40,7 @@ const LoginForm = () => {
       </ImageBox>
 
       <FormBox>
-        <div className="logo"> LOGO</div>
+        <div className="logo"> SMARTLEND</div>
         <p className="welcome">Welcome let&apos;s get you started</p>
         <div className="size">
           <Formik
@@ -57,8 +57,9 @@ const LoginForm = () => {
                       control="input"
                       type="email"
                       name="email"
-                      label="Work email"
+                      label="Work email address(required)"
                       placeholder="e.g @chiomachris@gmail.com"
+                      className="inputBox"
                     />
                   </div>
 
@@ -67,20 +68,28 @@ const LoginForm = () => {
                       control="input"
                       type="password"
                       name="password"
-                      label="Password"
+                      label="Password (required)"
                       placeholder="*********"
+                      variant={true}
+                      className="inputBox"
                     />
                   </div>
-
+                  <p className="forgot">
+                    <Link to={"/forgotPassword"}>Forgot password?</Link>
+                  </p>
                   <button
-                    className="btn"
+                    className="btno"
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
                   >
                     Login
                   </button>
                   <p className="account">
-                    Have an account? <span> Sign in</span>
+                    Don&apos;t have an account?{" "}
+                    <span>
+                      {" "}
+                      <Link to={"/signup"}> Sign up</Link>
+                    </span>
                   </p>
                 </Form>
               );

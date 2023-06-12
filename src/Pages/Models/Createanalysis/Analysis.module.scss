@@ -1,0 +1,55 @@
+.title {
+  text-align: center;
+  margin: 2%;
+}
+
+.createanalysis {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.create {
+  padding: 10px 12px;
+  margin: 9%;
+  border: 1px solid grey;
+  margin-left: 20%;
+}
+
+.assignedcreate{
+  padding: 10px 12px;
+  margin: 9%;
+  border: 1px solid grey;
+  margin-left: 30%;
+}
+
+.createbtn {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color: #4c4ddc;
+  padding: 10px 50px;
+  border-radius: 2px;
+  margin-top: 90px;
+}
+
+.createbtn1 {
+  margin-left: 45%;
+}
+
+.optionselect{
+  padding: 8px 10px;
+  margin: 8px;
+  border: 5% bold grey;
+}
+
+.optionselect1{
+  padding: 8px 10px;
+  margin: 8px;
+  margin-left: 10%;
+}

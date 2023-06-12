@@ -45,7 +45,7 @@ const LoginFormTwo = () => {
       </ImageBox>
 
       <FormBox>
-        <div className="logo"> LOGO</div>
+        <div className="logo"> SMARTLEND</div>
         <p className="welcome">Welcome let&apos;s get you started</p>
         <div className="size">
           <Formik
@@ -64,6 +64,7 @@ const LoginFormTwo = () => {
                       name="email"
                       label="Work email"
                       placeholder="e.g @chiomachris@gmail.com"
+                      className="inputBox"
                     />
                   </div>
 
@@ -74,6 +75,9 @@ const LoginFormTwo = () => {
                       name="password"
                       label="Password"
                       placeholder="*********"
+                      variant={true}
+                      value={null}
+                      className="inputBox"
                     />
                   </div>
 
@@ -84,19 +88,18 @@ const LoginFormTwo = () => {
                       name="passwordConfirmation"
                       label=" Confirm Password"
                       placeholder="*********"
+                      variant={true}
+                      className="inputBox"
                     />
                   </div>
 
                   <button
-                    className="btn"
+                    className="btno"
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
                   >
                     Login
                   </button>
-                  <p className="account">
-                    Have an account? <span> Sign in</span>
-                  </p>
                 </Form>
               );
             }}

@@ -1,5 +1,9 @@
-const Faq = () => {
-  return <div>Faq</div>;
-};
+import React from 'react'
 
-export default Faq;
+const Faq = () => {
+  return (
+    <div>Faq</div>
+  )
+}
+
+export default Faq

@@ -1,43 +1,33 @@
 import Top from "../../Component/LayoutComponent/TopSectionComponent/Top";
-import search from "./DashboardIcons/searchIcon.svg";
 import styles from "./Dashboard.module.scss";
+import Left from "./Left";
+import Right from "./Right";
+// import DashData from "./DashData";
+
+// import DashChart from "./DashChart";
+// import { useState } from "react";
+// import { Link } from "react-router-dom";
+// import Table from "./Table";
+// import Trail from "./Trail";
+import TopSec from "./TopSec";
 
 const Dashboard = () => {
-  return (
-    <div>
-      <Top>
-        <div className={styles.first}>
-          <h2>Hi chioma</h2>
-          <div className={styles.search}>
-            <img src={search} alt="img" className={styles.img} />
-            <input type="text" placeholder="search" className={styles.input} />
-          </div>
-        </div>
-        <div className={styles.second}>
-          <button className={styles.btn}>Create model</button>
+  // const [items, setItems] = useState(DashData);
+  // const [query, setQuery] = useState("");
+  // const filteredItems = items.filter((item) => {
+  // item.toLowercase().includes(query.toLowerCase());
 
-          <div className={styles.profile}> </div>
-        </div>
+  return (
+    <div className={styles.body}>
+      <Top>
+        <TopSec />
       </Top>
 
-      <div className={styles.body}>
-        <div className={styles.left}>
-          <div className={styles.box}>
-            <div className={styles.one}>
-              <h4 className={styles.applicant}>Total Applicants</h4>
-              <p className={styles.paragraph}> 500 </p>
-            </div>
-            <div className={styles.two}>
-              <h4 className={styles.applicant}>Default Applicants</h4>
-              <p className={styles.paragraph}>250 </p>
-            </div>
-            <div className={styles.three}>
-              <h4 className={styles.applicant}>Pending Applicants</h4>
-              <p className={styles.paragraph}>250</p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.right}> bjjjj</div>
+      {/* ////////////////////////////////////////////////////////////////////////////////////// */}
+
+      <div className={styles.down}>
+        <Left />
+        <Right />
       </div>
     </div>
   );

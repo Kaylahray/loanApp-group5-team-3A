@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2023 Your Company Name
+ * All rights reserved.
+ */
+/*
+ * Copyright (c) 2023 Your Company Name
+ * All rights reserved.
+ */
+
 import { useState } from "react";
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
@@ -13,16 +22,26 @@ import Settings from "./Pages/Settings/Settings";
 import Faq from "./Pages/Faq/Faq";
 import Models from "./Pages/Models/Models";
 import Logout from "./Pages/Logout/Logout";
-import CustomerProfile from "./Pages/CustomerProfile/CustomerProfile";
 
-// import SignUp from "./OnboardingPages/SignUp";
-// import PersonalDetails from "./OnboardingPages/PersonalDetails";
-// import LandingPage from "./OnboardingPages/LandingPage";
-// import AddTeam from "./OnboardingPages/AddTeam";
-// import UploadLogo from "./OnboardingPages/UploadLogo";
-// import SignUp from "./OnboardingPages/SignUp";
-// import LoginForm from "./OnboardingPages/LoginForm";
-// import LoginFormTwo from "./OnboardingPages/LoginFormTwo";
+import CustomerPro from "./Pages/CustomerProfile/CustomerPro";
+
+import SignUp from "./OnboardingPages/SignUp";
+import PersonalDetails from "./OnboardingPages/PersonalDetails";
+import LandingPage from "./OnboardingPages/LandingPage";
+import AddTeam from "./OnboardingPages/AddTeam";
+import UploadLogo from "./OnboardingPages/UploadLogo";
+import LoginForm from "./OnboardingPages/LoginForm";
+import LoginFormTwo from "./OnboardingPages/LoginFormTwo";
+import ForgotPassword from "./OnboardingPages/ForgotPassword";
+import ResetPassword from "./OnboardingPages/ResetPassword";
+import ResetPasswordSent from "./OnboardingPages/ResetPasswordSent";
+import PasswordResetSuccess from "./OnboardingPages/PasswordResetSuccess";
+import VerifyEmail from "./OnboardingPages/VerifyEmail";
+import VerificationSuccess from "./OnboardingPages/VerificationSuccess";
+// import ModelTop from "./Pages/Models/ModelTop";
+//import ModelIndex from "./Pages/Models/Index";
+//import OmitModel from "./Pages/Models/OmitedModel/OmitModel";
+import ModelPage from "./Pages/Models/Model LandingPage/ModelLandingPage";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -35,37 +54,54 @@ function App() {
 
   return (
     <Context.Provider value={{ visiblePassword, show, setTheme }}>
-      <div className={`${theme} application`}>
+      <div className={`${theme}`}>
         <Container>
           {/* <button className="btn" onClick={changeTheme}>
             theme
           </button> */}
 
           <Routes>
-            {/* <Route path="/" element={<SignUp />} />
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/signup" element={<SignUp />} />
+
+            <Route path="/pdetails" element={<PersonalDetails />} />
+            <Route path="/forgotPassword" element={<ForgotPassword />} />
+            <Route path="/resetPassword" element={<ResetPassword />} />
             <Route path="/login" element={<LoginForm />} />
-
-            <Route index element={<LoginFormTwo />} />
+            <Route path="/logTwo" element={<LoginFormTwo />} />
             <Route path="/add" element={<AddTeam />} />
-            <Route path="/up" element={<UploadLogo />} /> */}
+            <Route path="/up" element={<UploadLogo />} />
+            <Route path="/resetPasswordSent" element={<ResetPasswordSent />} />
+            <Route
+              path="/passwordResetSuccess"
+              element={<PasswordResetSuccess />}
+            />
+            <Route path="/verify" element={<VerifyEmail />} />
+            <Route path="/model" element={<Models />} />
 
-            <Route path="/" element={<Layout />}>
+            <Route path="/verifySuccess" element={<VerificationSuccess />} />
+
+            <Route path="/layout" element={<Layout />}/> 
+
+            <Route path="/models" element={<Models />} />
+
+            <Route path="/layout" element={<Layout />}>
+              <Route path="/layout/" element={<Dashboard />} />
               <Route path="/layout/dashboard" element={<Dashboard />} />
 
-              <Route path="/layout/application" element={<Application />}>
-                <Route
-                  path="/layout/application/customerprofile"
-                  element={<CustomerProfile />}
-                />
-              </Route>
-              <Route path="/layout/teams" element={<Teams />} />
-              <Route path="/layout/models" element={<Models />} />
+              <Route path="/layout/application" element={<Application />} />
+              <Route path="/layout/customerprofile" element={<CustomerPro />} />
 
+              <Route path="/layout/teams" element={<Teams />} />
+              <Route path="/layout/models" element={<ModelPage/>} />
               <Route path="/layout/settings" element={<Settings />} />
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />
               <Route path="/layout/logout" element={<Logout />} />
+
+
             </Route>
+
           </Routes>
         </Container>
       </div>
