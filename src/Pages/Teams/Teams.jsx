@@ -1,8 +1,7 @@
-/*
- * Copyright (c) 2023 Your Company Name
+/* Copyright (c) 2023 Your Company Name
  * All rights reserved.
  */
-import React from 'react';
+// import React from 'react';
 // import SideNav from '../../Component/LayoutComponent/SideNavSection/SideNav';
 
 import styles from '../Teams/Teams.module.scss';

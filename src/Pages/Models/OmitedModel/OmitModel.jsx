@@ -28,7 +28,7 @@ import {
 
 const OmitModel = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const { isOpenDel, onOpenDel, onCloseDel } = useDisclosure()
+  // const { isOpenDel, onOpenDel, onCloseDel } = useDisclosure()
 
   return (
     <>
@@ -95,12 +95,12 @@ const OmitModel = () => {
                   </ModalContent>
                 </Modal>
                 
-                <MenuItem icon={<img src={Delete} alt="delete" />} onClick={ onOpenDel }>
+                <MenuItem icon={<img src={Delete} alt="delete" />} onClick={ onOpen}>
                   Delete
                 </MenuItem>
                 <div>
                 
-              <Modal isOpen={isOpenDel} onClose={onCloseDel}>
+              <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay bg='blackAlpha.600' />
                     <ModalContent>
                       <ModalHeader>Delete Alpha Model</ModalHeader>
