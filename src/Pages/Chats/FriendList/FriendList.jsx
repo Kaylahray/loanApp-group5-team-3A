@@ -20,7 +20,7 @@ export default function FriendList() {
   return (
     <div className="child-container-1">
       <div className="search-area">
-        <h3>chat</h3>
+        <h3>Chat</h3>
         <div className="chat-input-2">
           <InputGroup>
             <InputLeftElement pointerEvents="none">
