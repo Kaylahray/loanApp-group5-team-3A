@@ -35,7 +35,10 @@ function Smartlend({activeStep, steps, setActiveStep}) {
               <StepIndicator bg="white" boxSize={3}>
                 <StepStatus complete={<StepIcon />} />
               </StepIndicator>
+            <stepSeparator/>
+              
             </Box>
+            {/* <stepSeparator/> */}
           </Step>
         ))}
       </Stepper>

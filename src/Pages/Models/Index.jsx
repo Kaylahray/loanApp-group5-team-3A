@@ -8,6 +8,7 @@ import {
   InputGroup,
   InputLeftElement,
   Text,
+  Button
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import BasicInformation from "./BasicInfo/BasicInformation";
@@ -29,10 +30,20 @@ const ModelIndex = (props) => {
             </InputGroup>
           </Flex>
           <div>
-            <button className="btn" >
+            <Button
+              className="btn"
+              bg="#4c4dd4"
+              fontSize="12px"
+              p="10px 50px"
+              border="none"
+              textAlign="center"
+              fontWeight={300}
+              color="white"
+              _hover="none"
+            >
               {" "}
               <Link to={"/model"}> Create Model </Link>
-            </button>
+            </Button>
           </div>
         </Flex>
       </Container>
