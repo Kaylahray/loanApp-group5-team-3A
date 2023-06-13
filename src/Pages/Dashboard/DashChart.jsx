@@ -1,4 +1,5 @@
 import { Line } from "react-chartjs-2";
+import styles from "./Dashboard.module.scss";
 
 import {
   CategoryScale,
@@ -72,6 +73,8 @@ const DashChart = () => {
     ],
 
     options: {
+      maintainAspectRatio: false,
+      responsive: true,
       plugins: {
         legend: {
           display: true,
@@ -85,16 +88,15 @@ const DashChart = () => {
           },
         },
       },
-      // interaction: {
-      //   mode: "index",
-      //   intersect: false,
-      // },
+      interaction: {
+        mode: "index",
+        intersect: false,
+      },
       scales: {
         x: {
           display: true,
           title: {
             display: true,
-            text: "Month",
           },
           ticks: {
             maxRotation: 30,
@@ -113,7 +115,7 @@ const DashChart = () => {
   };
 
   return (
-    <div>
+    <div className={styles.chart}>
       <Line data={state} options={state.options} />
     </div>
   );

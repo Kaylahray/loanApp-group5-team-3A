@@ -13,11 +13,10 @@ const TabItem = ({ name }) => (
       <path
         d="M0.999999 1L8 8L1 15"
         stroke="#9E9E9E"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
-  
     </svg>
   </span>
 );
@@ -45,7 +44,7 @@ const Settings = () => {
 
         <TabPanels className={styles.divTwo}>
           <TabPanel>
-            <p>Company's Profile</p>
+            <p>Company&apos;s Profile</p>
           </TabPanel>
           <TabPanel>
             <p>My Profile</p>
