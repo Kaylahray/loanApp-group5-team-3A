@@ -11,14 +11,12 @@ import {
   Button
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import BasicInformation from "./BasicInfo/BasicInformation";
 
 const ModelIndex = (props) => {
-  //   const [onContinue, setOnContinue] = useState(false);
 
   return (
     <div>
-      <Container maxW={"container.xl"}>
+      <Container maxW={"container.xl"} mt={5}  borderStyle="none">
         <Flex justifyContent={"space-between"} alignItems={"center"}>
           <Flex justifyContent={"left"} gap={20} alignItems={"center"}>
             <Text as={"b"}>Models</Text>
@@ -48,7 +46,7 @@ const ModelIndex = (props) => {
         </Flex>
       </Container>
 
-      <hr></hr>
+  
     </div>
   );
 };
