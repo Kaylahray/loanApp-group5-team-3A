@@ -28,7 +28,6 @@
     cursor: pointer;
     border-bottom: 1px solid rgb(255, 255, 255);
     box-sizing: content-box;
-    /* position: relative; */
     outline: none;
     margin-left: 10px;
     
@@ -37,15 +36,12 @@
 
   .teams-tabs:not(:last-child){
     border-right: 1px solid rgb(255, 255, 255);
-    /* font-size: 16px; */
   }
   
   .teams-active-tabs  {
     background: white;
     border-bottom: 1px solid transparent;
     color: black;
-    /* font-size: 16px; */
-    
   }
   
   .teams-active-tabs::before {
@@ -72,7 +68,7 @@
     background: white;
     padding: 20px;
     display: none;
-    /* padding-top: 0px; */
+    
     font-size: 14px;
   }
   .teams-content p {

@@ -1,0 +1,73 @@
+.teamtable {
+  width: 1040px;
+  margin-top: 20px; /* Add margin-top to create spacing between the table and the pagination */
+  margin-bottom: 20px;
+}
+
+.teamtable th,
+.teamtable td {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  width: 1040px;
+  font-weight: 400;
+}
+
+.teamtable .teamdataheader th {
+  background-color: #f2f2f2;
+}
+
+.teamsbody {
+  background-color: #fff;
+}
+
+.role {
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  border-radius: 7px;
+  font-weight: 50px;
+}
+
+.team-pagination {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: 400px;
+}
+
+.team-pagination li {
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.team-pagination li a {
+  padding: 6px 10px;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+}
+
+.team-pagination li a:hover {
+  background-color: #f2f2f2;
+}
+
+.team-pagination li.active a {
+  background-color: blue;
+  color: white;
+  border-color: blue;
+}
+
+.teampage-item.previous a {
+  color: gray;
+}
+
+.teampage-item.next a {
+  color: blue;
+}
