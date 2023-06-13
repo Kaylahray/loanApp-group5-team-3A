@@ -1,34 +1,29 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-.teamscontain{
-  position: absolute; 
+
+.teamscontain {
+  position: absolute;
   margin-left: 25px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> b3e51750e26375ec688ed75bf1fc9dd43c76a197
-.tops{
+.tops {
   display: flex;
   flex-direction: row;
   margin-top: 25px;
 }
-.topleft{
+
+.topleft {
   display: flex;
   font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: -0.011em;
-    color: #9E9E9E;
-<<<<<<< HEAD
-   
-=======
->>>>>>> b3e51750e26375ec688ed75bf1fc9dd43c76a197
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.011em;
+  color: #9E9E9E;
 }
 
 .topleft h1 {
@@ -43,34 +38,35 @@
   color: #000000;
 }
 
-.teaminput{
+.teaminput {
   display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 16px 20px;
-    gap: 8px;
-    width: 510px;
-    height: 50px;
-    background: #FCFCFC;
-    border-radius: 40px;
-    margin-left: 40px;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 20px;
+  gap: 8px;
+  width: 510px;
+  height: 50px;
+  background: #FCFCFC;
+  border-radius: 40px;
+  margin-left: 40px;
 }
 
-.topleft .teamssearchbar{
+.topleft .teamssearchbar {
   background: #FCFCFC;
-    border-width: 0;
-    font-family: "Inter", sans-serif;
-    outline: none;
+  border-width: 0;
+  font-family: "Inter", sans-serif;
+  outline: none;
 }
-.searchicon input{
+
+.searchicon input {
   width: 57px;
-    height: 24px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #1E1E1E;
+  height: 24px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1E1E1E;
 }
 
 .teamssearchbar::placeholder {
@@ -78,14 +74,15 @@
   font-weight: 400;
   color: black;
   text-align: left;
-  
+
 }
+
 .searchicon {
   color: #555;
   margin-right: 5px;
   width: 20px;
   height: 20px;
-  
+
 }
 
 .teamssearchbar input {
@@ -101,7 +98,8 @@
   flex: none;
   padding-left: 1px;
 }
-.topright{
+
+.topright {
 
   background: #4C4DDC;
   margin-right: 20px;
@@ -111,13 +109,10 @@
   width: 240px;
   margin-left: 200px;
   color: white;
-    
-    color: white;
+}
 
-  }
-  
-  
-.topright button{
+
+.topright button {
   color: white;
   font-family: 'Inter';
   font-style: normal;
