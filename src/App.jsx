@@ -21,7 +21,6 @@ import Chats from "./Pages/Chats/Chats";
 import Settings from "./Pages/Settings/Settings";
 import Faq from "./Pages/Faq/FaqHeader";
 import Models from "./Pages/Models/Models";
-import Logout from "./Pages/Logout/Logout";
 
 import CustomerPro from "./Pages/CustomerProfile/CustomerPro";
 
@@ -96,8 +95,6 @@ function App() {
               <Route path="/layout/settings" element={<Settings />} />
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />
-              <Route path="/layout/logout" element={<LandingPage />} />
-
 
             </Route>
 
