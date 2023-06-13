@@ -2,6 +2,7 @@
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import "./Settings.scss";
 import MyProfile from "./MyProfile";
+import CompanyProfile from "./CompanyProfile";
 const TabItem = ({ name }) => (
   <span className="tabItem">
     {name}{" "}
@@ -46,7 +47,7 @@ const Settings = () => {
 
         <TabPanels className="divTwo">
           <TabPanel>
-            <p>Company&apos;s Profile</p>
+            <CompanyProfile />
           </TabPanel>
           <TabPanel>
             <MyProfile />

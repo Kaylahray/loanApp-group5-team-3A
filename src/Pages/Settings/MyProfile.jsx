@@ -1,7 +1,6 @@
 import * as Yup from "yup";
 import { Formik, Form } from "formik";
 // import FormikControl from "../Component/FormComponent/FormikControl";
-import { Link } from "react-router-dom";
 import FormikControl from "../../Component/FormComponent/FormikControl";
 import "./Settings.scss";
 
