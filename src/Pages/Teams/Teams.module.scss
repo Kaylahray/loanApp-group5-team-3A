@@ -7,15 +7,15 @@
   position: absolute; 
   margin-left: 25px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b3e51750e26375ec688ed75bf1fc9dd43c76a197
 .tops{
   display: flex;
   flex-direction: row;
   margin-top: 25px;
 }
-
-
-
 .topleft{
   display: flex;
   font-family: 'Inter';
@@ -25,7 +25,10 @@
     line-height: 24px;
     letter-spacing: -0.011em;
     color: #9E9E9E;
+<<<<<<< HEAD
    
+=======
+>>>>>>> b3e51750e26375ec688ed75bf1fc9dd43c76a197
 }
 
 .topleft h1 {
@@ -108,7 +111,12 @@
   width: 240px;
   margin-left: 200px;
   color: white;
-}
+    
+    color: white;
+
+  }
+  
+  
 .topright button{
   color: white;
   font-family: 'Inter';
@@ -116,7 +124,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  
   display: block;
   text-align: center;
   letter-spacing: -0.011em;

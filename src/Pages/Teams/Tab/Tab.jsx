@@ -2,13 +2,13 @@
  * Copyright (c) 2023 Your Company Name
  * All rights reserved.
  */
-import {useState} from 'react';
+import {useState, useRef} from 'react';
 import './Tab.css';
 import TeamsTable from '../TeamsTable/TeamsTable';
 import AnalystTable from '../Analyst/AnalystTable';
 import AdminTable from '../Admin/AdminTable';
 import {TbSearch} from 'react-icons/tb';
-import Pagination from '../Pagination/Pagination';
+
 import styles from '../Teams.module.scss';
 // import AddTeamMemberModal from '../AddTeamMembers/AddTeamMembersModals';
 import React from 'react'
@@ -17,46 +17,45 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
+  ModalCloseButton,
   ModalFooter,
   ModalBody,
   Button,
   useDisclosure,FormControl,Input,FormLabel,Select,
+  
 } from '@chakra-ui/react'
 
 
 const Tab = () => {
-  const [currentPage, setCurrentPage] = useState (1);
-  const totalPages = 20; // Total number of pages
 
-  const handlePageChange = page => {
-    setCurrentPage (page);
+  const [toggleState, setToggleState] = useState(1);
+  const [filteredValue, setFilteredValue] = useState('');
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [email, setEmail] = useState('');
+  const [permission, setPermission] = useState('');
+
+  const toggleTab = (index) => {
+    setToggleState(index);
   };
 
-  const [toggleState, setToggleState] = useState (1);
-  const [filteredValue, setFilteredValue] = useState ('');
-
-  const toggleTab = index => {
-    setToggleState (index);
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
   };
 
-     const { isOpen, onOpen, onClose } = useDisclosure()
-  
-    const initialRef = React.useRef(null)
-    const finalRef = React.useRef(null)
-  
-    // const [isModalOpen, setModalOpen] = useState(false);
-  
-    // const handleOpenModal = () => {
-    //   setModalOpen(true);
-    // };
-  
-    // const handleCloseModal = () => {
-    //   setModalOpen(false);
-    // };
-  
-    // const handleAddTeamMember = (email, permission) => {
-    //   console.log('Adding team member:', email, permission);
-    // };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Perform form validation here
+    if (!email || !permission) {
+      alert('Please fill in all the required fields.');
+      return;
+    }
+    
+    // If the form is valid, set isFormSubmitted to true
+    setIsFormSubmitted(true);
+  };
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const initialRef = useRef();
+  const finalRef = useRef();
     
   return (
     <div className={styles.mainteamscontainer}>
@@ -74,44 +73,78 @@ const Tab = () => {
           </div>
         </div>
         <div className={styles.right}>
-          <button onClick={onOpen} className={styles.topright}>Add Team Member</button>
-          <Modal
-        initialFocusRef={initialRef}
-        finalFocusRef={finalRef}
-        isOpen={isOpen}
-        onClose={onClose}
-      >
+        <Button onClick={onOpen} className={styles.topright} colorScheme="blue">
+  Add Team Member
+</Button>
+
+        <Modal
+          initialFocusRef={initialRef}
+          finalFocusRef={finalRef}
+          isOpen={isOpen}
+          onClose={onClose}
+        >
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Add a team member</ModalHeader>
-          <ModalBody pb={6}>
-            <FormControl>
-              <FormLabel>Email address (required)</FormLabel>
-              <Input ref={initialRef} placeholder='e.g. idowu.oluwatofunmi@gmail.com' />
-            </FormControl>
+          <ModalContent>
+            <ModalHeader>Add a team member</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody pb={9}>
+              <form id="new-note" onSubmit={handleSubmit}>
+                <FormControl>
+                  <FormLabel>Email address (required)</FormLabel>
+                  <Input
+                    ref={initialRef}
+                    placeholder="e.g. idowu.oluwatofunmi@gmail.com"
+                    value={email}
+                    onChange={handleEmailChange}
+                  />
+                </FormControl>
+          
+            
 
-            <FormControl mt={4}>
-              <FormLabel>Permission (required)</FormLabel>
-              <Select>
-                <option disabled selected>Select</option>
-                <option value='option1'>Analyst</option>
-                <option value='option2'>Admin</option>
-              </Select>
-            </FormControl>
-          </ModalBody>
-
-          <ModalFooter>
-            <Button colorScheme='blue' mr={3}>
-              Add team member
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
-          {/* <AddTeamMemberModal
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-        onAddTeamMember={handleAddTeamMember}
-      /> */}
+                <FormControl mt={4}>
+                  <FormLabel>Permission (required)</FormLabel>
+                  <Select
+                    value={permission}
+                    onChange={(e) => setPermission(e.target.value)}
+                >
+                  <option disabled value="">
+                    Select
+                  </option>
+                  <option value="option1">Analyst</option>
+                  <option value="option2">Admin</option>
+                </Select>
+                </FormControl>
+              </form>
+            </ModalBody>
+            <ModalFooter>
+            <Button
+                type="submit"
+                form="new-note"
+                colorScheme="blue"
+                
+              >
+                Add team member
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+        {isFormSubmitted && (
+        <Modal isOpen={isFormSubmitted} onClose={() => setIsFormSubmitted(false)}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>Success</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <p>Form submitted successfully!</p>
+            </ModalBody>
+            <ModalFooter>
+              <Button colorScheme="blue" onClick={() => setIsFormSubmitted(false)}>
+                Close
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      )}
         </div>
       </nav>
 
@@ -175,14 +208,7 @@ const Tab = () => {
           </div>
         </div>
         
-        <div className={styles.teampaginationContainer}>
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={handlePageChange}
-            currentPageStyle={styles.currentPage}
-          />
-        </div> 
+        
       </div>
     </div>
   );

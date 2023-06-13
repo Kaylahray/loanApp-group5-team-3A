@@ -1,4 +1,5 @@
 import { Line } from "react-chartjs-2";
+import styles from "./Dashboard.module.scss";
 
 import {
   CategoryScale,
@@ -6,9 +7,10 @@ import {
   LineElement,
   LinearScale,
   PointElement,
+  Legend,
 } from "chart.js";
 
-ChartJs.register(LineElement, CategoryScale, LinearScale, PointElement);
+ChartJs.register(LineElement, CategoryScale, LinearScale, PointElement, Legend);
 
 const DashChart = () => {
   const state = {
@@ -28,71 +30,77 @@ const DashChart = () => {
     ],
     datasets: [
       {
-        label: "one",
+        label: "Total",
         data: [0, 20, 20, 30, 25, 45, 40, 55, 50, 57, 44, 60],
         // background: "none",
-        borderWidth: 1,
+        borderWidth: 2,
         borderColor: "blue",
         id: 1,
         pointStyle: false,
         tension: 0.1,
       },
       {
-        label: "one",
+        label: "Recovered",
         data: [0, 14, 25, 35, 40, 48, 25, 43, 55, 70, 77, 78],
 
         // backgroundColor: "red",
-        borderWidth: 1,
+        borderWidth: 2,
         borderColor: "green",
-        pointStyle: "line",
+        pointStyle: false,
 
         id: 2,
       },
       {
-        label: "one",
+        label: "Doubtful",
         data: [0, 30, 30, 40, 47, 50, 55, 30, 45, 40, 67, 70],
         backgroundColor: "red",
-        borderWidth: 1,
-        pointStyle: "line",
+        borderWidth: 2,
+        pointStyle: false,
 
         borderColor: "darkRed",
         id: 2,
       },
       {
-        label: "one",
+        label: "Lost",
         data: [0, 20, 30, 40, 50, 55, 60, 50, 57, 64, 56, 45],
         backgroundColor: "red",
-        borderWidth: 1,
+        borderWidth: 2,
         borderColor: "red",
-        pointStyle: "line",
+        pointStyle: false,
 
         id: 2,
       },
     ],
 
     options: {
+      maintainAspectRatio: false,
+      responsive: true,
       plugins: {
         legend: {
           display: true,
-          position: "left",
-          align: "left",
+          position: "top",
+          align: "start",
 
           labels: {
             usePointStyle: true,
             pointStyle: "circle",
+            padding: 17,
           },
         },
       },
-      // interaction: {
-      //   mode: "index",
-      //   intersect: false,
-      // },
+      interaction: {
+        mode: "index",
+        intersect: false,
+      },
       scales: {
         x: {
-          display: false,
+          display: true,
           title: {
             display: true,
-            text: "Month",
+          },
+          ticks: {
+            maxRotation: 30,
+            minRotation: 30,
           },
         },
         y: {
@@ -107,7 +115,7 @@ const DashChart = () => {
   };
 
   return (
-    <div>
+    <div className={styles.chart}>
       <Line data={state} options={state.options} />
     </div>
   );
