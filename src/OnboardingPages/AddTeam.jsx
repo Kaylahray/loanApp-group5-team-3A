@@ -19,6 +19,8 @@ const AddTeam = () => {
   const initialValues = {
     email: "",
     select: " ",
+    firstName: " ",
+    lastName: " ",
   };
   const validationSchema = Yup.object({
     firstName: Yup.string().required("Required"),

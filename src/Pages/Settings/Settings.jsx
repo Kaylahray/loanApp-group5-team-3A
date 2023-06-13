@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
-import styles from "./Settings.module.scss";
+import "./Settings.scss";
+import MyProfile from "./MyProfile";
 const TabItem = ({ name }) => (
-  <span className={styles.tabItem}>
+  <span className="tabItem">
     {name}{" "}
     <svg
       width="9"
@@ -23,8 +25,8 @@ const TabItem = ({ name }) => (
 const Settings = () => {
   return (
     <div>
-      <Tabs className={styles.chakra}>
-        <TabList className={styles.divOne}>
+      <Tabs className="chakra">
+        <TabList className="divOne">
           <Tab>
             <TabItem name="Company’s Profile" />
           </Tab>
@@ -42,12 +44,12 @@ const Settings = () => {
           </Tab>
         </TabList>
 
-        <TabPanels className={styles.divTwo}>
+        <TabPanels className="divTwo">
           <TabPanel>
             <p>Company&apos;s Profile</p>
           </TabPanel>
           <TabPanel>
-            <p>My Profile</p>
+            <MyProfile />
           </TabPanel>
           <TabPanel>
             <p>Password</p>
