@@ -128,7 +128,9 @@ const PredictionAnalysis = () => {
              bg='blackAlpha.600'
             />
             
-            <ModalContent>
+            <ModalContent
+              top={{ base: '0', md: '20%' }}
+            > 
               <ModalHeader>Candidate approved!</ModalHeader>
               <ModalCloseButton />
               <ModalBody>

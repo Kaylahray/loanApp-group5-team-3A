@@ -73,7 +73,7 @@ const Tab = () => {
           </div>
         </div>
         <div className={styles.right}>
-        <Button onClick={onOpen} className={styles.topright} colorScheme="blue">
+        <Button onClick={onOpen} className={styles.topright} colorScheme="blue" variant='background: #4C4DDC;'>
   Add Team Member
 </Button>
 
@@ -118,9 +118,12 @@ const Tab = () => {
             </ModalBody>
             <ModalFooter>
             <Button
+                className='btn_btn-primary'
                 type="submit"
                 form="new-note"
                 colorScheme="blue"
+                variant='background: #4C4DDC;'
+                color='white'
                 
               >
                 Add team member
@@ -135,10 +138,14 @@ const Tab = () => {
             <ModalHeader>Success</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
-              <p>Form submitted successfully!</p>
+              <p>Team member added successfully!</p>
             </ModalBody>
             <ModalFooter>
-              <Button colorScheme="blue" onClick={() => setIsFormSubmitted(false)}>
+              <Button colorScheme="blue" onClick={() => setIsFormSubmitted(false)}
+                className='btn_btn-primary'
+                variant='background: #4C4DDC;'
+                color='white'
+              >
                 Close
               </Button>
             </ModalFooter>
