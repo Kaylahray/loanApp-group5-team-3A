@@ -3,50 +3,99 @@
  * All rights reserved.
  */
 import analystdata from "./AnalystData";
-import styles from "./AnalystTable.module.scss";
+import "./AnalystTable.css";
+import { useState } from "react";
+function AnalystTable () {
+  const [currentPage, setCurrentPage] = useState(1);
+  const recordsPerPage = 10;
+  const lastIndex = currentPage * recordsPerPage;
+  const firstIndex = lastIndex - recordsPerPage;
+  const records = analystdata.slice(firstIndex, lastIndex);
+  const npage = Math.ceil(analystdata.length / recordsPerPage);
+  const numbers=[...Array(npage + 1).keys()].slice(1)
 
-const AnalystTable = ({ value }) => {
-  const filteredData = analystdata.filter((data) =>
-    data.name.toLowerCase().includes(value.toLowerCase())
-  );
-
-  const tableData = value ? filteredData : analystdata;
-
+  function prePage() {
+    if(currentPage !== 1){
+      setCurrentPage(currentPage - 1)
+    }
+  } 
+  function changeCPage (id) {
+    setCurrentPage(id)
+  }
+  function nextPage () {
+    if(currentPage !== npage){
+      setCurrentPage(currentPage + 1)
+    }
+  }
+  
   return (
-    <div className={styles.teamtable}>
-      <table>
-        <thead>
-          <tr className={styles.teamdataheader}>
+    <div>
+      <table className="teamtable">
+        <thead className="teamdataheader">
             <th>No</th>
             <th>User ID</th>
             <th>Name</th>
             <th>Role</th>
             <th>Last Seen</th>
-          </tr>
+          
         </thead>
+        
         <tbody>
-          {tableData.map((data, index) => (
-            <tr key={index} className={styles.teamsbody}>
-              <td>{data.no}</td>
-              <td>{data.userID}</td>
-              <td>{data.name}</td>
+            {records.map((d,i) => (
+            <tr key={i} className="teamsbody">
+              <td>{d.no}</td>
+              <td>{d.userID}</td>
+              <td>{d.name}</td>
               <td>
                 <div
-                  className={styles.role}
+                  className="role"
                   style={{
                     backgroundColor:
-                      data.role === "Analyst" ? "#F6F6F6" : "#4CDC93",
-                    color: data.role === "Analyst" ? "#4CDC93" : "#F6F6F6",
+                      d.role === "Analyst" ? "#F6F6F6" : "#4CDC93",
+                    color: d.role === "Analyst" ? "#4CDC93" : "#F6F6F6",
                   }}
                 >
-                  {data.role}
+                  {d.role}
                 </div>
               </td>
-              <td>{data.lastSeen}</td>
+              <td>{d.lastSeen}</td>
             </tr>
-          ))}
+          ))
+                }
+    
+          
         </tbody>
       </table>
+      
+      <nav>
+<ul className="team-pagination">
+  <li className="team-pagination-item">
+    <a href="#" className="team-pagination-link" onClick={prePage}>
+      Previous
+    </a>
+  </li>
+  {numbers.map((n, i) => (
+    <li
+      className={`team-pagination-item ${currentPage === n ? 'active' : ''}`}
+      key={i}
+    >
+      <a
+        href="#"
+        className="team-pagination-link"
+        onClick={() => changeCPage(n)}
+      >
+        {n}
+      </a>
+    </li>
+  ))}
+  <li className="team-pagination-item">
+    <a href="#" className="team-pagination-link" onClick={nextPage}>
+      Next
+    </a>
+  </li>
+</ul>
+</nav>
+
     </div>
   );
 };
