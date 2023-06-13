@@ -229,7 +229,7 @@ const CompanyProfile = () => {
     onSubmitProps.resetForm();
   };
   return (
-    <div className="main">
+    <div className="mainn">
       <div className="size-two">
         <Formik
           initialValues={initialValues}
