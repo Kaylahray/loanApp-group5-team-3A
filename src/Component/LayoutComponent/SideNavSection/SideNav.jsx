@@ -63,7 +63,7 @@ const bottom = [
   {
     id: 7,
     name: "Log out",
-    to: "/layout/logout",
+    to: "/",
     icon: <SlLogout />,
   },
 ];
