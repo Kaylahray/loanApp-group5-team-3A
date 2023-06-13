@@ -28,6 +28,7 @@ const Settings = () => {
     <div>
       <Tabs className="chakra">
         <TabList className="divOne">
+          <h1>Settings</h1>
           <Tab>
             <TabItem name="Company’s Profile" />
           </Tab>
