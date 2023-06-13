@@ -37,7 +37,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 22px;
     font-size: 14px;
 }
 
@@ -64,7 +63,8 @@
 .customer_details_wrraper {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left: 65%;
-    top: 22%;
+    position: relative;
+    margin: 0 auto;
+    left: 62%;
+    margin-top: -23%;
 }

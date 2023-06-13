@@ -66,7 +66,7 @@ const OmitModel = () => {
                 <Modal isOpen={isOpen} onClose={onClose}>
                   <ModalOverlay bg='blackAlpha.600' />
                   <ModalContent 
-                     top={{ base: '0', md: '30%' }}
+                     isCentered='true'
                   >
                     <ModalHeader>Deactivate Alpha Model</ModalHeader>
                     <ModalBody>
