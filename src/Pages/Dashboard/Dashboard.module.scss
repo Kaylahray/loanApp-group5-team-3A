@@ -314,8 +314,10 @@
 .chart {
   width: 90%;
   height: 360px;
-  margin-top: 32px;
   margin: 32px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .view {

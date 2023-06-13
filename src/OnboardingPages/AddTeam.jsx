@@ -6,6 +6,7 @@ import Image from "../Component/Image/Image";
 import FormikControl from "../Component/FormComponent/FormikControl";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { FcNext } from "react-icons/fc";
 
 const AddTeam = () => {
   const [users, setUsers] = useState([]);
@@ -130,9 +131,15 @@ const AddTeam = () => {
             <Link to={"/up"}>Continue</Link>
           </button>
 
-          <div>
-            <Link to={"/up"}>skip</Link>
-          </div>
+          <button className="hi">
+            <Link to={"/up"}> skip</Link>{" "}
+            <span>
+              <Link to={"/up"}>
+                {" "}
+                <FcNext />
+              </Link>{" "}
+            </span>
+          </button>
         </div>
       </FormBox>
     </div>
