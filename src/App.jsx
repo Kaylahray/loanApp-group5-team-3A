@@ -96,7 +96,7 @@ function App() {
               <Route path="/layout/settings" element={<Settings />} />
               <Route path="/layout/chats" element={<Chats />} />
               <Route path="/layout/faq" element={<Faq />} />
-              <Route path="/layout/logout" element={<Logout />} />
+              <Route path="/layout/logout" element={<LandingPage />} />
 
 
             </Route>
