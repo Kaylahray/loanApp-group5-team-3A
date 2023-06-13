@@ -61,7 +61,7 @@ function findFriend(friends, searchValue) {
 function findMatchingMessages(messages, searchValue) {
   const matchingMessages = [];
     for (let message of messages) {
-      if (message.content.includes(searchValue)) matchingMessages.push(message);
+      if (message.content.toLowerCase().includes(searchValue.toLowerCase())) matchingMessages.push(message);
     }
     return matchingMessages;
 }
@@ -69,7 +69,7 @@ function findMatchingMessages(messages, searchValue) {
 function findMatchingFriends(friends, searchValue) {
   const matchingFriends = [];
   for (let friend of friends) {
-    if (friend.name.includes(searchValue)) matchingFriends.push(friend);
+    if (friend.name.toLowerCase().includes(searchValue.toLowerCase())) matchingFriends.push(friend);
   }
   return matchingFriends;
 }

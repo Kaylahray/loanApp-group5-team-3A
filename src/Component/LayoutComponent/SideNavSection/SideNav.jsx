@@ -50,13 +50,13 @@ const links = [
 const bottom = [
   {
     id: 5,
-    name: "FaQ",
+    name: "FAQs",
     to: "/layout/faq",
     icon: <BsQuestionCircle />,
   },
   {
     id: 6,
-    name: "chats",
+    name: "Chats",
     to: "/layout/chats",
     icon: <BsChatDots />,
   },
