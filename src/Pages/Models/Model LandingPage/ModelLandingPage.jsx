@@ -28,7 +28,7 @@ import ModelIndex from '../Index'
 
 
 
-const ModelPage = () => {
+const ModelPage = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { isOpenDel, onOpenDel, onCloseDel } = useDisclosure()
 
