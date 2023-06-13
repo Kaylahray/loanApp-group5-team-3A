@@ -48,23 +48,26 @@ const OmitModel = () => {
               border: 1px solid #E0E0E0;'
             >
               <MenuButton
-                // className={styles.iconMenu}
                 as={IconButton}
                 aria-label='Options'
                 icon={<img src={Menus} alt='menu' />}
                 variant=''
               />
               <MenuList>
+
                 <MenuItem icon={<img src={Modify} alt="modify" />} >
                   Modify
                 </MenuItem>
+
                 <MenuItem icon={<img src={Deactive} alt="deactivate" />} onClick={onOpen}>
                   Deactivate
                 </MenuItem>
 
                 <Modal isOpen={isOpen} onClose={onClose}>
                   <ModalOverlay bg='blackAlpha.600' />
-                  <ModalContent>
+                  <ModalContent 
+                     top={{ base: '0', md: '30%' }}
+                  >
                     <ModalHeader>Deactivate Alpha Model</ModalHeader>
                     <ModalBody>
                       <p className={styles.decision}>
@@ -98,9 +101,9 @@ const OmitModel = () => {
                 <MenuItem icon={<img src={Delete} alt="delete" />} onClick={ onOpen}>
                   Delete
                 </MenuItem>
-                <div>
-                
-              <Modal isOpen={isOpen} onClose={onClose}>
+
+              <div>             
+              {/* <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay bg='blackAlpha.600' />
                     <ModalContent>
                       <ModalHeader>Delete Alpha Model</ModalHeader>
@@ -131,8 +134,8 @@ const OmitModel = () => {
                         </div>
                       </ModalFooter>
                     </ModalContent>
-                  </Modal>
-    </div>
+                  </Modal> */}
+                </div>
               </MenuList>
             </Menu>
           </div>
