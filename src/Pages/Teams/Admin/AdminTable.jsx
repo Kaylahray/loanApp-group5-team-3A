@@ -33,12 +33,13 @@ function AdminTable () {
     <div>
       <table className="teamtable">
         <thead className="teamdataheader">
+          <tr>
             <th>No</th>
             <th>User ID</th>
             <th>Name</th>
             <th>Role</th>
             <th>Last Seen</th>
-          
+          </tr>
         </thead>
         
         <tbody>

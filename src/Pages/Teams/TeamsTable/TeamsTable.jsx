@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023 Your Company Name
+ * All rights reserved.
+ */
 /* eslint-disable react/prop-types */
 /*
  * Copyright (c) 2023 Your Company Name
@@ -36,12 +40,13 @@ function TeamsTable () {
       <div>
         <table className="teamtable">
           <thead className="teamdataheader">
+            <tr>
               <th>No</th>
               <th>User ID</th>
               <th>Name</th>
               <th>Role</th>
               <th>Last Seen</th>
-            
+            </tr>
           </thead>
           
           <tbody>

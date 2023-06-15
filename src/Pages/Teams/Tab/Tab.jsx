@@ -8,9 +8,8 @@ import TeamsTable from '../TeamsTable/TeamsTable';
 import AnalystTable from '../Analyst/AnalystTable';
 import AdminTable from '../Admin/AdminTable';
 import {TbSearch} from 'react-icons/tb';
+import styles from "../Teams.module.scss";
 
-import styles from '../Teams.module.scss';
-// import AddTeamMemberModal from '../AddTeamMembers/AddTeamMembersModals';
 import React from 'react'
 import {
   Modal,
@@ -21,7 +20,8 @@ import {
   ModalFooter,
   ModalBody,
   Button,
-  useDisclosure,FormControl,Input,FormLabel,Select,
+FormControl,Input,FormLabel,Select,
+useDisclosure
   
 } from '@chakra-ui/react'
 
@@ -30,33 +30,43 @@ const Tab = () => {
 
   const [toggleState, setToggleState] = useState(1);
   const [filteredValue, setFilteredValue] = useState('');
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [email, setEmail] = useState('');
   const [permission, setPermission] = useState('');
+  const [isFormValid, setIsFormValid] = useState(false);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   const toggleTab = (index) => {
     setToggleState(index);
   };
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    validateForm();
+  };
+
+  const handlePermissionChange = (e) => {
+    setPermission(e.target.value);
+    validateForm();
+  };
+
+  const validateForm = () => {
+    setIsFormValid(email !== '' && permission !== '');
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Perform form validation here
-    if (!email || !permission) {
-      alert('Please fill in all the required fields.');
+
+    if (!isFormValid) {
       return;
     }
     
-    // If the form is valid, set isFormSubmitted to true
     setIsFormSubmitted(true);
   };
+  
+  const initialRef = useRef(null);
+  const finalRef = useRef(null);
+  
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const initialRef = useRef();
-  const finalRef = useRef();
-    
   return (
     <div className={styles.mainteamscontainer}>
       <nav className={styles.tops}>
@@ -72,21 +82,22 @@ const Tab = () => {
             />
           </div>
         </div>
+        
         <div className={styles.right}>
         <Button onClick={onOpen} className={styles.topright} colorScheme="blue">
   Add Team Member
 </Button>
-
-        <Modal
-          initialFocusRef={initialRef}
-          finalFocusRef={finalRef}
-          isOpen={isOpen}
-          onClose={onClose}
-        >
-        <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Add a team member</ModalHeader>
-            <ModalCloseButton />
+<Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        initialFocusRef={initialRef}
+        finalFocusRef={finalRef}
+  >
+<ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Add a team member</ModalHeader>
+          <ModalCloseButton />
+            
             <ModalBody pb={9}>
               <form id="new-note" onSubmit={handleSubmit}>
                 <FormControl>
@@ -99,14 +110,12 @@ const Tab = () => {
                   />
                 </FormControl>
           
-            
-
                 <FormControl mt={4}>
                   <FormLabel>Permission (required)</FormLabel>
                   <Select
                     value={permission}
-                    onChange={(e) => setPermission(e.target.value)}
-                >
+                    onChange={handlePermissionChange}>
+                
                   <option disabled value="">
                     Select
                   </option>
@@ -114,20 +123,24 @@ const Tab = () => {
                   <option value="option2">Admin</option>
                 </Select>
                 </FormControl>
-              </form>
-            </ModalBody>
+              
+            
             <ModalFooter>
             <Button
                 type="submit"
                 form="new-note"
-                colorScheme="blue"
+                colorScheme={isFormValid ? 'blue' : 'gray'}
+                  disabled={!isFormValid}
                 
               >
                 Add team member
               </Button>
             </ModalFooter>
+            </form>
+            </ModalBody>
           </ModalContent>
-        </Modal>
+          </Modal>
+        
         {isFormSubmitted && (
         <Modal isOpen={isFormSubmitted} onClose={() => setIsFormSubmitted(false)}>
           <ModalOverlay />
