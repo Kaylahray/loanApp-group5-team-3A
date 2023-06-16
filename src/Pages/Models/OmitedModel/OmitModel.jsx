@@ -3,7 +3,7 @@ import Menus from "../ModelIcons/v-menu.svg";
 import Modify from "../ModelIcons/modify.svg";
 import Deactive from "../ModelIcons/deactivate.svg";
 import Delete from "../ModelIcons/delete.svg";
-import InactiveModel from "./InactiveModel";
+// import InactiveModel from "./InactiveModel";
 import {
   Menu,
   MenuButton,
@@ -51,7 +51,6 @@ const OmitModel = () => {
               border: 1px solid #E0E0E0;"
             >
               <MenuButton
-                // className={styles.iconMenu}
                 as={IconButton}
                 aria-label="Options"
                 icon={<img src={Menus} alt="menu" />}

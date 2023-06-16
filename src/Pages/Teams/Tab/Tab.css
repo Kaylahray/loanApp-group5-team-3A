@@ -84,4 +84,8 @@
     align-items: center;
     padding-bottom: 30px; 
   }
+
+  .btn_btn-primary {
+    background: #4C4DDC;
+  }
   
