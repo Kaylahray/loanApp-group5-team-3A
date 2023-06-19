@@ -3,6 +3,8 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import "./Settings.scss";
 import MyProfile from "./MyProfile";
 import CompanyProfile from "./CompanyProfile";
+import Notification from "./Notification";
+
 const TabItem = ({ name }) => (
   <span className="tabItem">
     {name}{" "}
@@ -57,7 +59,7 @@ const Settings = () => {
             <p>Password</p>
           </TabPanel>
           <TabPanel>
-            <p>Notification</p>
+            <Notification/>
           </TabPanel>
           <TabPanel>
             <p>Maintain Roles</p>
