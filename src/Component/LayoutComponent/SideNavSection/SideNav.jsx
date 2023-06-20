@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import styles from "./SideNav.module.scss";
 import Logo from "./SLogo.svg";
 import { FiSettings } from "react-icons/fi";
-import { BiCategory, BiGroup } from "react-icons/bi";
+import { BiCategory, BiGroup,} from "react-icons/bi";
 import { HiOutlineDocumentDuplicate } from "react-icons/hi";
 import { BsQuestionCircle } from "react-icons/bs";
 import { BsChatDots } from "react-icons/bs";

@@ -1,9 +1,22 @@
-// import React from 'react'
+import { useEffect, useState } from "react"
+import LandingPage from "./LandingPage";
 
 const LoadingPage = () => {
+  const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+      setLoading(true)
+      setTimeout(() => {
+        setLoading(false);
+      }, 6000);
+    }, []);
   return (
     <div>
-        <img src="src/OnboardingPages/OnboardingGIF/loading.gif" alt="loading" />
+       {loading ? (
+           <div className="loadingContainer">
+           <img src="src/OnboardingPages/OnboardingGIF/loading.gif" alt="loading" /> 
+         </div>
+       ) : (<LandingPage/>)}
     </div>
   )
 }
