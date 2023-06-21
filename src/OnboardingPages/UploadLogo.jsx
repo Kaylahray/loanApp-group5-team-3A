@@ -4,14 +4,35 @@ import Image from "../Component/Image/Image";
 import ImageBox from "../Component/ImageBox/ImageBox";
 import { useState } from "react";
 import { FcNext } from "react-icons/fc";
+import Axios from "axios";
+import { useEffect } from "react";
 
 const UploadLogo = () => {
-  const [file, setFile] = useState("");
+  const [file, setFile] = useState([""]);
+
+  function uploadImage () {
+    Axios.post(
+      "https://smartlendapp-backend-app.onrender.com/api/admin/:superAdminId/upload-logo/",
+      {file},
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((res) => {
+        console.log("Getting from ::::", res.file);
+        setFile(res.file);
+      })
+      .catch((err) => console.log(err));
+    }
+
 
   const handleImage = (e) => {
+    console.log("it worked")
     console.log(e.target.files);
     const file = e.target.files[0];
     setFile(URL.createObjectURL(file));
+    uploadImage()
   };
 
   return (
@@ -23,14 +44,17 @@ const UploadLogo = () => {
         <div className="logo">SMARTLEND</div>
         <p className="welcomee">Upload Company Logo</p>
         <p className="space">
-          Give your workspace a more pleasing feel with your company logo
+          Give your workspace a more pleasing feel with your company logos
         </p>
         <div className="size">
           <label htmlFor="image-upload" className="uploadLabel">
             <input
               id="image-upload"
               type="file"
-              onChange={handleImage}
+              onChange={ (e) =>{
+                console.log("anything", e.target.files)
+                handleImage(e)
+              } }
               accept="image/*"
               className="uploadInput"
             />

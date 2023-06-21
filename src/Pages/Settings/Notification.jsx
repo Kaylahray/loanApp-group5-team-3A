@@ -85,7 +85,7 @@ const Notification = (props) => {
       {/* <Container bg="red" p={0} m={0} display="flex" flexDirection="column" gap={10}>  */}
       <Text  fontSize={20} mt="16px" fontWeight={900}>
         Notification
-      </Text>
+      </Text>git 
       {Notify.map((Notify) => (
         <Container maxW={480} p={0} m={0} mt={5}>
           <Box key={notify.id} display="flex" gap={2} alignItems="center">

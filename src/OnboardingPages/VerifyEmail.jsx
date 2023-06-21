@@ -8,9 +8,8 @@ const VerifyEmail = () => {
         <p className="ptext">
           We just sent a verification mail to{" "}
           <a href="#" className="email">
-            Jane_doe@gmail.com.
-          </a>
-          Click on the link in the mail to complete verification.
+            Jane_doe@gmail.com. 
+          </a> Click on the link in the mail to complete verification.
         </p>
         <p className="ptext2">
           Please note that the link will expire in 4 hours.
