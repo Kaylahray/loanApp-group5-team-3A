@@ -15,7 +15,7 @@ import { useState } from "react";
 
 function TeamsTable () {
     const [currentPage, setCurrentPage] = useState(1);
-    const recordsPerPage = 10;
+    const recordsPerPage = 12;
     const lastIndex = currentPage * recordsPerPage;
     const firstIndex = lastIndex - recordsPerPage;
     const records = teamsdata.slice(firstIndex, lastIndex);
