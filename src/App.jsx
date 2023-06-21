@@ -38,6 +38,7 @@ import PasswordResetSuccess from "./OnboardingPages/PasswordResetSuccess";
 import VerifyEmail from "./OnboardingPages/VerifyEmail";
 import VerificationSuccess from "./OnboardingPages/VerificationSuccess";
 import ModelTabs from "./Pages/Models/Tabs/ModelTabs";
+import LoadingPage from "./OnboardingPages/LoadingPage";
 
 
 
@@ -59,7 +60,8 @@ function App() {
           </button> */}
 
           <Routes>
-            <Route path="/" element={<LandingPage />} />
+            <Route path="/" element={<LoadingPage />} />
+            <Route path="/landingpage" element={<LandingPage />} />
             <Route path="/signup" element={<SignUp />} />
 
             <Route path="/pdetails" element={<PersonalDetails />} />
