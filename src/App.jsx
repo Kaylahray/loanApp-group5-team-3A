@@ -80,8 +80,8 @@ function App() {
             <Route path="/model" element={<Models />} />
 
             <Route path="/verifySuccess" element={<VerificationSuccess />} />
-            
-            <Route path="/email_verification_message" element={<VerificationSuccess />} />
+
+          
 
             <Route path="/layout" element={<Layout />} />
 
