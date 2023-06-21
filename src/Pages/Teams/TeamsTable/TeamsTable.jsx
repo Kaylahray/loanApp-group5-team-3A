@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023 Your Company Name
+ * All rights reserved.
+ */
 /* eslint-disable react/prop-types */
 /*
  * Copyright (c) 2023 Your Company Name
@@ -11,7 +15,7 @@ import { useState } from "react";
 
 function TeamsTable () {
     const [currentPage, setCurrentPage] = useState(1);
-    const recordsPerPage = 10;
+    const recordsPerPage = 12;
     const lastIndex = currentPage * recordsPerPage;
     const firstIndex = lastIndex - recordsPerPage;
     const records = teamsdata.slice(firstIndex, lastIndex);
@@ -36,12 +40,13 @@ function TeamsTable () {
       <div>
         <table className="teamtable">
           <thead className="teamdataheader">
+            <tr>
               <th>No</th>
               <th>User ID</th>
               <th>Name</th>
               <th>Role</th>
               <th>Last Seen</th>
-            
+            </tr>
           </thead>
           
           <tbody>
