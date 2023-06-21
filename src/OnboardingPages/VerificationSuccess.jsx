@@ -8,7 +8,7 @@ const VerificationSuccess = () => {
       </div>
       <div className="gif">
         <img
-          src="src/OnboardingPages/OnboardingGIF/mailverified.gif"
+          src="/OnboardingGIF/mailverified.gif"
           alt="gif"
         />
       </div>

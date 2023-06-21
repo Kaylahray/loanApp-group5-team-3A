@@ -14,7 +14,7 @@ const LoadingPage = () => {
     <div>
        {loading ? (
            <div className="loadingContainer">
-           <img src="src/OnboardingPages/OnboardingGIF/loading.gif" alt="loading" /> 
+           <img src="/OnboardingGIF/loading.gif" alt="loading" /> 
          </div>
        ) : (<LandingPage/>)}
     </div>
