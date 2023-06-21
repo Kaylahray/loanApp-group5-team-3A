@@ -7,7 +7,7 @@ import "./AnalystTable.css";
 import { useState } from "react";
 function AnalystTable () {
   const [currentPage, setCurrentPage] = useState(1);
-  const recordsPerPage = 10;
+  const recordsPerPage = 12;
   const lastIndex = currentPage * recordsPerPage;
   const firstIndex = lastIndex - recordsPerPage;
   const records = analystdata.slice(firstIndex, lastIndex);
@@ -32,12 +32,13 @@ function AnalystTable () {
     <div>
       <table className="teamtable">
         <thead className="teamdataheader">
+          <tr>
             <th>No</th>
             <th>User ID</th>
             <th>Name</th>
             <th>Role</th>
             <th>Last Seen</th>
-          
+          </tr>
         </thead>
         
         <tbody>

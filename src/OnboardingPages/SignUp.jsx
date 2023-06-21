@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023 Your Company Name
+ * All rights reserved.
+ */
 import * as Yup from "yup";
 import { Formik, Form } from "formik";
 import ImageBox from "../Component/ImageBox/ImageBox";
@@ -5,6 +9,7 @@ import FormBox from "../Component/FormBox/FormBox";
 import Image from "../Component/Image/Image";
 import FormikControl from "../Component/FormComponent/FormikControl";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -24,12 +29,31 @@ const SignUp = () => {
       .min(8, "must contain at least 8 letters."),
   });
 
-  const onSubmit = (values, onSubmitProps) => {
-    console.log(values);
-    console.log(onSubmitProps);
-    onSubmitProps.setSubmitting(false);
-    onSubmitProps.resetForm();
-    navigate("/pdetails");
+  const onSubmit = async (values, onSubmitProps) => {
+    try {
+      const response = await axios.post("https://smartlendapp-backend-app.onrender.com/api/admin/signup", values);
+      console.log(response.data);
+
+      onSubmitProps.setSubmitting(false);
+      onSubmitProps.resetForm();
+      navigate("/pdetails");
+    //   console.log(values);
+    // console.log(onSubmitProps);
+    // onSubmitProps.setSubmitting(false);
+    // onSubmitProps.resetForm();
+    // navigate("/pdetails");
+
+
+      
+    } catch (error) {
+      console.error(error);
+      
+    }
+  
+    
+    
+
+    
   };
   return (
     <div className="main">

@@ -2,16 +2,16 @@
  * Copyright (c) 2023 Your Company Name
  * All rights reserved.
  */
-import {useState, useRef} from 'react';
+import { useState, useRef } from 'react';
 import './Tab.css';
 import TeamsTable from '../TeamsTable/TeamsTable';
 import AnalystTable from '../Analyst/AnalystTable';
 import AdminTable from '../Admin/AdminTable';
-import {TbSearch} from 'react-icons/tb';
+import { TbSearch } from 'react-icons/tb';
+import styles from "../Teams.module.scss";
 
-import styles from '../Teams.module.scss';
-// import AddTeamMemberModal from '../AddTeamMembers/AddTeamMembersModals';
-import React from 'react'
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import {
   Modal,
   ModalOverlay,
@@ -21,42 +21,47 @@ import {
   ModalFooter,
   ModalBody,
   Button,
-  useDisclosure,FormControl,Input,FormLabel,Select,
-  
-} from '@chakra-ui/react'
 
+  FormControl,
+  Input,
+  FormLabel,
+  Select,
+  useDisclosure,
+} from '@chakra-ui/react';
 
 const Tab = () => {
-
   const [toggleState, setToggleState] = useState(1);
   const [filteredValue, setFilteredValue] = useState('');
+  const [isEmailSent, setIsEmailSent] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [email, setEmail] = useState('');
-  const [permission, setPermission] = useState('');
-
+  // const { isOpen: isAddMemberModalOpen, onOpen: openAddMemberModal, onClose: closeAddMemberModal } = useDisclosure();
+  // const { isOpen: isSuccessModalOpen, onOpen: openSuccessModal, onClose: closeSuccessModal } = useDisclosure();
+  const [submittedEmail, setSubmittedEmail] = useState('');
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const toggleTab = (index) => {
     setToggleState(index);
   };
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
+  
+  const initialRef = useRef(null);
+  const finalRef = useRef(null);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Perform form validation here
-    if (!email || !permission) {
-      alert('Please fill in all the required fields.');
-      return;
-    }
-    
-    // If the form is valid, set isFormSubmitted to true
-    setIsFormSubmitted(true);
+  
+  const handleSubmit = (values, { setSubmitting }) => {
+    setTimeout(() => {
+     
+      setSubmitting(false);
+      setSubmittedEmail(values.email);
+      setIsFormSubmitted(true);
+      openSuccessModal();
+    }, 500);
+    const handleSecondModalClose = () => {
+      setIsFormSubmitted(false);
+      setIsEmailSent(false);
+    };
+  
   };
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const initialRef = useRef();
-  const finalRef = useRef();
-    
   return (
     <div className={styles.mainteamscontainer}>
       <nav className={styles.tops}>
@@ -66,118 +71,132 @@ const Tab = () => {
             <TbSearch className={styles.searchicon} />
             <input
               type="text"
-              onInput={e => setFilteredValue (e.target.value)}
+              onInput={(e) => setFilteredValue(e.target.value)}
               placeholder="Search"
               className={styles.teamssearchbar}
             />
           </div>
         </div>
+
         <div className={styles.right}>
-        <Button onClick={onOpen} className={styles.topright} colorScheme="blue" variant='background: #4C4DDC;'>
-  Add Team Member
+          <Button
+            onClick={onOpen}
+            className={styles.topright}
+            colorScheme="blue"
+            variant="background: #4C4DDC;"
+          >
+            Add Team Member
+          </Button>
+          <Modal isOpen={isOpen} onClose={onClose} initialFocusRef={initialRef} finalFocusRef={finalRef}>
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader>Add a team member</ModalHeader>
+              <ModalCloseButton />
+              
+              <Formik
+            initialValues={{ email: '', permission: '' }}
+            validate={(values) => {
+              const errors = {};
+
+              if (!values.email) {
+                errors.email = 'Email address is required';
+              }
+
+              if (!values.permission) {
+                errors.permission = 'Permission is required';
+              }
+              setIsFormValid(Object.keys(errors).length === 0);
+
+              return errors;
+            }}
+            onSubmit={handleSubmit}
+          >
+            {({ isFormSubmitted, isFormValid }) => (
+              <Form id="new-note">
+              <ModalBody pb={9}>
+                  <FormControl>
+                    <FormLabel>Email address (required)</FormLabel>
+                    <Field type="email" name="email" as={Input} placeholder="e.g. idowu.oluwatofunmi@gmail.com" />
+                    <ErrorMessage name="email" component="div" />
+                  </FormControl>
+
+                  <FormControl mt={4}>
+                    <FormLabel>Permission (required)</FormLabel>
+                    <Field name="permission" as={Select} placeholder="Select">
+                      {/* <option disabled value="">
+                        Select
+                      </option> */}
+                      <option value="option1">Analyst</option>
+                      <option value="option2">Admin</option>
+                      <ErrorMessage name="permission" component="div" />
+                    </Field>
+                  </FormControl>
+                  
+                </ModalBody>
+
+                   <ModalFooter justifyContent="flex-start">
+    <Button
+                    type="submit"
+                    form="new-note"
+                    bg={!isFormValid ? '#E0E0E0': '#4C4DDC'}
+                    color={!isFormValid ? '#9E9E9E' : 'white'}
+                    disabled={!isFormValid}
+>      Add team member
+    </Button>
+    
+  
+</ModalFooter>
+
+              </Form>
+            )}
+          </Formik>
+        </ModalContent>
+      </Modal>
+  
+          {isFormSubmitted && (
+            <Modal isOpen={isFormSubmitted} onClose={() => setIsFormSubmitted(false)}>
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader>Successful!
+                </ModalHeader>
+                
+                <ModalBody>
+                  <p>An email invite has been sent to {submittedEmail}</p>
+                </ModalBody>
+                <ModalFooter>
+                  <Button
+  type="submit"
+  form="new-note"
+  bg={isFormValid ? '#4C4DDC' : '#E0E0E0'}
+  color={isFormValid ? 'white' : '#9E9E9E'}
+>
+  {isFormSubmitted ? 'Team member added' : 'Add team member'}
 </Button>
 
-        <Modal
-          initialFocusRef={initialRef}
-          finalFocusRef={finalRef}
-          isOpen={isOpen}
-          onClose={onClose}
-        >
-        <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Add a team member</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody pb={9}>
-              <form id="new-note" onSubmit={handleSubmit}>
-                <FormControl>
-                  <FormLabel>Email address (required)</FormLabel>
-                  <Input
-                    ref={initialRef}
-                    placeholder="e.g. idowu.oluwatofunmi@gmail.com"
-                    value={email}
-                    onChange={handleEmailChange}
-                  />
-                </FormControl>
-          
-            
-
-                <FormControl mt={4}>
-                  <FormLabel>Permission (required)</FormLabel>
-                  <Select
-                    value={permission}
-                    onChange={(e) => setPermission(e.target.value)}
-                >
-                  <option disabled value="">
-                    Select
-                  </option>
-                  <option value="option1">Analyst</option>
-                  <option value="option2">Admin</option>
-                </Select>
-                </FormControl>
-              </form>
-            </ModalBody>
-            <ModalFooter>
-            <Button
-                className='btn_btn-primary'
-                type="submit"
-                form="new-note"
-                colorScheme="blue"
-                variant='background: #4C4DDC;'
-                color='white'
-                
-              >
-                Add team member
-              </Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-        {isFormSubmitted && (
-        <Modal isOpen={isFormSubmitted} onClose={() => setIsFormSubmitted(false)}>
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Success</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody>
-              <p>Team member added successfully!</p>
-            </ModalBody>
-            <ModalFooter>
-              <Button colorScheme="blue" onClick={() => setIsFormSubmitted(false)}
-                className='btn_btn-primary'
-                variant='background: #4C4DDC;'
-                color='white'
-              >
-                Close
-              </Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-      )}
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+          )}
         </div>
       </nav>
 
       <div className="team-container">
         <div className="team-bloc-tabs">
           <button
-            className={
-              toggleState === 1 ? 'teams-tabs teams-active-tabs' : 'teams-tabs'
-            }
-            onClick={() => toggleTab (1)}
+            className={toggleState === 1 ? 'teams-tabs teams-active-tabs' : 'teams-tabs'}
+            onClick={() => toggleTab(1)}
           >
             <p className={styles.teamsall}>All (200)</p>
           </button>
           <button
-            className={
-              toggleState === 2 ? 'teams-tabs teams-active-tabs' : 'teams-tabs'
-            }
-            onClick={() => toggleTab (2)}
+            className={toggleState === 2 ? 'teams-tabs teams-active-tabs' : 'teams-tabs'}
+            onClick={() => toggleTab(2)}
           >
             <p className={styles.teamsadmin}>Admin (20)</p>
           </button>
           <button
-            className={
-              toggleState === 3 ? 'teams-tabs teams-active-tabs' : 'teams-tabs'
-            }
-            onClick={() => toggleTab (3)}
+            className={toggleState === 3 ? 'teams-tabs teams-active-tabs' : 'teams-tabs'}
+            onClick={() => toggleTab(3)}
           >
             <p className={styles.teamsanalyst}>Analyst (180)</p>
           </button>
@@ -185,37 +204,23 @@ const Tab = () => {
 
         <div className="teams-content-tabs">
           <div
-            className={
-              toggleState === 1
-                ? 'teams-content teams-active-content'
-                : 'teams-content'
-            }
+            className={toggleState === 1 ? 'teams-content teams-active-content' : 'teams-content'}
           >
             <TeamsTable value={filteredValue} />
           </div>
 
           <div
-            className={
-              toggleState === 2
-                ? 'teams-content teams-active-content'
-                : 'teams-content'
-            }
+            className={toggleState === 2 ? 'teams-content teams-active-content' : 'teams-content'}
           >
             <AdminTable value={filteredValue} />
           </div>
 
           <div
-            className={
-              toggleState === 3
-                ? 'teams-content teams-active-content'
-                : 'teams-content'
-            }
+            className={toggleState === 3 ? 'teams-content teams-active-content' : 'teams-content'}
           >
             <AnalystTable value={filteredValue} />
           </div>
         </div>
-        
-        
       </div>
     </div>
   );
