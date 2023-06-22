@@ -403,7 +403,14 @@ span {
             transform: rotate(359deg);
   }
 }
-
+.company-logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: -40px;
+    border-radius: 50%;
+}
 // ////////////////////////////////////////////////media queries////////////////////////////
 
 // @media (min-width: 1536px) {

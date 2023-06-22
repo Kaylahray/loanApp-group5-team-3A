@@ -55,7 +55,7 @@ const UploadLogo = () => {
               </svg>
             </div>
             <p>Drag and drop or select from device</p>
-            <img src={file} />
+            <img src={file} className="company-logo" />
           </label>
         </div>
 

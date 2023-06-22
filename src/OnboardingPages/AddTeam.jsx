@@ -7,9 +7,13 @@ import FormikControl from "../Component/FormComponent/FormikControl";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FcNext } from "react-icons/fc";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import Loader from "./Loader";
 
 const AddTeam = () => {
   const [users, setUsers] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const dropDown = [
     { key: "select", value: "" },
     { key: "Analyst", value: "User" },
@@ -35,6 +39,30 @@ const AddTeam = () => {
     onSubmitProps.resetForm();
   };
 
+   const onComplete = async () => {
+     setIsLoading(true);
+     try {
+       const userId = localStorage.getItem("userId");
+
+       const response = await axios.post(
+         "https://smartlendapp-backend-app.onrender.com/api/admin/invite-teammember",
+         {
+            "invitedBy": userId,
+            "invitedUser": users
+          }
+       );
+       console.log(response.data);
+       navigate("/up");
+     } catch (error) {
+       console.error(error);
+      Swal.fire({
+        title: "Error!",
+        text: error.response.data.error,
+        icon: "error",
+      });
+     }
+     setIsLoading(false);
+   };
   const removeList = (list) => {
     const newList = users.filter((item) => item.email !== list.email);
     setUsers(newList);
@@ -42,6 +70,7 @@ const AddTeam = () => {
 
   return (
     <div className="main">
+      {isLoading ? <Loader /> : <></>}
       <ImageBox>
         <Image />
       </ImageBox>
@@ -129,8 +158,8 @@ const AddTeam = () => {
         </div>
 
         <div className="skip">
-          <button className="btnoo">
-            <Link to={"/up"}>Continue</Link>
+          <button className="btnoo" onClick={onComplete}>
+            Continue
           </button>
 
           <button className="hi">
