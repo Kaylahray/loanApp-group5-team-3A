@@ -4,18 +4,45 @@ import Image from "../Component/Image/Image";
 import ImageBox from "../Component/ImageBox/ImageBox";
 import { useState } from "react";
 import { FcNext } from "react-icons/fc";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import Loader from "./Loader";
 
 const UploadLogo = () => {
   const [file, setFile] = useState("");
+const [isLoading, setIsLoading] = useState(false);
 
   const handleImage = (e) => {
     console.log(e.target.files);
     const file = e.target.files[0];
     setFile(URL.createObjectURL(file));
   };
+   const onSubmit = async () => {
+     setIsLoading(true);
+     try {
+       const userId = localStorage.getItem("userId");
 
+       const response = await axios.post(
+         `https://smartlendapp-backend-app.onrender.com/api/admin/${userId}/upload-logo`,
+         {
+           image: file
+         }
+       );
+       console.log(response.data);
+       navigate("/up");
+     } catch (error) {
+       console.error(error);
+       Swal.fire({
+         title: "Error!",
+         text: error.response.data.message,
+         icon: "error",
+       });
+     }
+     setIsLoading(false);
+   };
   return (
     <div className="main">
+      {isLoading ? <Loader /> : <></>}
       <ImageBox>
         <Image />
       </ImageBox>
@@ -60,8 +87,8 @@ const UploadLogo = () => {
         </div>
 
         <div className="skip">
-          <button className="btno" type="submit">
-            <Link to={"/verify"}> Complete Sign up</Link>
+          <button className="btno" type="submit" onClick={onSubmit}>
+             Complete Sign up
           </button>
 
           <button className="hi">

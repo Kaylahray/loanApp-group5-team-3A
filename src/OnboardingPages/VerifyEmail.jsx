@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const VerifyEmail = () => {
+  const email = localStorage.getItem("userEmail");
   return (
     <div className="verify">
       <h2 className="h2text">Verify email address</h2>
@@ -8,7 +9,7 @@ const VerifyEmail = () => {
         <p className="ptext">
           We just sent a verification mail to{" "}
           <a href="#" className="email">
-            Jane_doe@gmail.com.
+            {email}.
           </a>
           Click on the link in the mail to complete verification.
         </p>
@@ -18,7 +19,7 @@ const VerifyEmail = () => {
         <div>
           <button className="btno">
             {" "}
-            <Link to={"/verifySuccess"}>Open email </Link>
+            <Link to={"/login"}>Open email </Link>
           </button>
         </div>
 

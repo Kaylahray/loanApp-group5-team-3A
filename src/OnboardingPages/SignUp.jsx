@@ -38,6 +38,7 @@ const SignUp = () => {
       const response = await axios.post("https://smartlendapp-backend-app.onrender.com/api/admin/signup", values);
       const generatedId = response.data.message.userId;
       localStorage.setItem("userId", generatedId);
+      localStorage.setItem("userEmail", values.email);
 
       onSubmitProps.setSubmitting(false);
       onSubmitProps.resetForm();
