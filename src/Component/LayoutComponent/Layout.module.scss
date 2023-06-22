@@ -1,10 +1,19 @@
 .grid {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  // display: grid;
+  // grid-template-columns: 1fr auto;
+
   // height: min-content;
   // background-color: bisque;
   // height: 100vh;
 }
 .left {
   margin-left: 304px;
+  @media (max-width: 900px) {
+    margin-left: 100px;
+  }
+}
+.side {
+  @media (max-width: 900px) {
+    width: 100px;
+  }
 }

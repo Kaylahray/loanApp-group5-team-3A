@@ -13,7 +13,7 @@ import { BsChatDots } from "react-icons/bs";
 import { SlLogout } from "react-icons/sl";
 import { RxStack } from "react-icons/rx";
 import { useState } from "react";
-
+import { AiOutlineMenu } from "react-icons/ai";
 const links = [
   {
     id: 0,
@@ -68,11 +68,19 @@ const bottom = [
   },
 ];
 const SideNav = () => {
-  const [link, setLink] = useState(0);
-  return (
-    <div className={styles.nav}>
-      <img src={Logo} alt="logo" className={styles.slogo} />
+  const [width, setWidth] = useState(false);
 
+  const [link, setLink] = useState(0);
+  // useEffect(())
+  const clickMenu = () => {
+    setWidth(!width);
+  };
+  return (
+    <div className={width ? styles.nav001 : styles.nav}>
+      <div className={styles.menu}>
+        <AiOutlineMenu onClick={clickMenu} />
+        <img src={Logo} alt="logo" className={styles.slogo} />
+      </div>
       <div className={styles.navlinkContainer}>
         <div className={styles.topS}>
           {links.map((item) => {
@@ -87,9 +95,13 @@ const SideNav = () => {
                     : `${styles.nav1}`
                 }
               >
-                {icon}
-                <NavLink to={to} className={styles.navl}>
-                  {name}
+                <NavLink to={to} className={`${styles.navl}`}>
+                  <p className={styles.clear}>
+                    {icon}
+                    <span className={width ? styles.spaan1 : styles.spaan}>
+                      {name}
+                    </span>
+                  </p>
                 </NavLink>
               </div>
             );
@@ -109,10 +121,16 @@ const SideNav = () => {
                     : `${styles.nav1}`
                 }
               >
-                {icon}
-                <NavLink to={to} className={styles.navl}>
-                  {name}
-                </NavLink>
+                <div>
+                  <NavLink to={to} className={`${styles.navl}`}>
+                    <p className={styles.clear}>
+                      {icon}
+                      <span className={width ? styles.spaan1 : styles.spaan}>
+                        {name}
+                      </span>
+                    </p>
+                  </NavLink>
+                </div>
               </div>
             );
           })}
