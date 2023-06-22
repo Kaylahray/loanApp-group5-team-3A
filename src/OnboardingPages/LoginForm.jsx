@@ -38,7 +38,6 @@ const LoginForm = () => {
       data: values,
     }).then((response) => navigate("/layout"))
       .catch((result) => {
-        console.log(result);
           Swal.fire({
             title: "Error!",
             text: result.response.data.error,

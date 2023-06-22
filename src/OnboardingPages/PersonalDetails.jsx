@@ -10,10 +10,12 @@ import Image from "../Component/Image/Image";
 import FormikControl from "../Component/FormComponent/FormikControl";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useState } from "react";
+import Loader from "./Loader";
 
 const PersonalDetails = () => {
   const navigate = useNavigate();
-
+const [isLoading, setIsLoading] = useState(false);
   const initialValues = {
     firstname: "",
     lastname: "",
@@ -25,12 +27,13 @@ const PersonalDetails = () => {
     role: Yup.string().required("Required"),
   });
   const onSubmit = async (values, onSubmitProps) => {
+    setIsLoading(true);
     try {
       const userId = localStorage.getItem("userId"); 
       
       const payload = {
         ...values,
-        id: "6493b22a22b06002cb166e4c",
+        id: userId,
       };
 
 
@@ -45,13 +48,14 @@ const PersonalDetails = () => {
       console.error(error);
       
     }
-
+       setIsLoading(false);
     const storedId = localStorage.getItem("6493b22a22b06002cb166e4c");
     console.log(storedId);
     
   };
   return (
     <div className="main">
+      {isLoading ? <Loader /> : <></>}
       <ImageBox>
         <Image />
       </ImageBox>
@@ -66,7 +70,6 @@ const PersonalDetails = () => {
             onSubmit={onSubmit}
           >
             {(formik) => {
-              console.log(formik);
               return (
                 <Form>
                   <div className="form-control">
