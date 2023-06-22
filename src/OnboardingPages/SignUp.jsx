@@ -10,9 +10,12 @@ import Image from "../Component/Image/Image";
 import FormikControl from "../Component/FormComponent/FormikControl";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useState } from "react";
+import Loader from "./Loader"; 
 
 const SignUp = () => {
   const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(false);
 
   const initialValues = {
     email: "",
@@ -31,34 +34,33 @@ const SignUp = () => {
 
   const onSubmit = async (values, onSubmitProps) => {
     try {
+      setIsLoading(true);
       const response = await axios.post("https://smartlendapp-backend-app.onrender.com/api/admin/signup", values);
-      const generatedId = response.data.id; 
-      
+      const generatedId = response.data.message.userId;
       localStorage.setItem("userId", generatedId);
 
       onSubmitProps.setSubmitting(false);
       onSubmitProps.resetForm();
       navigate("/pdetails");
-    //   console.log(values);
-    // console.log(onSubmitProps);
-    // onSubmitProps.setSubmitting(false);
-    // onSubmitProps.resetForm();
-    // navigate("/pdetails");
 
 
       
     } catch (error) {
-      console.error(error);
-      
+      Swal.fire({
+        title: "Error!",
+        text: error.response.data,
+        icon: "error",
+      });
     }
   
-    
+    setIsLoading(false);
     
 
     
   };
   return (
     <div className="main">
+      {isLoading ? <Loader /> : <></>}
       <ImageBox>
         <Image />
       </ImageBox>
@@ -73,7 +75,6 @@ const SignUp = () => {
             onSubmit={onSubmit}
           >
             {(formik) => {
-              console.log(formik);
               return (
                 <Form>
                   <div className="form-control">
