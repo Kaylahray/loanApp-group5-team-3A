@@ -128,8 +128,9 @@ const Tab = () => {
                       </option> */}
                       <option value="option1">Analyst</option>
                       <option value="option2">Admin</option>
+                      </Field>
                       <ErrorMessage name="permission" component="div" />
-                    </Field>
+                    
                   </FormControl>
                   
                 </ModalBody>
@@ -138,10 +139,10 @@ const Tab = () => {
     <Button
                     type="submit"
                     form="new-note"
-                    bg={!isFormValid ? '#E0E0E0': '#4C4DDC'}
-                    color={!isFormValid ? '#9E9E9E' : 'white'}
+                    bg={isFormSubmitted && isFormValid ? '#4C4DDC' : '#E0E0E0'}
+                    color={isFormSubmitted && isFormValid ? '#9E9E9E' : 'white'}
                     disabled={!isFormValid}
->      Add team member
+>      {isFormSubmitted ? 'Team member added' : 'Add team member'}
     </Button>
     
   

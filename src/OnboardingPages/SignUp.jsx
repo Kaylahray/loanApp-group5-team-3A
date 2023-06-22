@@ -16,14 +16,14 @@ const SignUp = () => {
 
   const initialValues = {
     email: "",
-    company: "",
-    employees: "",
+    companyname: "",
+    employeenumber: "",
     password: "",
   };
   const validationSchema = Yup.object({
     email: Yup.string().email("Invalid Format").required("Required"),
-    company: Yup.string().required("Required"),
-    employees: Yup.number().positive().integer().required("Required"),
+    companyname: Yup.string().required("Required"),
+    employeenumber: Yup.number().positive().integer().required("Required"),
     password: Yup.string()
       .required("No password provided.")
       .min(8, "must contain at least 8 letters."),
@@ -32,7 +32,9 @@ const SignUp = () => {
   const onSubmit = async (values, onSubmitProps) => {
     try {
       const response = await axios.post("https://smartlendapp-backend-app.onrender.com/api/admin/signup", values);
-      console.log(response.data);
+      const generatedId = response.data.id; 
+      
+      localStorage.setItem("userId", generatedId);
 
       onSubmitProps.setSubmitting(false);
       onSubmitProps.resetForm();
@@ -88,7 +90,7 @@ const SignUp = () => {
                     <FormikControl
                       control="input"
                       type="text"
-                      name="company"
+                      name="companyname"
                       label="Company name(required)"
                       placeholder="e.g Stutern"
                       className="inputBox"
@@ -98,7 +100,7 @@ const SignUp = () => {
                     <FormikControl
                       control="input"
                       type="number"
-                      name="employees"
+                      name="employeenumber"
                       label="Number of employees(required)"
                       placeholder="e.g Stutern"
                       className="inputBox"
