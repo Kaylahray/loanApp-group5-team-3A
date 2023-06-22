@@ -15,18 +15,27 @@ const PersonalDetails = () => {
   const navigate = useNavigate();
 
   const initialValues = {
-    firstName: "",
-    lastName: "",
+    firstname: "",
+    lastname: "",
     role: "",
   };
   const validationSchema = Yup.object({
-    firstName: Yup.string().required("Required"),
-    lastName: Yup.string().required("Required"),
+    firstname: Yup.string().required("Required"),
+    lastname: Yup.string().required("Required"),
     role: Yup.string().required("Required"),
   });
   const onSubmit = async (values, onSubmitProps) => {
     try {
-      const response = await axios.post("https://smartlendapp-backend-app.onrender.com/api/admin/signup/personal", values);
+      const userId = localStorage.getItem("userId"); 
+      
+      const payload = {
+        ...values,
+        id: "6493b22a22b06002cb166e4c",
+      };
+
+
+      
+      const response = await axios.post("https://smartlendapp-backend-app.onrender.com/api/admin/signup/personal", payload);
       console.log(response.data); 
   
       onSubmitProps.setSubmitting(false);
@@ -37,7 +46,8 @@ const PersonalDetails = () => {
       
     }
 
-    
+    const storedId = localStorage.getItem("6493b22a22b06002cb166e4c");
+    console.log(storedId);
     
   };
   return (
@@ -63,7 +73,7 @@ const PersonalDetails = () => {
                     <FormikControl
                       control="input"
                       type="text"
-                      name="firstName"
+                      name="firstname"
                       label="First name"
                       placeholder="e.g chioma"
                       className="inputBox"
@@ -73,7 +83,7 @@ const PersonalDetails = () => {
                     <FormikControl
                       control="input"
                       type="text"
-                      name="lastName"
+                      name="lastname"
                       label="Last name"
                       placeholder="e.g christopher"
                       className="inputBox"
