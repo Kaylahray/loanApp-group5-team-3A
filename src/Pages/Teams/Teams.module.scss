@@ -1,8 +1,14 @@
-* {
-  padding: 0;
-  margin: 0;
+/* Common styles */
+
+*,
+::before,
+::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+/* Teams.css */
 
 .teamscontain {
   position: absolute;
@@ -36,6 +42,7 @@
   line-height: 28px;
   letter-spacing: -0.017em;
   color: #000000;
+  padding-top: 8px;
 }
 
 .teaminput {
@@ -74,7 +81,6 @@
   font-weight: 400;
   color: black;
   text-align: left;
-
 }
 
 .searchicon {
@@ -82,7 +88,6 @@
   margin-right: 5px;
   width: 20px;
   height: 20px;
-
 }
 
 .teamssearchbar input {
@@ -100,7 +105,6 @@
 }
 
 .topright {
-
   background: #4C4DDC;
   margin-right: 20px;
   border-radius: 6px;
@@ -110,7 +114,6 @@
   margin-left: 200px;
   color: white;
 }
-
 
 .topright button {
   color: white;
@@ -123,3 +126,4 @@
   text-align: center;
   letter-spacing: -0.011em;
 }
+

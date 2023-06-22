@@ -63,10 +63,10 @@ const Tab = () => {
   
   };
   return (
-    <div className={styles.mainteamscontainer}>
+    <div className={styles.mainteamscontainer }> 
       <nav className={styles.tops}>
         <div className={styles.topleft}>
-          <h1>Teams</h1>
+          <h1 className={styles.toplefthead}>Teams</h1>
           <div className={styles.teaminput}>
             <TbSearch className={styles.searchicon} />
             <input

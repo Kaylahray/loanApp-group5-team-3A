@@ -1,9 +1,15 @@
+/*
+ * Copyright (c) 2023 Your Company Name
+ * All rights reserved.
+ */
 /* eslint-disable react/prop-types */
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import "./Settings.scss";
 import MyProfile from "./MyProfile";
 import CompanyProfile from "./CompanyProfile";
 import Notification from "./Notification";
+import MaintainRoles from "./MaintainRoles";
+
 
 const TabItem = ({ name }) => (
   <span className="tabItem">
@@ -62,7 +68,7 @@ const Settings = () => {
             <Notification/>
           </TabPanel>
           <TabPanel>
-            <p>Maintain Roles</p>
+            <MaintainRoles/>
           </TabPanel>
         </TabPanels>
       </Tabs>
